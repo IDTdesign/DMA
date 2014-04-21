@@ -39,13 +39,13 @@ h1,h2,h3,h4,h5,h6{font-family: 'Open Sans', Arial;}
 blockquote.reply-message{
 	font-size: 14px;
 }
-.modal{z-index: 9999996;}
+.modal {z-index: 1006;}
 .modal-backdrop {
-  z-index: 9999995;
+  z-index: 1005;
 }
-.navbar{
+.navbar {
 	margin: 0 0 0 -15px;
-	z-index: 999993;
+	z-index: 1003;
 	border-radius: 0;
 }
 .navbar-collapse{
@@ -357,7 +357,8 @@ i.danger{color: #E85344}
 }
 .header.logo-brand {
 	top: 0;
-	z-index: 2;
+	z-index: 1004;
+	width: 225px;
 }
 .header .logo-inner {
 	margin: 0 0 0 50px;
@@ -369,6 +370,14 @@ i.danger{color: #E85344}
 	vertical-align: top;
 	color: #FFF;
 	text-decoration: none;
+	-webkit-transition: color 0.3s ease;
+	   -moz-transition: color 0.3s ease;
+	    -ms-transition: color 0.3s ease;
+	     -o-transition: color 0.3s ease;
+	        transition: color 0.3s ease;
+}
+.sidebar-is-closed .logo a {
+	color: #1B1E24;
 }
 .logo img {
 	display: inline-block;
@@ -610,7 +619,7 @@ i.danger{color: #E85344}
 	        transition: all 0.3s ease;
 }
 @media screen and (min-width: 990px) {
-	.content-container.sidebar-is-opened {
+	.sidebar-is-opened .content-container {
 		left: 225px;
 	}
 }
@@ -641,9 +650,21 @@ i.danger{color: #E85344}
 	padding: 10px 15px;
 	height: 50px;
 	font-size: 14px;
-	background: #1B1E24;
+	background: transparent;
 	color: #A5B2BC;
 	border: none;
+	-webkit-transition: color 0.3s ease;
+	   -moz-transition: color 0.3s ease;
+	    -ms-transition: color 0.3s ease;
+	     -o-transition: color 0.3s ease;
+	        transition: color 0.3s ease;
+}
+.button-menu-mobile:hover,
+.button-menu-mobile:focus {
+	background: rgba(127,127,127,0.2);
+}
+.sidebar-is-closed .button-menu-mobile {
+	color: #1B1E24;
 }
 .page-footer {
 	padding: 20px 0;

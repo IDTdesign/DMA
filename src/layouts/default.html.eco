@@ -43,7 +43,7 @@
 	
 	
 	<!-- BODY -->
-	<body class="tooltips">
+	<body class="tooltips sidebar-is-opened">
 	
 	<!-- LOADING ANIMATION -->
 	<div id="loading">
@@ -66,12 +66,12 @@
 		<!-- Your logo goes here -->
 		<div class="logo-brand header rows">
 			<div class="logo">
-				<h1 class="logo-inner"><a href="#fakelink"><img src="/assets/img/logo.png" alt="Logo"><span class="logo-txt">DMA</span></a></h1>
+				<h1 class="logo-inner"><a href="/"><img src="/assets/img/logo.png" alt="Logo"><span class="logo-txt">DMA</span></a></h1>
 			</div>
 		</div><!-- End div .header .sidebar .rows -->
 	
 		<!-- BEGIN SIDEBAR -->
-		<div class="page-sidebar side-menu sidebar-is-opened">
+		<div class="page-sidebar side-menu">
 			
             <div class="body rows">
 				
@@ -96,7 +96,7 @@
 		
 		
 		<!-- BEGIN CONTENT -->
-        <div class="content-container content-page sidebar-is-opened">
+        <div class="content-container content-page">
 		
 			<!-- BEGIN CONTENT HEADER -->
             <div class="header content rows-content-header">

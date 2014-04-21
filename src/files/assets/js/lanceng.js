@@ -67,8 +67,7 @@ $(document).ready(function(){
 
 	//RESPONSIVE SIDEBAR
 	$("button.show-sidebar").click(function(){
-		$(".page-sidebar").toggleClass("sidebar-is-closed sidebar-is-opened");
-		$(".content-container").toggleClass("sidebar-is-closed sidebar-is-opened");
+		$("body").toggleClass("sidebar-is-closed sidebar-is-opened");
 	});
 
 

@@ -90,8 +90,8 @@
 		        transition: all 0.3s ease;
 		overflow-x: hidden;
 	}
-	.page-sidebar.sidebar-is-opened {left: 0px;}
-	.content-container.sidebar-is-opened {
+	.sidebar-is-opened .page-sidebar {left: 0px;}
+	.sidebar-is-opened .content-container {
 		left: 225px;
 		right: -225px;
 	}
@@ -155,7 +155,7 @@
 	}
 	.navbar{
 		margin: 0 0 0 0px;
-		z-index: 999991;
+		z-index: 1001;
 	}
 	.navbar-default {
 	  border: none;
@@ -168,8 +168,8 @@
 	button.navbar-toggle{
 		padding: 15px 15px;
 		border-radius: 0;
-		background: #1B1E24;
-		color: #A5B2BC;
+		background: transparent;
+		color: #1B1E24;
 		margin-right: 0px;
 		margin-top: 0px;
 		margin-bottom: 0px;
@@ -178,8 +178,7 @@
 	}
 	.navbar-default .navbar-toggle:hover,
 	.navbar-default .navbar-toggle:focus {
-		background: #1B1E24;
-		color: #A5B2BC;
+		color: #000;
 	}
 	
 	.navbar-collapse{
@@ -203,8 +202,8 @@
 		        transition: all 0.3s ease;
 		overflow-x: hidden;
 	}
-	.page-sidebar.sidebar-is-opened {left: 0px;}
-	.content-container.sidebar-is-opened {
+	.sidebar-is-opened .page-sidebar {left: 0px;}
+	.sidebar-is-opened .content-container {
 		left: 225px;
 		right: -225px;
 	}
