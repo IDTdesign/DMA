@@ -64,13 +64,6 @@ docpadConfig = {
 			# if our document does not have it's own title, then we should just use the site's title
 			else
 				@site.title
-
-		# -----------------------------
-		# Helpers
-
-		# Get the Absolute URL of a document
-		# getUrl: (document) ->
-		#	return @site.url + (document.url or document.get?('url'))
 			
 	plugins:
 		cleanurls:
