@@ -6,6 +6,9 @@ docpadConfig = {
 	# ...
 	templateData:
 		site:
+			# Site Production URL
+			url: 'http://interpaul.github.io/dma'
+
 			# The default title of our website
 			title: "DMA"
 
@@ -61,41 +64,30 @@ docpadConfig = {
 			# if our document does not have it's own title, then we should just use the site's title
 			else
 				@site.title
+
+		# -----------------------------
+		# Helpers
+
+		# Get the Absolute URL of a document
+		# getUrl: (document) ->
+		#	return @site.url + (document.url or document.get?('url'))
+			
 	plugins:
 		cleanurls:
 			static: true
-}
+		ghpages:
+			deployRemote: 'origin'
+			deployBranch: 'gh-pages'
 
-module.exports =
 	# =================================
-    # Template Data
-    # These are variables that will be accessible via our templates
+	# Environments
 
-    templateData:
-
-        # -----------------------------
-        # Site Information
-
-        site:
-
-            # Site Production URL
-            url: 'http://interpaul.github.io/dma'
-
-        # -----------------------------
-        # Helpers
-
-        # Get the Absolute URL of a document
-        getUrl: (document) ->
-            return @site.url + (document.url or document.get?('url'))
-
-    # =================================
-    # Environments
-
-    environments:
-        development:
-            templateData:
-                site:
-                    url: 'http://localhost:9778'
+	environments:
+		development:
+			templateData:
+				site:
+					url: 'http://localhost:9778'
+}
 
 # Export the DocPad Configuration
 module.exports = docpadConfig
