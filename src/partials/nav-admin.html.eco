@@ -1,7 +1,7 @@
 					<div id="sidebar-menu">
 						<ul>
-							<li><a href="/index.html"><i class="fa fa-home"></i> Dashboard</a></li>
-							<li><a href="/distributors/"><i class="fa fa-truck"></i> Distributors</a></li>
+							<li><a href="<%= @getUrl('/') %>"><i class="fa fa-home"></i> Dashboard</a></li>
+							<li><a href="<%= @getUrl('/distributors/') %>"><i class="fa fa-truck"></i> Distributors</a></li>
 							<li><a href="/retailers/"><i class="fa fa-shopping-cart"></i><i class="fa fa-angle-double-down i-right"></i> Retailers</a>
 								<ul>
 									<li><a href="/retailers/"><i class="fa fa-angle-right"></i> General Info</a></li>
