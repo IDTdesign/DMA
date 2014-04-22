@@ -7,7 +7,7 @@ docpadConfig = {
 	templateData:
 		site:
 			# Site Production URL
-			url: 'http://interpaul.github.io/dma'
+			url: 'http://interpaul.github.io/DMA'
 
 			# The default title of our website
 			title: "DMA"
@@ -69,7 +69,7 @@ docpadConfig = {
 		cleanurls:
 			static: true
 		ghpages:
-			deployRemote: 'origin'
+			deployRemote: 'deploy'
 			deployBranch: 'gh-pages'
 
 	# =================================
