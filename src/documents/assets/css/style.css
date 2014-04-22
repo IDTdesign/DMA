@@ -472,8 +472,9 @@ i.danger{color: #E85344}
 /* === LEFT COLUMN (SIDEBAR VERTICAL MENU) === */
 .sidebar-menu,
 .sidebar-menu ul,
-.sidebar-menu li,
-.sidebar-menu a {
+.sidebar-menu .first-level,
+.sidebar-menu .second-level,
+.sidebar-menu .menu-item {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -484,12 +485,12 @@ i.danger{color: #E85344}
 	font-size: 14px;
 	position: relative;
 }
-.sidebar-menu a {line-height: 1.3;}
+.sidebar-menu .menu-item {line-height: 1.3;}
 .sidebar-menu {
 	width: 100%;
 	border-top: 1px solid #1F2429;
 }
-.sidebar-menu ul li.first-level a {
+.sidebar-menu .first-level .menu-item {
 	font-size: 14px;
 	display: block;
 	color: #8B91A0;
@@ -499,43 +500,43 @@ i.danger{color: #E85344}
 	-moz-transition:All 0.25s ease;
 	-o-transition:All 0.25s ease;
 }
-.sidebar-menu ul li.first-level a:hover {
+.sidebar-menu .first-level .menu-item:hover {
 	color: #fff;
 	background: #121515;
 	padding-left: 20px;
 	border-left-color: #3B9BED;
 }
-.sidebar-menu ul li.first-level a i {
+.sidebar-menu .first-level .menu-item i {
 	margin-right: 5px;
 	color: #D3D6DB;
 }
-.sidebar-menu ul li.first-level a i.fa.fa-angle-double-down.i-right {opacity: 0.45}
-.sidebar-menu ul li.first-level a i.i-right {
+.sidebar-menu .first-level .menu-item .fa.fa-angle-double-down.i-right {opacity: 0.45}
+.sidebar-menu .first-level .menu-item .i-right {
 	margin: 3px 0 0 0;
 	float: right;
 }
-.sidebar-menu ul li.first-level a.yellow.i-right {color: #EBC85E;}
-.sidebar-menu ul li.first-level a a:hover {text-decoration: none;}
-.sidebar-menu ul li.active a {
+.sidebar-menu .first-level .menu-item.yellow.i-right {color: #EBC85E;}
+.sidebar-menu .first-level .menu-item .menu-item:hover {text-decoration: none;}
+.sidebar-menu .active .menu-item {
 	color: #fff;
 	background: #121515;
 }
-.sidebar-menu ul li.active a:hover {
+.sidebar-menu .active .menu-item:hover {
 	color: #fff;
 	background: #121515;
 	padding: 10px 15px;
 }
-.sidebar-menu ul.first-level li.selected a {
+.sidebar-menu .selected .menu-item {
 	color: #fff;
 	background: #121515;
 	padding-left: 20px;
 }
-.sidebar-menu ul li.first-level a span.label{float: right;}
-.sidebar-menu ul li.first-level a span.label.span-left{
+.sidebar-menu .first-level .label{float: right;}
+.sidebar-menu .first-level .label.span-left{
 	float: none;
 	margin-left: 5px;
 }
-.sidebar-menu span.cnt {
+.sidebar-menu .cnt {
 	position: absolute;
 	top: 8px;
 	right: 15px;
@@ -545,14 +546,14 @@ i.danger{color: #E85344}
 }
 
 /* === LEFT COLUMN (SIDEBAR VERTICAL SUBMENU) === */
-.sidebar-menu ul.second-level {
+.sidebar-menu .first-level ul {
 	display: none;
 	border-bottom: 1px solid #121515;
 	background: #22262E;
 }
-.sidebar-menu ul li.first-level ul.visible {display: block;}
-.sidebar-menu ul.second-level li.second-level {border-top: 0;}
-.sidebar-menu ul.second-level li.second-level a {
+.sidebar-menu .first-level .visible {display: block;}
+.sidebar-menu .second-level {border-top: 0;}
+.sidebar-menu .second-level .menu-item {
 	padding: 10px 25px;
 	display: block;
 	color: #D3D6DB;
@@ -563,15 +564,15 @@ i.danger{color: #E85344}
 	border-left: none;
 	background: none;
 }
-.sidebar-menu ul.second-level li.second-level a:hover {
+.sidebar-menu .second-level .menu-item:hover {
 	color: #fff;
 	background: #121515;
 }
-.sidebar-menu ul.second-level li.active a {
+.sidebar-menu .first-level .active .menu-item {
 	color: #fff;
 	background: #121515;
 }
-.sidebar-menu ul.second-level li.second-level a i {margin-right: 5px;}
+.sidebar-menu .second-level .menu-item i {margin-right: 5px;}
 
 /* === LEFT COLUMN (SIDEBAR FOOTER) === */
 .footer.rows {

@@ -72,7 +72,7 @@ $(document).ready(function(){
 
 
 	//SIDEBAR MENU
-	$('.sidebar-menu ul.first-level li.first-level a').not('.sidebar-menu ul.second-level li.second-level a').click(function() {
+	$('.sidebar-menu ul li.first-level a').not('.sidebar-menu ul li.second-level a').click(function() {
 		$('.sidebar-menu li').removeClass('selected');
 		$(this).closest('li').addClass('selected');	
 		var checkElement = $(this).next();
