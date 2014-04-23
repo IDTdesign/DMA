@@ -10,7 +10,7 @@ $(document).ready(function(){
 		color: '#DDD',
 		size: '3px',
 		railOpacity: 0.3,
-		wheelStep: 5
+		wheelStep: 20
 	});
 	$('.chat-widget').slimScroll({
 		height: '300px',
