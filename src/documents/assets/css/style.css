@@ -567,13 +567,34 @@ i.danger{color: #E85344}
 .sidebar-menu .second-level .menu-item:hover {
 	color: #fff;
 	background: #121515;
+	padding-left: 25px;
 }
 .sidebar-menu .first-level .active .menu-item {
 	color: #fff;
 	background: #121515;
 }
 .sidebar-menu .second-level .menu-item i {margin-right: 5px;}
-
+.sidebar-menu .retailer-search{
+	padding: 15px 15px 15px 25px;
+	position: relative;
+}
+.sidebar-menu .retailer-search .search{
+	border-radius: 0;
+	border-color: #121515;
+	background: #313940;
+	padding-right: 25px;
+	font-size: 12px;
+	color: #909090;
+	-webkit-transition: All 0.25s ease;
+	-moz-transition: All 0.25s ease;
+	-o-transition: All 0.25s ease;
+}
+.retailer-search i{
+	color: #909090;
+	position: absolute;
+	top: 25px;
+	right: 25px;
+}
 /* === LEFT COLUMN (SIDEBAR FOOTER) === */
 .footer.rows {
 	height: 50px;
