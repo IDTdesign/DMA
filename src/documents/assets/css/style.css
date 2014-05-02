@@ -333,7 +333,7 @@ i.danger{color: #E85344}
 }
 .col {top: 0; bottom: 0;}
 .scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-.scroll-y { overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.scroll-y { overflow-y: scroll; -webkit-overflow-scrolling: touch; }
 .fill, .pane {
 	position: absolute;
 	left: 0;
@@ -2790,3 +2790,52 @@ a:focus .icon-vimeo {
 .flag.flag-hk {background-position: -32px -11px}
 .flag.flag-sg {background-position: 0 -22px}
 .flag.flag-us {background-position: -16px -22px}
+/************** PRODUCTS *************************/
+.prod-search{
+	padding-top: 22px;
+}
+.ui-widget-content table, #pager table, tr, td, span, th{
+	border-collapse: separate;	
+}
+
+.ui-jqgrid tr.jqgrow td:last-child{
+	border-right: 0;
+}	
+.buttons{
+	margin: 20px 0 0;
+	text-align: right;
+	float: none; 
+	padding-right: 0;
+}
+.buttons button{
+	padding: 5px 10px;
+	margin-left: 10px;
+}
+.page-footer{
+	clear: both;
+}
+.sort{
+	margin-bottom: 20px;
+}
+input[type=checkbox].cbox{
+	opacity: 0;
+	float: left;
+	width: 18px;
+	display: block;
+	margin: 0;
+	padding: 0;
+	height: 18px;
+	position: absolute;
+}
+input[type=checkbox].cbox + label.choise{
+	margin: 0;
+	clear: none;
+	padding: 5px 0 4px 18px;
+	cursor: pointer;
+	background: url(/assets/img/grey.png) 0 0 no-repeat;
+	width: 18px;
+	height: 18px;
+}
+input[type=checkbox].cbox:checked + label.choise{
+	background: url(/assets/img/grey.png) -40px 0 no-repeat;
+}
