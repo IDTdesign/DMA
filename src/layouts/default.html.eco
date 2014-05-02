@@ -8,13 +8,6 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="admin, bootstrap,admin template, bootstrap admin, simple, awesome">
 	<meta name="author" content="">
-
-	<!-- BOOTSTRAP -->
-	<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-	
-	<!-- LANCENG CSS -->
-	<link href="/assets/css/style.css" rel="stylesheet">
-	<link href="/assets/css/style-responsive.css" rel="stylesheet">
 	
 	<!-- VENDOR -->
 	<link href="/assets/css/animate.css" rel="stylesheet">
@@ -30,6 +23,8 @@
 	<link href="/assets/third/datepicker/css/datepicker.css" rel="stylesheet">
 	<link href="/assets/third/jqgrid/css/ui.jqgrid.css" rel="stylesheet">
 	<link href="/assets/third/jqgrid/css/smoothness/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+	<!-- DocPad Styles + Our Own -->
+	<%- @getBlock('styles').add(@getUrl(@site.styles)).toHTML() %>
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -68,7 +63,7 @@
 		<!-- Your logo goes here -->
 		<div class="logo-brand header rows">
 			<div class="logo">
-				<h1 class="logo-inner"><a href="/"><img src="/assets/img/logo.png" alt="Logo"><span class="logo-txt">DMA</span></a></h1>
+				<h1 class="logo-inner"><a href="<%= @getUrl('/') %>"><img src="<%= @getUrl('/assets/img/logo.png') %>" alt="Logo"><span class="logo-txt">DMA</span></a></h1>
 			</div>
 		</div><!-- End div .header .sidebar .rows -->
 	
@@ -130,14 +125,14 @@
 
 								<!-- Dropdown region -->
 								<li class="dropdown">
-									<a href="#fakelink" class="dropdown-toggle" data-toggle="dropdown"><img src="/assets/img/blank.gif" class="flag flag-us" alt="Unated States"/> USA <i class="fa fa-chevron-down i-xs"></i></a>
+									<a href="#fakelink" class="dropdown-toggle" data-toggle="dropdown"><img src="<%= @getUrl('/assets/img/blank.gif') %>" class="flag flag-us" alt="Unated States"/> USA <i class="fa fa-chevron-down i-xs"></i></a>
 									<ul class="dropdown-menu animated half flipInX">
-										<li><a href="#fakelink"><img src="/assets/img/blank.gif" class="flag flag-ca" alt="Canada"/> Canada</a></li>
-										<li><a href="#fakelink"><img src="/assets/img/blank.gif" class="flag flag-gb" alt="Great Britain"/> Great Britain</a></li>
-										<li><a href="#fakelink"><img src="/assets/img/blank.gif" class="flag flag-es" alt="Spain"/> Spain</a></li>
-										<li><a href="#fakelink"><img src="/assets/img/blank.gif" class="flag flag-hk" alt="Hong Kong"/> Hong Kong</a></li>
-										<li><a href="#fakelink"><img src="/assets/img/blank.gif" class="flag flag-sg" alt="Singapore"/> Singapore</a></li>
-										<li><a href="#fakelink"><img src="/assets/img/blank.gif" class="flag flag-au" alt="Australia"/> Australia</a></li>
+										<li><a href="#fakelink"><img src="<%= @getUrl('/assets/img/blank.gif') %>" class="flag flag-ca" alt="Canada"/> Canada</a></li>
+										<li><a href="#fakelink"><img src="<%= @getUrl('/assets/img/blank.gif') %>" class="flag flag-gb" alt="Great Britain"/> Great Britain</a></li>
+										<li><a href="#fakelink"><img src="<%= @getUrl('/assets/img/blank.gif') %>" class="flag flag-es" alt="Spain"/> Spain</a></li>
+										<li><a href="#fakelink"><img src="<%= @getUrl('/assets/img/blank.gif') %>" class="flag flag-hk" alt="Hong Kong"/> Hong Kong</a></li>
+										<li><a href="#fakelink"><img src="<%= @getUrl('/assets/img/blank.gif') %>" class="flag flag-sg" alt="Singapore"/> Singapore</a></li>
+										<li><a href="#fakelink"><img src="<%= @getUrl('/assets/img/blank.gif') %>" class="flag flag-au" alt="Australia"/> Australia</a></li>
 									</ul>
 								</li>
 							
@@ -206,6 +201,7 @@
 	JAVASCRIPT
 	================================================
 	-->
+<<<<<<< HEAD
 	<!-- Basic Javascripts (Jquery and bootstrap) -->
 	<script src="/assets/js/jquery.js"></script>
 	<script src="/assets/js/bootstrap.min.js"></script>
@@ -256,6 +252,8 @@
 	
 	<!-- LANCENG TEMPLATE JAVASCRIPT -->
 	<script src="/assets/js/lanceng.js"></script>
+	<!-- DocPad Scripts + Our Own -->
+	<%- @getBlock('scripts').add(@getUrl(@site.scripts)).toHTML() %>
 
 	</body>
 </html>

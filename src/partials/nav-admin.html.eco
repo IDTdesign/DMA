@@ -20,6 +20,20 @@
 									<li class="second-level"><a class="menu-item" href="/retailers/"><i class="fa fa-angle-right"></i> Locations</a></li>
 									<li class="second-level"><a class="menu-item" href="/retailers/"><i class="fa fa-angle-right"></i> Toll Free</a></li>
 									<li class="second-level"><a class="menu-item" href="/retailers/"><i class="fa fa-angle-right"></i> Product Fees</a></li>
+							<li><a href="<%= @getUrl('/') %>"><i class="fa fa-home"></i> Dashboard</a></li>
+							<li><a href="<%= @getUrl('/distributors') %>"><i class="fa fa-truck"></i> Distributors</a></li>
+							<li><a href="/retailers/"><i class="fa fa-shopping-cart"></i><i class="fa fa-angle-double-down i-right"></i> Retailers</a>
+								<ul>
+									<li><a href="/retailers/"><i class="fa fa-angle-right"></i> General Info</a></li>
+									<li><a href="/retailers/"><i class="fa fa-angle-right"></i> Bill Pay</a></li>
+									<li><a href="/retailers/"><i class="fa fa-angle-right"></i> Products</a></li>
+									<li><a href="/retailers/"><i class="fa fa-angle-right"></i> Allowed IPs</a></li>
+									<li><a href="/retailers/"><i class="fa fa-angle-right"></i> Money Transfer</a></li>
+									<li><a href="/retailers/"><i class="fa fa-angle-right"></i> Transfer Retailer</a></li>
+									<li><a href="/retailers/"><i class="fa fa-angle-right"></i> Adjustment</a></li>
+									<li><a href="/retailers/"><i class="fa fa-angle-right"></i> Locations</a></li>
+									<li><a href="/retailers/"><i class="fa fa-angle-right"></i> Toll Free</a></li>
+									<li><a href="/retailers/"><i class="fa fa-angle-right"></i> Product Fees</a></li>
 								</ul>
 							</li>
 							<li class="first-level"><a class="menu-item" href="/consumers/"><i class="fa fa-users"></i> Consumers</a></li>

@@ -6,26 +6,50 @@ docpadConfig = {
 	# ...
 	templateData:
 		site:
+			# Site Production URL
+			url: 'http://interpaul.github.io/DMA'
+
 			# The default title of our website
 			title: "DMA"
 
 			# The website's styles
 			styles: [
-				'/vendor/normalize.css'
-				'/vendor/h5bp.css'
-				'/css/bettertext.css'
-				'/css/github.css'
-				'/css/caniuse.css'
-				'/css/template.css'
+				'/assets/css/bootstrap.min.css'
+				'/assets/css/style.css'
+				'/assets/css/style-responsive.css'
+				'/assets/css/animate.css'
+				'/assets/third/font-awesome/css/font-awesome.min.css'
+				'/assets/third/weather-icon/css/weather-icons.min.css'
+				'/assets/third/morris/morris.css'
+				'/assets/third/nifty-modal/css/component.css'
+				'/assets/third/sortable/sortable-theme-bootstrap.css'
+				'/assets/third/icheck/skins/minimal/grey.css' 
+				'/assets/third/select/bootstrap-select.min.css'
+				'/assets/third/summernote/summernote.css'
+				'/assets/third/magnific-popup/magnific-popup.css' 
+				'/assets/third/datepicker/css/datepicker.css'
 			]
 
 			# The website's scripts
 			scripts: [
-				'/vendor/log.js'
-				'/js/offscreenmenu.js'
-				'/vendor/jquery.sticky.js'
-				'/vendor/caniuse.js'
-				'/js/script.js'
+				'/assets/js/jquery.js'
+				'/assets/js/bootstrap.min.js'
+				'/assets/third/slimscroll/jquery.slimscroll.min.js'
+				'http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js'
+				'/assets/third/morris/morris.js'
+				'/assets/third/nifty-modal/js/classie.js'
+				'/assets/third/nifty-modal/js/modalEffects.js'
+				'/assets/third/sortable/sortable.min.js'
+				'/assets/third/select/bootstrap-select.min.js'
+				'/assets/third/summernote/summernote.js'
+				'/assets/third/magnific-popup/jquery.magnific-popup.min.js' 
+				'/assets/third/input/bootstrap.file-input.js'
+				'/assets/third/datepicker/js/bootstrap-datepicker.js'
+				'/assets/third/icheck/icheck.min.js'
+				'/assets/third/wizard/jquery.snippet.min.js'
+				'/assets/third/wizard/jquery.easyWizard.js'
+				'/assets/third/wizard/scripts.js'
+				'/assets/js/lanceng.js'
 			]
 		# -----------------------------
 		# Helper Functions
@@ -40,9 +64,22 @@ docpadConfig = {
 			# if our document does not have it's own title, then we should just use the site's title
 			else
 				@site.title
+			
 	plugins:
 		cleanurls:
 			static: true
+		ghpages:
+			deployRemote: 'deploy'
+			deployBranch: 'gh-pages'
+
+	# =================================
+	# Environments
+
+	environments:
+		development:
+			templateData:
+				site:
+					url: 'http://localhost:9778'
 }
 
 # Export the DocPad Configuration
