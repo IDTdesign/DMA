@@ -1,3 +1,96 @@
+// JQUERY JQGRID
+// =============
+jQuery(function(){
+	var myData = [
+        {product: 'lorem', com_type:'transfers',  dis_com:'22', ret_com_min:'15', ret_com:'2.5667', ret_com_max: '1.6'},
+        {product: 'duis', com_type:'transfers',  dis_com:'11', ret_com_min:'10', ret_com:'12.5833', ret_com_max: '12.65'},
+        {product: 'irure', com_type:'transfers',  dis_com:'14', ret_com_min:'11', ret_com:'42.5333', ret_com_max: '1.5833'},
+        {product: 'amet', com_type:'transfers',  dis_com:'21', ret_com_min:'20', ret_com:'5.5667', ret_com_max: '3.4833'},
+        {product: 'consectetur', com_type:'transfers',  dis_com:'21', ret_com_min:'14', ret_com:'42.55', ret_com_max: '23.5167'},
+        {product: 'elit', com_type:'transfers',  dis_com:'23', ret_com_min:'12', ret_com:'142.6', ret_com_max: '1.5333'},
+        {product: 'nisi', com_type:'transfers',  dis_com:'20', ret_com_min:'2', ret_com:'2.55', ret_com_max: '17.5333'},
+        {product: 'qui', com_type:'transfers',  dis_com:'20', ret_com_min:'4', ret_com:'432.4667', ret_com_max: '2.5'},
+        {product: 'culpa', com_type:'transfers',  dis_com:'18', ret_com_min:'15', ret_com:'22.5', ret_com_max: '10.5167'},
+        {product: 'sunt', com_type:'transfers',  dis_com:'16', ret_com_min:'7', ret_com:'42.5167', ret_com_max: '1.55'},
+        {product: 'nulla', com_type:'transfers',  dis_com:'7', ret_com_min:'5', ret_com:'4.5', ret_com_max: '1.5333'},
+        {product: 'velit', com_type:'residuals',  dis_com:'11', ret_com_min:'10', ret_com:'24.4667', ret_com_max: '54.3667'},
+        {product: 'esse', com_type:'residuals',  dis_com:'14', ret_com_min:'11', ret_com:'24.1917', ret_com_max: '5.7606'},
+        {product: 'commodo', com_type:'residuals',  dis_com:'17', ret_com_min:'14', ret_com:'2.2722', ret_com_max: '55.3111'},
+        {product: 'labore', com_type:'residuals',  dis_com:'21', ret_com_min:'17', ret_com:'0.2521', ret_com_max: '55.28'},
+        {product: 'tempor', com_type:'residuals',  dis_com:'27', ret_com_min:'25', ret_com:'25.2097', ret_com_max: '55.2478'},
+        {product: 'officia', com_type:'residuals',  dis_com:'20', ret_com_min:'14', ret_com:'25.1231', ret_com_max: '6.3375'},
+        {product: 'deserunt', com_type:'residuals',  dis_com:'13', ret_com_min:'9', ret_com:'25.7911', ret_com_max: '55.9428'},
+        {product: 'mollit', com_type:'residuals',  dis_com:'10', ret_com_min:'6', ret_com:'25.7911', ret_com_max: '55.9428'},
+        {product: 'anim', com_type:'residuals',  dis_com:'9', ret_com_min:'1', ret_com:'25.6167', ret_com_max: '56.2667'},
+        {product: 'est', com_type:'residuals',  dis_com:'12', ret_com_min:'11', ret_com:'25.3622', ret_com_max: '55.3911'},
+        {product: 'ipsum', com_type:'resitrans',  dis_com:'11', ret_com_min:'4', ret_com:'34.3469', ret_com_max: '62.1983'},
+        {product: 'sed', com_type:'resitrans',  dis_com:'13', ret_com_min:'10', ret_com:'34.5167', ret_com_max: '69.1833'},
+        {product: 'ullamco', com_type:'resitrans',  dis_com:'23', ret_com_min:'22', ret_com:'31.8314', ret_com_max: '65.0689'},
+        {product: 'magna', com_type:'resitrans',  dis_com:'23', ret_com_min:'10', ret_com:'31.6125', ret_com_max: '65.7094'}
+           ]
+	jQuery('#list').jqGrid({
+	    datatype: 'local',
+        colNames:['Product','Comission Type','Distributor Comission', 'Retailers Comission (Min)','Retailers Comission','Retailers Comission (MAX)'],
+        colModel:[
+            {name:'product', index:'product', editable: true},
+            {name:'com_type', index:'com_type', editable: true, edittype: 'select', editoptions: {value: "tr: transfers; rd: residuals; rt: resitrans"}},
+            {name:'dis_com', index:'dis_com', editable: true},
+            {name:'ret_com_min', index:'ret_com_min', editable: true},
+            {name:'ret_com', index:'ret_com', editable: true, sorttype: 'float'},
+            {name:'ret_com_max', index:'ret_com_max', editable: true, sorttype: 'float'},
+                   ],
+        pager: "#pager",
+        hidegrid: false,
+        multiselect: true,
+        multiselectWidth: 40,
+        height: '100%',
+        rowNum: 10,
+        rowList: [10, 20, 30],
+	    viewrecords: true,		    
+	    autowidth: true,
+	    gridview: true,
+	    cellEdit: true,
+	    cellsubmit: 'clientArray',
+	    editurl: 'clientArray',
+	    data : myData,
+		caption: 'Comission',
+		gridComplete: function(){
+			$("#list tbody .ui-row-ltr td:nth-child(6)").digitCapacity('.');
+			$("#list tbody .ui-row-ltr td:nth-child(7)").digitCapacity('.');
+		},
+		});
+	jQuery("#list").jqGrid('navGrid','#pager',{add: false, edit: false}, //options
+		{reloadAfterSubmit:false}, // del options
+		{reloadAfterSubmit:false}, // del options
+		{reloadAfterSubmit:false} // del options
+	);
+	jQuery("#list").navButtonAdd('#pager',{
+	   title:"Add product", 
+	   caption: "",
+	   buttonicon:"ui-icon-plus", 
+	   onClickButton: function(){ 
+	   		var recCount = jQuery("#list").jqGrid('getGridParam', 'records');
+	    	jQuery("#list").addRowData(recCount+1, 'first');		    	
+	   }, 
+	   position:"first"
+	});
+	jQuery("#list").navButtonAdd('#pager',{
+	   title:"Remove product", 
+	   caption: "",
+	   buttonicon:"ui-icon-trash", 
+	   onClickButton: function(){ 
+	   		var selectedItems = jQuery("#list").jqGrid('getGridParam', 'selarrrow');
+	   		for (var i = selectedItems.length - 1; i >= 0; i--) {
+	   			jQuery("#list").delRowData(selectedItems[i]);
+	   		};
+	   }, 
+	   position:"last"
+	});
+	$('body').bind("DOMSubtreeModified",function(){//don't forget to remove if we'll deside don't use floating/popup edit                     
+		$(".ui-jqdialog select, .ui-jqdialog input[type=text]").addClass('form-control');
+	});
+	jQuery("#list").addClass('table-hover table-striped');
+});
 $(document).ready(function(){
 	
 	$(window).load(function() { $("#loading").fadeOut("slow"); })
@@ -10,7 +103,7 @@ $(document).ready(function(){
 		color: '#DDD',
 		size: '3px',
 		railOpacity: 0.3,
-		wheelStep: 5
+		wheelStep: 20
 	});
 	$('.chat-widget').slimScroll({
 		height: '300px',
@@ -72,8 +165,8 @@ $(document).ready(function(){
 
 
 	//SIDEBAR MENU
-	$('#sidebar-menu > ul > li > a').click(function() {
-		$('#sidebar-menu li').removeClass('selected');
+	$('.sidebar-menu ul li.first-level a').not('.sidebar-menu ul li.second-level a').click(function() {
+		$('.sidebar-menu li').removeClass('selected');
 		$(this).closest('li').addClass('selected');	
 		var checkElement = $(this).next();
 			if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
@@ -81,7 +174,7 @@ $(document).ready(function(){
 				checkElement.slideUp('fast');
 			}
 			if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
-				$('#sidebar-menu ul ul:visible').slideUp('fast');
+				$('.sidebar-menu ul ul:visible').slideUp('fast');
 				checkElement.slideDown('fast');
 			}
 			if($(this).closest('li').find('ul').children().length == 0) {
@@ -116,11 +209,11 @@ $(document).ready(function(){
 	//DATE PICKER
 	$('.datepicker-input').datepicker();
 	//ICHECK
-	$('input').iCheck({
+	/*$('input').iCheck({
 	checkboxClass: 'icheckbox_minimal-grey',
 	radioClass: 'iradio_minimal-grey',
 	increaseArea: '20%' // optional
-	});
+	});*/
 
 
 	//GALLERY
@@ -616,4 +709,3 @@ $(document).ready(function(){
 	})
 
 }(window.jQuery);
-
