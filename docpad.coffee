@@ -28,6 +28,8 @@ docpadConfig = {
 				'/assets/third/summernote/summernote.css'
 				'/assets/third/magnific-popup/magnific-popup.css' 
 				'/assets/third/datepicker/css/datepicker.css'
+				'/assets/third/jqgrid/css/ui.jqgrid.css'
+				'/assets/third/jqgrid/css/smoothness/jquery-ui-1.10.4.custom.css'
 			]
 
 			# The website's scripts
@@ -49,6 +51,9 @@ docpadConfig = {
 				'/assets/third/wizard/jquery.snippet.min.js'
 				'/assets/third/wizard/jquery.easyWizard.js'
 				'/assets/third/wizard/scripts.js'
+				'/assets/third/jqgrid/js/i18n/grid.locale-en.js'
+				'/assets/third/jqgrid/js/jquery.jqGrid.min.js'
+				'/assets/third/digitCapacity/jquery.digitCapacity.js'
 				'/assets/js/lanceng.js'
 			]
 		# -----------------------------
