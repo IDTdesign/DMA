@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/interpaul/dma.png?label=ready&title=Ready)](https://waffle.io/interpaul/dma)
 # Static pages of DMA
 
 ## Platform & Components
