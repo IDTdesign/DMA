@@ -2779,7 +2779,7 @@ a:focus .icon-vimeo {
 .flag {
 	width: 16px;
 	height: 11px;
-	background:url(../img/flags.png) no-repeat;
+	background:url(/assets/img/flags.png) no-repeat;
 	margin-bottom: 2px;
 }
 
@@ -2820,22 +2820,24 @@ a:focus .icon-vimeo {
 input[type=checkbox].cbox{
 	opacity: 0;
 	float: left;
-	width: 18px;
+	width: 45px;
 	display: block;
 	margin: 0;
 	padding: 0;
-	height: 18px;
+	height: 39px;
 	position: absolute;
+	left: -15px;
+	top: -8px;
 }
 input[type=checkbox].cbox + label.choise{
 	margin: 0;
 	clear: none;
 	padding: 5px 0 4px 18px;
 	cursor: pointer;
-	background: url(../img/grey.png) 0 0 no-repeat;
+	background: url(/assets/img/grey.png) 0 0 no-repeat;
 	width: 18px;
 	height: 18px;
 }
 input[type=checkbox].cbox:checked + label.choise{
-	background: url(../img/grey.png) -40px 0 no-repeat;
+	background: url(/assets/img/grey.png) -40px 0 no-repeat;
 }
