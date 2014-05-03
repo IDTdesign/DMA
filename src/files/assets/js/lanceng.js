@@ -49,7 +49,7 @@ jQuery(function(){
 	    viewrecords: true,		    
 	    autowidth: true,
 	    gridview: true,
-	    cellEdit: true,
+	    cellEdit: false,
 	    cellsubmit: 'clientArray',
 	    editurl: 'clientArray',
 	    data : myData,
@@ -58,6 +58,23 @@ jQuery(function(){
 			$("#list tbody .ui-row-ltr td:nth-child(6)").digitCapacity('.');
 			$("#list tbody .ui-row-ltr td:nth-child(7)").digitCapacity('.');
 		},
+		ondblClickRow: function(id){
+			jQuery("#list tbody tr#"+id+" td:has('span')").each(function() {
+				var old_val = $(this).children('span').text();
+				$(this).text(old_val);
+			});
+
+            jQuery("#list").jqGrid('editRow',id, 
+			{ 
+			    keys : true, 
+			    aftersavefunc: function() {
+			        jQuery("#list").trigger('reloadGrid'); 
+			    },
+			    afterrestorefunc: function() {
+			        jQuery("#list").trigger('reloadGrid'); 
+			    }
+			});
+        },
 		});
 	jQuery("#list").jqGrid('navGrid','#pager',{add: false, edit: false}, //options
 		{reloadAfterSubmit:false}, // del options
