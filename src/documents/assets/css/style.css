@@ -2779,7 +2779,7 @@ a:focus .icon-vimeo {
 .flag {
 	width: 16px;
 	height: 11px;
-	background:url(/assets/img/flags.png) no-repeat;
+	background:url(../img/flags.png) no-repeat;
 	margin-bottom: 2px;
 }
 
@@ -2834,10 +2834,10 @@ input[type=checkbox].cbox + label.choise{
 	clear: none;
 	padding: 5px 0 4px 18px;
 	cursor: pointer;
-	background: url(/assets/img/grey.png) 0 0 no-repeat;
+	background: url(../img/grey.png) 0 0 no-repeat;
 	width: 18px;
 	height: 18px;
 }
 input[type=checkbox].cbox:checked + label.choise{
-	background: url(/assets/img/grey.png) -40px 0 no-repeat;
+	background: url(../img/grey.png) -40px 0 no-repeat;
 }
