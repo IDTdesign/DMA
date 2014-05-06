@@ -510,7 +510,26 @@ i.danger{color: #E85344}
 	margin-right: 5px;
 	color: #D3D6DB;
 }
-.sidebar-menu .first-level .menu-item .fa.fa-angle-double-down.i-right {opacity: 0.45}
+.sidebar-menu .first-level .menu-item .fa-angle-double-down.i-right {
+	opacity: 0.45;
+	-webkit-transform: rotate(-90deg);
+	   -moz-transform: rotate(-90deg);
+	    -ms-transform: rotate(-90deg);
+	     -o-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
+	-webkit-transition: -webkit-transform 0.3s;
+	   -moz-transition:    -moz-transform 0.3s;
+	    -ms-transition:     -ms-transform 0.3s;
+	     -o-transition:      -o-transform 0.3s;
+	        transition:         transform 0.3s;
+}
+.sidebar-menu .first-level.selected .menu-item .fa-angle-double-down.i-right {
+	-webkit-transform: rotate(0);
+	   -moz-transform: rotate(0);
+	    -ms-transform: rotate(0);
+	     -o-transform: rotate(0);
+	        transform: rotate(0);	
+}
 .sidebar-menu .first-level .menu-item .i-right {
 	margin: 3px 0 0 0;
 	float: right;
