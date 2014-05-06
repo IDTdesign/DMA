@@ -21,6 +21,7 @@
 	
 	<!-- FAVICON -->
 	<link rel="shortcut icon" href="<%= @getUrl('/assets/img/favicon.ico') %>">
+	<script src="<%= @getUrl('/assets/third/modernizr/modernizr.custom.93625.js') %>"></script>
 	</head>
 	
 	
