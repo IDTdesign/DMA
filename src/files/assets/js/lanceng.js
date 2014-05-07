@@ -114,6 +114,19 @@ jQuery(function(){
 		$(".ui-jqdialog select, .ui-jqdialog input[type=text]").addClass('form-control');
 	});
 	jQuery("#list").addClass('table-hover table-striped');
+
+	function resizeGrids() {
+	var reportObjectsGrid = $("#list");
+	reportObjectsGrid.setGridWidth($(".page-heading").width());
+	};
+
+	var resizeTimer;
+
+	$(window).bind('resize', function () {
+	clearTimeout(resizeTimer);
+	resizeTimer = setTimeout(resizeGrids, 60);
+	});
+
 });
 $(document).ready(function(){
 	
