@@ -116,15 +116,27 @@ jQuery(function(){
 	jQuery("#list").addClass('table-hover table-striped');
 
 	function resizeGrids() {
-	var reportObjectsGrid = $("#list");
-	reportObjectsGrid.setGridWidth($(".page-heading").width());
+		var reportObjectsGrid = $("#list");
+		reportObjectsGrid.setGridWidth($(".page-heading").width());
 	};
+
+	function slimScrollResize(){
+		$('.slimscroller').slimscroll({
+		height: 'auto',
+		position: 'right',
+		color: '#DDD',
+		size: '3px',
+		railOpacity: 0.3,
+		wheelStep: 20
+		});
+	}
 
 	var resizeTimer;
 
 	$(window).bind('resize', function () {
 	clearTimeout(resizeTimer);
 	resizeTimer = setTimeout(resizeGrids, 60);
+	resizeTimer = setTimeout(slimScrollResize, 60);
 	});
 
 });
@@ -190,27 +202,58 @@ $(document).ready(function(){
 
 
 	//TOOLTIP
-	$('.tooltips').tooltip({
+	$('body').tooltip({
 		selector: "[data-toggle=tooltip]",
-		container: "body"
+		container: "body",
+		placement: "right",
 	})
 
+	function resizeGrids() {
+	var reportObjectsGrid = $("#list");
+	reportObjectsGrid.setGridWidth($(".page-heading").width());
+	};
+
 	//RESPONSIVE SIDEBAR
-	$("button.show-sidebar").click(function(){
+	$("body").on('click', 'button.show-sidebar', function() {
 		$("body").toggleClass("sidebar-is-closed sidebar-is-opened");
+		$(".overlay").toggleClass("none");
+		setTimeout(resizeGrids, 400);
+		$(".sidebar-menu ul ul:visible").slideUp('fast');
+		if((!$(".first-level").attr('data-toggle')) && ($(".none").length > 0)){
+			$(".first-level").attr('data-toggle', 'tooltip');
+		} else {
+			$(".first-level").removeAttr('data-toggle');
+		}
+		$(".sidebar-is-closed .first-level:has(ul) a").click(function() {
+			$("body").removeClass("sidebar-is-closed").addClass("sidebar-is-opened");
+			$(".first-level ul").removeClass("second-level-hide").addClass("second-level");
+			$(".first-level").removeAttr('data-toggle');
+			$(".tooltip").css('display', 'none');
+		});
+	});
+	//ADD TITLE TO SIDEBAR
+	$(".first-level").each(function() {
+		var liTitle = $(this).children('a').text();
+		$(this).attr('title', $.trim(liTitle));
 	});
 
+	//HIDE SIDEBAR ONCLICK
+	$("body").prepend('<div class="overlay"></div>');
+	$(".overlay").click(function() {
+		$("body").removeClass("sidebar-is-opened").addClass("sidebar-is-closed");
+		$(".overlay").addClass('none');
+	});
 
 	//SIDEBAR MENU
 	$('.sidebar-menu ul li.first-level a').not('.sidebar-menu ul li.second-level a').click(function() {
 		$('.sidebar-menu li').removeClass('selected');
 		$(this).closest('li').addClass('selected');	
 		var checkElement = $(this).next();
-			if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+			if((checkElement.is('ul.second-level')) && (checkElement.is(':visible'))) {
 				$(this).closest('li').removeClass('selected');
 				checkElement.slideUp('fast');
 			}
-			if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+			if((checkElement.is('ul.second-level')) && (!checkElement.is(':visible'))) {
 				$('.sidebar-menu ul ul:visible').slideUp('fast');
 				checkElement.slideDown('fast');
 			}
@@ -220,7 +263,6 @@ $(document).ready(function(){
 				return false;	
 			}		
 	});
-
 
 	//SUMMERNOTE
 	$('.summernote').summernote({
@@ -245,14 +287,6 @@ $(document).ready(function(){
 	$('input[type=file]').bootstrapFileInput();
 	//DATE PICKER
 	$('.datepicker-input').datepicker();
-	//ICHECK
-	/*$('input').iCheck({
-	checkboxClass: 'icheckbox_minimal-grey',
-	radioClass: 'iradio_minimal-grey',
-	increaseArea: '20%' // optional
-	});*/
-
-
 	//GALLERY
 	$('.gallery-wrap').each(function() { // the containers for all your galleries
 		$(this).magnificPopup({
