@@ -58,6 +58,7 @@ blockquote.reply-message{
 .navbar-default {
 	background-color: #fff;
 	border: none;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 .nav.navbar-nav.top-navbar li {position:relative;}
 .nav.navbar-nav.top-navbar li a {
@@ -721,6 +722,44 @@ i.danger{color: #E85344}
 	.tooltip{
 		display: none;
 	}
+}
+@media screen and (max-width: 768px){
+	.overlay{
+		z-index: 10000;
+	}
+}
+
+/*	TABLE SEARCH (SORT) */
+.box-info .ui-search-toolbar .ui-search-input{
+	padding-left: 0;
+	padding-right: 0;
+}
+.ui-search-toolbar{
+	border-color: #DDD;
+}
+select.editable{
+	height: 24px;
+}
+.ui-pg-input{
+	height: 18px;
+}
+.ui-search-input .form-control.input-sm{
+	height: 24px;
+}
+.box-info table tr td.ui-search-clear{
+	padding-left: 5px;
+	padding-right: 0;
+}
+.ui-search-clear a{
+	position: absolute;
+	top: 11px;
+	right: 13px;
+}
+.ui-search-clear a:hover{
+	color: #d9534f;
+}
+.box-info table tr.ui-search-toolbar th{
+	padding-right: 0;
 }
 /* === RIGHT COLUMN (CONTENT HEADER / NAV) === */
 .header.rows { height: 50px;}

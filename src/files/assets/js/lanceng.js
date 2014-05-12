@@ -94,7 +94,26 @@ jQuery(function(){
 	   buttonicon:"ui-icon-plus", 
 	   onClickButton: function(){ 
 	   		var recCount = jQuery("#list").jqGrid('getGridParam', 'records');
-	    	jQuery("#list").addRowData(recCount+1, 'first');		    	
+	    	jQuery("#list").addRowData(recCount+1, 'first');	
+			if(recCount/* && id!==lastsel*/){
+				jQuery('#list').jqGrid('restoreRow',lastsel);
+				jQuery("#list tbody tr#"+(recCount+1)+" td:has('span')").each(function() {
+					var old_val = $(this).children('span').text();
+					$(this).text(old_val);
+				});
+
+	            jQuery("#list").jqGrid('editRow',(recCount+1), 
+				{ 
+				    keys : true, 
+				    aftersavefunc: function() {
+				        jQuery("#list").trigger('reloadGrid'); 
+				    },
+				    afterrestorefunc: function() {
+				        jQuery("#list").trigger('reloadGrid'); 
+				    }
+				});
+				lastsel=recCount+1;
+			}
 	   }, 
 	   position:"first"
 	});
@@ -110,6 +129,7 @@ jQuery(function(){
 	   }, 
 	   position:"last"
 	});
+	jQuery("#list").jqGrid('filterToolbar',{searchOperators : false});
 	$('body').bind("DOMSubtreeModified",function(){//don't forget to remove if we'll deside don't use floating/popup edit                     
 		$(".ui-jqdialog select, .ui-jqdialog input[type=text]").addClass('form-control');
 	});
@@ -138,7 +158,12 @@ jQuery(function(){
 	resizeTimer = setTimeout(resizeGrids, 60);
 	resizeTimer = setTimeout(slimScrollResize, 60);
 	});
-
+	$(".ui-search-input input[type=text]").addClass('form-control input-sm');
+	$(".ui-search-input input[type=text]").css({
+		padding: '5px 17px 5px 10px',
+	});
+	$(".ui-search-toolbar th div:has(table)").css('padding-left', '0');
+	$(".ui-search-clear a").html('&times');
 });
 $(document).ready(function(){
 	
