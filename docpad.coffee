@@ -7,7 +7,7 @@ docpadConfig = {
 	templateData:
 		site:
 			# Site Production URL
-			url: 'http://interpaul.github.io/DMA'
+			url: 'http://idtdesign.github.io/DMA'
 
 			# The default title of our website
 			title: "DMA"
