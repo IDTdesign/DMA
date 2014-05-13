@@ -61,12 +61,13 @@ jQuery(function(){
 			$("#list tbody .ui-row-ltr td:nth-child(7)").digitCapacity('.');
 		},
 		ondblClickRow: function(id){
-			if(id/* && id!==lastsel*/){
+			jQuery("#list tbody tr#"+id+" td:has('span')").each(function() {
+				var old_val = $(this).children('span').text();
+				$(this).text(old_val);
+			});
+			if(id && id!==lastsel){
 				jQuery('#list').jqGrid('restoreRow',lastsel);
-				jQuery("#list tbody tr#"+id+" td:has('span')").each(function() {
-					var old_val = $(this).children('span').text();
-					$(this).text(old_val);
-				});
+				lastsel=id;
 
 	            jQuery("#list").jqGrid('editRow',id, 
 				{ 
@@ -78,9 +79,19 @@ jQuery(function(){
 				        jQuery("#list").trigger('reloadGrid'); 
 				    }
 				});
-				lastsel=id;
-			}
+			} else if(id == lastsel){
+	            jQuery("#list").jqGrid('editRow',id, 
+					{ 
+					    keys : true, 
+					    aftersavefunc: function() {
+					        jQuery("#list").trigger('reloadGrid'); 
+					    },
+					    afterrestorefunc: function() {
+					        jQuery("#list").trigger('reloadGrid'); 
+					    }
+					});
 
+			}
         },
 		});
 	jQuery("#list").jqGrid('navGrid','#pager',{add: false, edit: false}, //options
