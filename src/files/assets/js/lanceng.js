@@ -264,6 +264,7 @@ $(document).ready(function(){
 			$("body").removeClass("sidebar-is-closed").addClass("sidebar-is-opened");
 			$(".first-level ul").removeClass("second-level-hide").addClass("second-level");
 			$(".first-level").removeAttr('data-toggle');
+			$(".overlay").removeClass("none");
 			$(".tooltip").css('display', 'none');
 		});
 	});
