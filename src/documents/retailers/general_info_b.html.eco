@@ -1,0 +1,128 @@
+---
+layout: default
+title: General Info / Retailers
+---
+
+<!-- Page header -->
+<div class="page-heading animated fadeInDownBig">
+	<h1>Retailers / General Info</h1>
+</div>
+<!-- End page header -->
+
+<%- @partial('retailers-select-form-filled') %>
+
+<div class="box-info">
+	<h2>General Info</h2>
+	<div class="row">
+		<div class="col-sm-6" style="padding-left: 0;">
+			<table class="table table-condensed table-no-dividers">
+				<tr>
+					<th class="tbl_label">NextGen</th>
+					<td class="tbl_data">Y</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Account Number</th>
+					<td class="tbl_data">5555693051</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Security Code</th>
+					<td class="tbl_data">1111</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Store Name</th>
+					<td class="tbl_data">dPostPaid Selenium Store</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Distributor Id</th>
+					<td class="tbl_data">2368</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Distributor Name</th>
+					<td class="tbl_data">eytanqa</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Master Distributor</th>
+					<td class="tbl_data">eytanqa</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Account Type</th>
+					<td class="tbl_data">Postpaid</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Status</th>
+					<td class="tbl_data">Active</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Security Question</th>
+					<td class="tbl_data">Birthplace</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Security Answer</th>
+					<td class="tbl_data">Bronx</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">CsIvr Priority</th>
+					<td class="tbl_data">+</td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-sm-6" style="padding-right: 0;">
+			<table class="table table-condensed table-no-dividers">
+				<tr>
+					<th class="tbl_label">NextGen</th>
+					<td class="tbl_data">Y</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Account Number</th>
+					<td class="tbl_data">5555693051</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Security Code</th>
+					<td class="tbl_data">1111</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Store Name</th>
+					<td class="tbl_data">dPostPaid Selenium Store</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Distributor Id</th>
+					<td class="tbl_data">2368</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Distributor Name</th>
+					<td class="tbl_data">eytanqa</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Master Distributor</th>
+					<td class="tbl_data">eytanqa</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Account Type</th>
+					<td class="tbl_data">Postpaid</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Status</th>
+					<td class="tbl_data">Active</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Security Question</th>
+					<td class="tbl_data">Birthplace</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">Security Answer</th>
+					<td class="tbl_data">Bronx</td>
+				</tr>
+				<tr>
+					<th class="tbl_label">CsIvr Priority</th>
+					<td class="tbl_data">+</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="clr col-sm-12 ">
+		<p style="margin-top: 20px;" class="text-right">
+			<button class="btn btn-default">PayNow</button>
+			<button class="btn btn-primary">Save</button>
+		</p>
+	</div>
+</div>

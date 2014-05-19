@@ -173,6 +173,12 @@ blockquote.reply-message{
 	border-bottom: 1px solid #dddddd;
 }
 
+.table.table-no-dividers,
+.table.table-no-dividers th,
+.table.table-no-dividers td {
+	border-color: transparent !important;
+}
+
 /** Form **/
 .form-control{
 	font-size: 13px;

@@ -1,0 +1,41 @@
+<!--div class="box-info">
+	<h2>Select Retailer version A</h2>
+	<form action="" class="form-horizontal" role=form>
+		<div class="form-group">
+			<label for="ip_address" class="col-sm-1 control-label">IP Adress</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="ip_address" placeholder="Search by IP">
+			</div>
+			<div class="col-sm-1">
+				<button class="btn btn-default" type="submit">Search</button>
+			</div>
+			<label for="account_number" class="col-sm-2 control-label">Account Number</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="account_number" placeholder="Search by Account Number">
+			</div>
+			<div class="col-sm-1">
+				<button class="btn btn-default" type="submit">Search</button>
+			</div>
+		</div>
+	</form>
+</div-->
+
+<div class="box-info">
+	<h2>Selected Retailer: <strong>dPostPaid Selenium Store</strong> (5555693051)</h2>
+	<div class="additional-btn">
+		<a class="additional-icon" href="#fakelink" data-toggle="collapse" data-target="#box-icon-2"><i class="fa fa-chevron-down"></i></a>
+	</div>
+	<div id="box-icon-2" class="collapse in" style="height: auto;">
+		<form action="" class="form-horizontal" role=form>
+			<div class="form-group">
+				<label for="account_or_ip_address" class="col-sm-3 control-label">Account Number or IP Adress</label>
+				<div class="col-sm-3">
+					<input type="text" class="form-control" id="account_or_ip_address" placeholder="Search Retailer" value="5555693051">
+				</div>
+				<div class="col-sm-1">
+					<button class="btn btn-default" type="submit">Search</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

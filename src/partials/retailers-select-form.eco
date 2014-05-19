@@ -1,0 +1,36 @@
+<!--div class="box-info">
+	<h2>Select Retailer version A</h2>
+	<form action="" class="form-horizontal" role=form>
+		<div class="form-group">
+			<label for="ip_address" class="col-sm-1 control-label">IP Adress</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="ip_address" placeholder="Search by IP">
+			</div>
+			<div class="col-sm-1">
+				<button class="btn btn-default" type="submit">Search</button>
+			</div>
+			<label for="account_number" class="col-sm-2 control-label">Account Number</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="account_number" placeholder="Search by Account Number">
+			</div>
+			<div class="col-sm-1">
+				<button class="btn btn-default" type="submit">Search</button>
+			</div>
+		</div>
+	</form>
+</div-->
+
+<div class="box-info">
+	<h2>Select Retailer</h2>
+	<form action="<%= @getUrl('/retailers/general_info_b') %>" class="form-horizontal" role=form>
+		<div class="form-group">
+			<label for="account_or_ip_address" class="col-sm-3 control-label">Account Number or IP Adress</label>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" id="account_or_ip_address" placeholder="Search Retailer">
+			</div>
+			<div class="col-sm-1">
+				<button class="btn btn-default" type="submit">Search</button>
+			</div>
+		</div>
+	</form>
+</div>

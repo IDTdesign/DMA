@@ -1,7 +1,18 @@
 					<div class="sidebar-menu">
 						<ul>
 							<li class="first-level"><a class="menu-item" href="<%= @getUrl('/') %>"><i class="fa fa-home"></i> Dashboard</a></li>
-							<li class="first-level"><a class="menu-item" href="<%= @getUrl('/distributors') %>"><i class="fa fa-truck"></i> Distributors</a></li>
+							<li class="first-level"><a class="menu-item" href="<%= @getUrl('/distributors') %>"><i class="fa fa-truck"></i><i class="fa fa-angle-double-down i-right"></i> Distributors</a>
+								<ul class="second-level">
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/distributors/general_info') %>"><i class="fa fa-angle-right"></i> General Info</a></li>
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/distributors/bank_info') %>"><i class="fa fa-angle-right"></i> Bank Info</a></li>
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/distributors/manage_comission') %>"><i class="fa fa-angle-right"></i> Manage Comission</a></li>
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/distributors/manage_fees') %>"><i class="fa fa-angle-right"></i> Manage Fees</a></li>
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/distributors/manage_products') %>"><i class="fa fa-angle-right"></i> Manage Products</a></li>
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/distributors/notes') %>"><i class="fa fa-angle-right"></i> Notes</a></li>
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/distributors/access_control') %>"><i class="fa fa-angle-right"></i> Access Control</a></li>
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/distributors/adjustment') %>"><i class="fa fa-angle-right"></i> Adjustment</a></li>
+								</ul>
+							</li>
 							<li class="first-level"><a class="menu-item" href="<%= @getUrl('/retailers/') %>"><i class="fa fa-shopping-cart"></i><i class="fa fa-angle-double-down i-right"></i> Retailers</a>
 								<ul class="second-level">
 									<li class="second-level">
@@ -10,16 +21,16 @@
 											<i class="fa fa-search"></i>
 										</form>
 									</li>								
-									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers') %>"><i class="fa fa-angle-right"></i> General Info</a></li>
-									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers') %>"><i class="fa fa-angle-right"></i> Bill Pay</a></li>
-									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers') %>"><i class="fa fa-angle-right"></i> Products</a></li>
-									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers') %>"><i class="fa fa-angle-right"></i> Allowed IPs</a></li>
-									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers') %>"><i class="fa fa-angle-right"></i> Money Transfer</a></li>
-									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers') %>"><i class="fa fa-angle-right"></i> Transfer Retailer</a></li>
-									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers') %>"><i class="fa fa-angle-right"></i> Adjustment</a></li>
-									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers') %>"><i class="fa fa-angle-right"></i> Locations</a></li>
-									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers') %>"><i class="fa fa-angle-right"></i> Toll Free</a></li>
-									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers') %>"><i class="fa fa-angle-right"></i> Product Fees</a></li>
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers/general_info') %>"><i class="fa fa-angle-right"></i> General Info</a></li>
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers/bill_pay') %>"><i class="fa fa-angle-right"></i> Bill Pay</a></li>
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers/products') %>"><i class="fa fa-angle-right"></i> Products</a></li>
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers/allowed_ips') %>"><i class="fa fa-angle-right"></i> Allowed IPs</a></li>
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers/money_transfer') %>"><i class="fa fa-angle-right"></i> Money Transfer</a></li>
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailerstransfer_retails/') %>"><i class="fa fa-angle-right"></i> Transfer Retailer</a></li>
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers/adjustment') %>"><i class="fa fa-angle-right"></i> Adjustment</a></li>
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers/locations') %>"><i class="fa fa-angle-right"></i> Locations</a></li>
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers/toll_fee') %>"><i class="fa fa-angle-right"></i> Toll Free</a></li>
+									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers/product_fees') %>"><i class="fa fa-angle-right"></i> Product Fees</a></li>
 								</ul>
 							</li>
 							<li class="first-level"><a class="menu-item" href="<%= @getUrl('/consumers') %>"><i class="fa fa-users"></i> Consumers</a></li>
