@@ -72,7 +72,16 @@ docpadConfig = {
 			# current links in navigation
 			if s == @document.url
 				"active"
-			
+	collections:
+		retailers: ->
+			# get all posts by «kind», sort them by «created_at» and set to all «layout»
+			@getCollection("html").findAllLive({url: $startsWith: '/retailers'}).on "add", (model) ->
+				model.setMetaDefaults({retailers:"is-opened"})
+		distributors: ->
+			# get all posts by «kind», sort them by «created_at» and set to all «layout»
+			@getCollection("html").findAllLive({url: $startsWith: '/distributors'}).on "add", (model) ->
+				model.setMetaDefaults({distributors:"is-opened"})
+
 	plugins:
 		cleanurls:
 			static: true
