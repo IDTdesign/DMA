@@ -67,6 +67,11 @@ docpadConfig = {
 			# if our document does not have it's own title, then we should just use the site's title
 			else
 				@site.title
+
+		isActive: (s) ->
+			# current links in navigation
+			if s == @document.url
+				"active"
 			
 	plugins:
 		cleanurls:

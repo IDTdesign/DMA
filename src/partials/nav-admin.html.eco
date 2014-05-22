@@ -1,7 +1,7 @@
 					<div class="sidebar-menu">
 						<ul>
-							<li class="first-level"><a class="menu-item" href="<%= @getUrl('/') %>"><i class="fa fa-home"></i> Dashboard</a></li>
-							<li class="first-level"><a class="menu-item" href="<%= @getUrl('/distributors') %>"><i class="fa fa-truck"></i><i class="fa fa-angle-double-down i-right"></i> Distributors</a>
+							<li class="first-level <%- @isActive('/') %>"><a class="menu-item " href="<%= @getUrl('/') %>"><i class="fa fa-home"></i> Dashboard</a></li>
+							<li class="first-level <%- @isActive('/distributors') %>"><a class="menu-item " href="<%= @getUrl('/distributors') %>"><i class="fa fa-truck"></i><i class="fa fa-angle-double-down i-right"></i> Distributors</a>
 								<ul class="second-level">
 									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/distributors/general_info') %>"><i class="fa fa-angle-right"></i> General Info</a></li>
 									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/distributors/bank_info') %>"><i class="fa fa-angle-right"></i> Bank Info</a></li>
@@ -13,7 +13,7 @@
 									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/distributors/adjustment') %>"><i class="fa fa-angle-right"></i> Adjustment</a></li>
 								</ul>
 							</li>
-							<li class="first-level"><a class="menu-item" href="<%= @getUrl('/retailers/') %>"><i class="fa fa-shopping-cart"></i><i class="fa fa-angle-double-down i-right"></i> Retailers</a>
+							<li class="first-level <%- @isActive('/retailers') %>"><a class="menu-item" href="<%= @getUrl('/retailers/') %>"><i class="fa fa-shopping-cart"></i><i class="fa fa-angle-double-down i-right"></i> Retailers</a>
 								<ul class="second-level">
 									<li class="second-level">
 										<form class="retailer-search">
