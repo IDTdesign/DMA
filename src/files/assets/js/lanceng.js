@@ -282,10 +282,10 @@ $(document).ready(function(){
 	});
 
 	//SIDEBAR MENU
-	$('.sidebar-menu ul li.first-level a').not('.sidebar-menu ul li.second-level a').click(function() {
+	$('.sidebar-menu ul li.first-level a .fa-angle-double-down')/*.not('.sidebar-menu ul li.second-level a')*/.click(function() {
 		$('.sidebar-menu li').removeClass('selected');
 		$(this).closest('li').addClass('selected');	
-		var checkElement = $(this).next();
+		var checkElement = $(this).parents('a').next();
 			if((checkElement.is('ul.second-level')) && (checkElement.is(':visible'))) {
 				$(this).closest('li').removeClass('selected');
 				checkElement.slideUp('fast');

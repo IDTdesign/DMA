@@ -541,8 +541,9 @@ i.danger{color: #E85344}
 	        transform: rotate(0);	
 }
 .sidebar-menu .first-level .menu-item .i-right {
-	margin: 3px 0 0 0;
+	margin: 0;
 	float: right;
+	padding: 3px 5px;
 }
 .sidebar-menu .first-level .menu-item.yellow.i-right {color: #EBC85E;}
 .sidebar-menu .first-level .menu-item .menu-item:hover {text-decoration: none;}
