@@ -282,6 +282,17 @@ $(document).ready(function(){
 	});
 
 	//SIDEBAR MENU
+	$(".sidebar-menu li.first-level.active").addClass('selected');
+	$(".sidebar-menu li.first-level.active ul").slideDown('fast');
+	$(".sidebar-menu li.second-level.active").parents('li').addClass('active selected');
+	$(".sidebar-menu li.second-level.active").parents('ul.second-level').slideDown('fast');
+	/*$(".sidebar-menu .first-level.active .menu-item .fa-angle-double-down.i-right").css({
+		'-webkit-transform': 'rotate(0deg)',
+		   '-moz-transform': 'rotate(0deg)',
+		    '-ms-transform': 'rotate(0deg)',
+			 '-o-transform': 'rotate(0deg)',
+			    'transform': 'rotate(0deg)',
+	});*/
 	$('.sidebar-menu ul li.first-level a .fa-angle-double-down')/*.not('.sidebar-menu ul li.second-level a')*/.click(function() {
 		$('.sidebar-menu li').removeClass('selected');
 		$(this).closest('li').addClass('selected');	

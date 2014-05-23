@@ -21,7 +21,7 @@
 											<i class="fa fa-search"></i>
 										</form>
 									</li>								
-									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers/general_info') %>"><i class="fa fa-angle-right"></i> General Info</a></li>
+									<li class="second-level <%- @isActive('/retailers/general_info') %>"><a class="menu-item" href="<%= @getUrl('/retailers/general_info') %>"><i class="fa fa-angle-right"></i> General Info</a></li>
 									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers/bill_pay') %>"><i class="fa fa-angle-right"></i> Bill Pay</a></li>
 									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers/products') %>"><i class="fa fa-angle-right"></i> Products</a></li>
 									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers/allowed_ips') %>"><i class="fa fa-angle-right"></i> Allowed IPs</a></li>
