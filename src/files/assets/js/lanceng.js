@@ -151,6 +151,30 @@ jQuery(function(){
 		reportObjectsGrid.setGridWidth($(".page-heading").width());
 	};
 
+	var popTimes = 0;
+
+	function SidebarPopover(){
+		if($("html").width() < 991 && popTimes != 1){
+			$("body").addClass('sidebar-is-closed').removeClass('sidebar-is-opened');
+			$(".show-sidebar").attr({
+				'data-container': 'body',
+				'data-toggle': 'popover',
+				'data-placement': 'bottom',
+				'data-content': 'Navigation is hidden. Please click this button to view menu.',
+				'data-trigger': 'manual',
+			});
+			setTimeout(function() {
+				$(".show-sidebar").popover('show');
+			}, 1500);
+			setTimeout(function() {
+				$(".show-sidebar").popover('hide');
+			}, 5500);
+			popTimes = 1;
+			$(".first-level").attr('data-toggle', 'tooltip');
+		}
+	}
+	SidebarPopover();
+
 	function slimScrollResize(){
 		$('.slimscroller').slimscroll({
 		height: 'auto',
@@ -165,9 +189,10 @@ jQuery(function(){
 	var resizeTimer;
 
 	$(window).bind('resize', function () {
-	clearTimeout(resizeTimer);
-	resizeTimer = setTimeout(resizeGrids, 60);
-	resizeTimer = setTimeout(slimScrollResize, 60);
+		clearTimeout(resizeTimer);
+		setTimeout(SidebarPopover, 60);
+		resizeTimer = setTimeout(resizeGrids, 60);
+		resizeTimer = setTimeout(slimScrollResize, 60);
 	});
 	$(".ui-search-input input[type=text]").addClass('form-control input-sm');
 	$(".ui-search-input input[type=text]").css({
@@ -252,10 +277,10 @@ $(document).ready(function(){
 	//RESPONSIVE SIDEBAR
 	$("body").on('click', 'button.show-sidebar', function() {
 		$("body").toggleClass("sidebar-is-closed sidebar-is-opened");
-		$(".overlay").toggleClass("none");
+		//$(".overlay").toggleClass("none");
 		setTimeout(resizeGrids, 400);
 		$(".sidebar-menu ul ul:visible").slideUp('fast');
-		if((!$(".first-level").attr('data-toggle')) && ($(".none").length > 0)){
+		if((!$(".first-level").attr('data-toggle'))/* && ($(".none").length > 0)*/){
 			$(".first-level").attr('data-toggle', 'tooltip');
 		} else {
 			$(".first-level").removeAttr('data-toggle');
@@ -274,12 +299,12 @@ $(document).ready(function(){
 		$(this).attr('title', $.trim(liTitle));
 	});
 
-	//HIDE SIDEBAR ONCLICK
+	/*/HIDE SIDEBAR ONCLICK
 	$("body").prepend('<div class="overlay"></div>');
 	$(".overlay").click(function() {
 		$("body").removeClass("sidebar-is-opened").addClass("sidebar-is-closed");
 		$(".overlay").addClass('none');
-	});
+	});*/
 
 	//SIDEBAR MENU
 	$(".sidebar-menu li.first-level.active").addClass('selected');
