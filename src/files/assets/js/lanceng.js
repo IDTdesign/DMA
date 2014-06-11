@@ -1,9 +1,10 @@
 // JQUERY JQGRID
 // =============
+var cog = '<button id="pop" type="button" class="btn btn-default btn-xs" role="button"><i class="fa fa-cog"></i></button>'
 jQuery(function(){
 	var lastsel;
 	var myData = [
-        {product: 'lorem', com_type:'transfers',  dis_com:'22', ret_com_min:'15', ret_com:'2.5667', ret_com_max: '1.6'},
+        {product: 'lorem', com_type:'transfers',  dis_com:'22', ret_com_min:'15', ret_com:'2.5667', ret_com_max: '1.6', actions: cog},
         {product: 'duis', com_type:'transfers',  dis_com:'11', ret_com_min:'10', ret_com:'12.5833', ret_com_max: '12.65'},
         {product: 'irure', com_type:'transfers',  dis_com:'14', ret_com_min:'11', ret_com:'42.5333', ret_com_max: '1.5833'},
         {product: 'amet', com_type:'transfers',  dis_com:'21', ret_com_min:'20', ret_com:'5.5667', ret_com_max: '3.4833'},
@@ -31,7 +32,7 @@ jQuery(function(){
            ]
 	jQuery('#list').jqGrid({
 	    datatype: 'local',
-        colNames:['Product','Comission Type','Distributor Comission', 'Retailers Comission (Min)','Retailers Comission','Retailers Comission (MAX)'],
+        colNames:['Product','Comission Type','Distributor Comission', 'Retailers Comission (Min)','Retailers Comission','Retailers Comission (MAX)', 'Actions'],
         colModel:[
             {name:'product', index:'product', editable: true},
             {name:'com_type', index:'com_type', editable: true, edittype: 'select', editoptions: {value: "tr: transfers; rd: residuals; rt: resitrans"}},
@@ -39,6 +40,7 @@ jQuery(function(){
             {name:'ret_com_min', index:'ret_com_min', editable: true},
             {name:'ret_com', index:'ret_com', editable: true, sorttype: 'float'},
             {name:'ret_com_max', index:'ret_com_max', editable: true, sorttype: 'float'},
+            {name:'actions', index:'actions', editable: false, sortable: false, search: false},
                    ],
         pager: "#pager",
         hidegrid: false,
@@ -59,6 +61,13 @@ jQuery(function(){
 		gridComplete: function(){
 			$("#list tbody .ui-row-ltr td:nth-child(6)").digitCapacity('.');
 			$("#list tbody .ui-row-ltr td:nth-child(7)").digitCapacity('.');
+			$(".ui-jqgrid tr.jqgrow td:has('#pop')").css('overflow', 'visible');
+			$("#pop").popover({
+				html: true,
+				content: '<ul><li><a href="#fake">General Info</a></li><li><a href="#fake">Bank Info</a></li><li><a href="#fake">Manage Comission</a></li><li><a href="#fake">Manage Products</a></li><li><a href="#fake">Manage Fees</a></li></ul>',
+				title: 'Distributor ID',
+				placement: 'left'
+			});
 		},
 		ondblClickRow: function(id){
 			jQuery("#list tbody tr#"+id+" td:has('span')").each(function() {
@@ -167,7 +176,7 @@ jQuery(function(){
 				$(".show-sidebar").popover('show');
 			}, 1500);
 			setTimeout(function() {
-				$(".show-sidebar").popover('hide');
+				//$(".show-sidebar").popover('hide');
 			}, 5500);
 			popTimes = 1;
 			$(".first-level").attr('data-toggle', 'tooltip');
