@@ -1,12 +1,17 @@
 // JQUERY JQGRID
 // =============
-var cog = '<button id="pop" type="button" class="btn btn-default btn-xs" role="button"><i class="fa fa-cog"></i></button>'
+var cog = '<button id="pop" type="button" class="btn btn-default btn-xs" role="button"><i class="fa fa-cog"></i></button>';
+var editBtn = '<button id="edit-btn" type="button" class="btn btn-default btn-xs" role="button"><i class="fa fa-pencil"></i></button>';
+var enRestore = '<button id="restore" type="button" class="btn btn-default btn-xs" role="button"><i class="fa fa-mail-reply"></i></button>';
+var disRestore = '<button disabled id="restore" type="button" class="btn btn-default btn-xs" role="button"><i class="fa fa-mail-reply"></i></button>';
+var enGroup = '<div class="btn-group btn-group-xs">'+editBtn+enRestore+'</div>'
+var disGroup = '<div class="btn-group btn-group-xs">'+editBtn+disRestore+'</div>'
 jQuery(function(){
 	var lastsel;
 	var myData = [
         {product: 'lorem', com_type:'transfers',  dis_com:'22', ret_com_min:'15', ret_com:'2.5667', ret_com_max: '1.6', actions: cog},
-        {product: 'duis', com_type:'transfers',  dis_com:'11', ret_com_min:'10', ret_com:'12.5833', ret_com_max: '12.65'},
-        {product: 'irure', com_type:'transfers',  dis_com:'14', ret_com_min:'11', ret_com:'42.5333', ret_com_max: '1.5833'},
+        {product: 'duis', com_type:'transfers',  dis_com:'11', ret_com_min:'10', ret_com:'12.5833', ret_com_max: '12.65', actions: enGroup},
+        {product: 'irure', com_type:'transfers',  dis_com:'14', ret_com_min:'11', ret_com:'42.5333', ret_com_max: '1.5833', actions: disGroup},
         {product: 'amet', com_type:'transfers',  dis_com:'21', ret_com_min:'20', ret_com:'5.5667', ret_com_max: '3.4833'},
         {product: 'consectetur', com_type:'transfers',  dis_com:'21', ret_com_min:'14', ret_com:'42.55', ret_com_max: '23.5167'},
         {product: 'elit', com_type:'transfers',  dis_com:'23', ret_com_min:'12', ret_com:'142.6', ret_com_max: '1.5333'},
@@ -36,10 +41,10 @@ jQuery(function(){
         colModel:[
             {name:'product', index:'product', editable: true},
             {name:'com_type', index:'com_type', editable: true, edittype: 'select', editoptions: {value: "tr: transfers; rd: residuals; rt: resitrans"}},
-            {name:'dis_com', index:'dis_com', editable: true},
-            {name:'ret_com_min', index:'ret_com_min', editable: true},
+            {name:'dis_com', index:'dis_com', editable: true, cellattr: function(val){return 'data-oldval="'+(val+2)+'"'}},
+            {name:'ret_com_min', index:'ret_com_min', editable: true, cellattr: function(val){return 'data-oldval="'+(val+7)+'"'}},
             {name:'ret_com', index:'ret_com', editable: true, sorttype: 'float'},
-            {name:'ret_com_max', index:'ret_com_max', editable: true, sorttype: 'float'},
+            {name:'ret_com_max', index:'ret_com_max', editable: true, sorttype: 'float', cellattr: function(val){return 'data-oldval="'+(val+4)+'"'}},
             {name:'actions', index:'actions', editable: false, sortable: false, search: false},
                    ],
         pager: "#pager",
@@ -68,6 +73,44 @@ jQuery(function(){
 				title: 'Distributor ID',
 				placement: 'left'
 			});
+			/*$("tr#2 td").hover(function() {
+				
+				if($(this).is("[data-oldval]")){
+					$(this).wrapInner('<span></span>');
+					$(this).children('span').popover({
+						title: 'Defval',
+						placement: 'top',
+						selector: 'body',
+						trigger: 'manual',
+						content: $(this).attr("data-oldval"),
+					}).popover('show');
+				}
+			}, function(){
+				if($(this).is("[data-oldval]")){
+					$(this).children('span').popover('hide');
+					var currVal = $(this).children('span').text();
+					$(this).text(currVal);
+
+				}
+			});*/
+			$("tr#2").hover(function(){
+				$(this).children('[data-oldval]').each(function() {
+					$(this).wrapInner('<span></span>');
+					$(this).children('span').popover({
+						placement: 'top',
+						selector: 'body',
+						trigger: 'manual',
+						html: 'true',
+						content: 'Default value: <strong>'+$(this).attr("data-oldval")+'</strong>',
+					}).popover('show');
+				});
+			}, function(){
+				$(this).children('span').popover('hide');
+				$(this).children('[data-oldval]').each(function() {
+					var currVal = $(this).children('span').text();
+					$(this).text(currVal);
+				});
+			})
 		},
 		ondblClickRow: function(id){
 			jQuery("#list tbody tr#"+id+" td:has('span')").each(function() {
