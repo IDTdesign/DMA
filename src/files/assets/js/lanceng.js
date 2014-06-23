@@ -95,7 +95,7 @@ jQuery(function(){
 			});*/
 			$("tr#2").hover(function(){
 				$(this).children('[data-oldval]').each(function() {
-					$(this).wrapInner('<span></span>');
+					$(this).wrapInner('<span class="oldval"></span>');
 					$(this).children('span').popover({
 						placement: 'top',
 						selector: 'body',
@@ -110,7 +110,7 @@ jQuery(function(){
 					var currVal = $(this).children('span').text();
 					$(this).text(currVal);
 				});
-			})
+			});
 		},
 		ondblClickRow: function(id){
 			jQuery("#list tbody tr#"+id+" td:has('span')").each(function() {
