@@ -6,13 +6,14 @@ var enRestore = '<button id="restore" type="button" class="btn btn-default btn-x
 var disRestore = '<button disabled id="restore" type="button" class="btn btn-default btn-xs" role="button"><i class="fa fa-mail-reply"></i></button>';
 var enGroup = '<div class="btn-group btn-group-xs">'+editBtn+enRestore+'</div>'
 var disGroup = '<div class="btn-group btn-group-xs">'+editBtn+disRestore+'</div>'
+var longGroup = '<div class="btn-group btn-group-xs">'+editBtn+enRestore+editBtn+'</div>'
 jQuery(function(){
 	var lastsel;
 	var myData = [
         {product: 'lorem', com_type:'transfers',  dis_com:'22', ret_com_min:'15', ret_com:'2.5667', ret_com_max: '1.6', actions: cog},
         {product: 'duis', com_type:'transfers',  dis_com:'11', ret_com_min:'10', ret_com:'12.5833', ret_com_max: '12.65', actions: enGroup},
         {product: 'irure', com_type:'transfers',  dis_com:'14', ret_com_min:'11', ret_com:'42.5333', ret_com_max: '1.5833', actions: disGroup},
-        {product: 'amet', com_type:'transfers',  dis_com:'21', ret_com_min:'20', ret_com:'5.5667', ret_com_max: '3.4833'},
+        {product: 'amet', com_type:'transfers',  dis_com:'21', ret_com_min:'20', ret_com:'5.5667', ret_com_max: '3.4833', actions: longGroup},
         {product: 'consectetur', com_type:'transfers',  dis_com:'21', ret_com_min:'14', ret_com:'42.55', ret_com_max: '23.5167'},
         {product: 'elit', com_type:'transfers',  dis_com:'23', ret_com_min:'12', ret_com:'142.6', ret_com_max: '1.5333'},
         {product: 'nisi', com_type:'transfers',  dis_com:'20', ret_com_min:'2', ret_com:'2.55', ret_com_max: '17.5333'},

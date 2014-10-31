@@ -3039,3 +3039,47 @@ input[type=checkbox].cbox:checked + label.choise{
 .ui-jqgrid-btable td[data-oldval] .popover.top>.arrow{
 	border-color: transparent;
 }
+/************ACTION BUTTONS STYLE********************/
+.btn-group-xs, td[aria-describedby=list_actions] .btn{
+	position: relative;
+}
+.btn-group-xs:before{
+    background-color: #F3F3F3;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    left: -5px;
+    top: -5px;
+    z-index: -1;
+    border-radius: 3px;
+    box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+    box-sizing: content-box;
+}
+.ui-jqgrid-bdiv .btn-group .btn, td[aria-describedby=list_actions] .btn{
+	-webkit-box-shadow: 0 2px 0 #C4B3B3;
+	-moz-box-shadow: 0 2px 0 #C4B3B3;
+	box-shadow: 0 2px 0 #C4B3B3;
+}
+.ui-jqgrid-bdiv .btn-group .btn:active, .ui-jqgrid-bdiv .btn-group .btn:focus{
+	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+	box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+	top: 2px;
+}
+.ui-jqgrid-bdiv .btn-group .btn:first-child:active, .ui-jqgrid-bdiv .btn-group .btn:first-child:focus{
+	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+	box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+}
+.ui-jqgrid-bdiv .btn-group .btn:last-child:active, .ui-jqgrid-bdiv .btn-group .btn:last-child:focus{
+	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+	box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+}
+td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions] .btn:focus{
+	top: 2px;
+	box-shadow: none;
+}
