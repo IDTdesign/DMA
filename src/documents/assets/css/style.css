@@ -468,7 +468,7 @@ i.danger{color: #E85344}
 	padding-right: 25px;
 	font-size: 12px;
 	color: #909090;
-	-webkit-transition:All 0.25s ease;
+	-webkit-transition:All 1.25s ease;
 	-moz-transition:All 0.25s ease;
 	-o-transition:All 0.25s ease;
 }
@@ -3044,42 +3044,51 @@ input[type=checkbox].cbox:checked + label.choise{
 	position: relative;
 }
 .btn-group-xs:before{
-    background-color: #F3F3F3;
     content: "";
     display: block;
     position: absolute;
     width: 100%;
     height: 100%;
-    padding: 5px;
-    left: -5px;
-    top: -5px;
+    padding: 0;
+    left: 0px;
+    top: 0px;
     z-index: -1;
     border-radius: 3px;
-    box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+    box-shadow:  0px 3px 1px #8A8A8A;
     box-sizing: content-box;
 }
 .ui-jqgrid-bdiv .btn-group .btn, td[aria-describedby=list_actions] .btn{
-	-webkit-box-shadow: 0 2px 0 #C4B3B3;
-	-moz-box-shadow: 0 2px 0 #C4B3B3;
-	box-shadow: 0 2px 0 #C4B3B3;
+	-webkit-box-shadow: 0 2px 0 #E0CBCB, 0px 3px 1px #8A8A8A;
+	-moz-box-shadow: 0 2px 0 #E0CBCB, 0px 3px 1px #8A8A8A;
+	box-shadow: 0 2px 0 #E0CBCB, 0px 3px 1px #8A8A8A;
+}
+.ui-jqgrid-bdiv .btn-group .btn, td[aria-describedby=list_actions] .btn-group .btn{
+	-webkit-box-shadow: 0 2px 0 #E0CBCB;
+	-moz-box-shadow: 0 2px 0 #E0CBCB;
+	box-shadow: 0 2px 0 #E0CBCB;
+}
+.ui-jqgrid-bdiv .btn-group .btn, td[aria-describedby=list_actions] .btn-group .btn[disabled]{
+	-webkit-box-shadow: 0 2px 0 #FFF;
+	-moz-box-shadow: 0 2px 0 #FFF;
+	box-shadow: 0 2px 0 #FFF;
 }
 .ui-jqgrid-bdiv .btn-group .btn:active, .ui-jqgrid-bdiv .btn-group .btn:focus{
-	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
-	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
-	box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
-	top: 2px;
+	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset, 0px 1px 1px 0px #fbf9ee;
+	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset, 0px 1px 1px 0px #fbf9ee;
+	box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset, 0px 1px 1px 0px #fbf9ee;
+	top: 3px;
 }
 .ui-jqgrid-bdiv .btn-group .btn:first-child:active, .ui-jqgrid-bdiv .btn-group .btn:first-child:focus{
-	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
-	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
-	box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset, -2px 1px 1px 0px #fbf9ee;
+	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset, -2px 1px 1px 0px #fbf9ee;
+	box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset, -2px 1px 1px 0px #fbf9ee;
 }
 .ui-jqgrid-bdiv .btn-group .btn:last-child:active, .ui-jqgrid-bdiv .btn-group .btn:last-child:focus{
-	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset;
-	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset;
-	box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, 2px 1px 1px 0px #fbf9ee;
+	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, 2px 1px 1px 0px #fbf9ee;
+	box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, 2px 1px 1px 0px #fbf9ee;
 }
 td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions] .btn:focus{
-	top: 2px;
-	box-shadow: none;
+	top: 3px;
+	box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 0 0 5px -1px rgba(0, 0, 0, .2) inset;
 }

@@ -74,6 +74,9 @@ jQuery(function(){
 				title: 'Distributor ID',
 				placement: 'left'
 			});
+			$('#pop').on('hide.bs.popover', function () {
+				$(this).blur();
+			})			
 			/*$("tr#2 td").hover(function() {
 				
 				if($(this).is("[data-oldval]")){
