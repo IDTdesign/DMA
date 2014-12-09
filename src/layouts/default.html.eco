@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<title>DMA / <%= @document.title %></title>
+	<title><%= @document.title %> - BMA</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,7 +50,7 @@
 		<!-- Your logo goes here -->
 		<div class="logo-brand header rows">
 			<div class="logo">
-				<h1 class="logo-inner"><a href="<%= @getUrl('/') %>"><img src="<%= @getUrl('/assets/img/logo.png') %>" alt="Logo"><span class="logo-txt">DMA</span></a></h1>
+				<h1 class="logo-inner"><a href="<%= @getUrl('/') %>"><img src="<%= @getUrl('/assets/img/logo.png') %>" alt="Logo"><span class="logo-txt">BMA</span></a></h1>
 			</div>
 		</div><!-- End div .header .sidebar .rows -->
 	
