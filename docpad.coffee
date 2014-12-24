@@ -15,7 +15,6 @@ docpadConfig = {
 			# The website's styles
 			styles: [
 				'/assets/css/bootstrap.min.css'
-				'/assets/css/style.css'
 				'/assets/css/style-responsive.css'
 				'/assets/css/animate.css'
 				'/assets/third/font-awesome/css/font-awesome.min.css'
@@ -29,6 +28,7 @@ docpadConfig = {
 				'/assets/third/datepicker/css/datepicker.css'
 				'/assets/third/jqgrid/css/ui.jqgrid.css'
 				'/assets/third/jqgrid/css/smoothness/jquery-ui-1.10.4.custom.css'
+				'/assets/css/style.css'
 			]
 
 			# The website's scripts

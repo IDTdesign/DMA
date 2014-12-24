@@ -257,11 +257,59 @@ jQuery(function(){
 	$(".ui-search-toolbar th div:has(table)").css('padding-left', '0');
 	$(".ui-search-clear a").html('&times');
 });
+//#####################################	TREEGRID ##########################################################################################################################################
+var treeData = [{hierarchy: "Zone changes", type: "", level:"0", id:"1", parent:"null", isLeaf:false, expanded:true, loaded:true}, 
+				{hierarchy: "Customer", type:"site", level:"1", id:"5", parent:"1", isLeaf:false, expanded:false, loaded:true},
+				{hierarchy: "Distributor", type:"site", level:"1", id:"6", parent:"1", isLeaf:false, expanded:false, loaded:true},
+				{hierarchy: "Retailer", type:"site", level:"1", id:"7", parent:"1", isLeaf:false, expanded:false, loaded:true},
+				{hierarchy: "Resource changes", type: "", level:"0", id:"2", parent:"null", isLeaf:false, expanded:true, loaded:true},
+				{hierarchy: "PDF", type: "res-type", level:"1", id:"3", parent:"2", isLeaf:false, expanded:true, loaded:true},
+				{hierarchy: "Privacy policy", type:"resource", level:"2", id:"4", parent:"3", isLeaf:true, expanded:false, loaded:true}];
+var grid = jQuery('#change-tree');
+jQuery('#change-tree').jqGrid({
+    datatype: 'jsonstring',
+    colNames: ['Hierarchy', 'Type'],
+    colModel:[
+        {name:'hierarchy', index:'hierarchy', sortable:'false', width:'300', fixed:'true'},
+        {name:'type', index:'type', sortable:'false', width:'100', fixed:'true'},        
+               ],
+    height: "auto",
+    datastr: treeData,
+    treedatatype: "json",
+    treeGrid: true,
+    gridview: true,
+    treeGridModel: 'adjacency',
+    ExpandColumn: 'hierarchy',
+    jsonReader: {
+                    repeatitems: false,
+                    root: function (obj) { return obj; },
+                    page: function (obj) { return 1; },
+                    total: function (obj) { return 1; },
+                    records: function (obj) { return obj.length; }
+                },
+});
+
+function getLiHeight(){
+	var lis = $(".res-grid li");
+	var maxLiHeight = 0;
+	if(lis.length > 0){
+		for(var i = 0; i < lis.length; i++){
+			if (lis[i].offsetHeight > maxLiHeight) {
+				maxLiHeight = lis[i].offsetHeight;
+			};
+							console.log(maxLiHeight);
+
+		}
+		return maxLiHeight;
+	}
+}
 $(document).ready(function(){
 	
-	$(window).load(function() { $("#loading").fadeOut("slow"); })
+	$(window).load(function() { $("#loading").fadeOut("slow", function(){getLiHeight()});})
 	
-	
+	$(".res-grid li").outerHeight(getLiHeight());
+
+
 	//SLIM SCROLL
 	$('.slimscroller').slimscroll({
 		height: 'auto',
@@ -323,7 +371,13 @@ $(document).ready(function(){
 		selector: "[data-toggle=tooltip]",
 		container: "body",
 		placement: "right",
-	})
+	});
+
+	$('.res-grid').tooltip({
+		selector: "[data-toggle=tooltip]",
+		container: "body",
+		placement: "top",
+	});
 
 	function resizeGrids() {
 	var reportObjectsGrid = $("#list");

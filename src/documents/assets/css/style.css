@@ -3092,3 +3092,112 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
 	top: 3px;
 	box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 0 0 5px -1px rgba(0, 0, 0, .2) inset;
 }
+.form-inline form {
+	display: inline-block;
+	margin-right: 10px;
+}
+.form-inline form .input-group{
+	vertical-align: middle;
+	display: inline-table;
+}
+.form-inline form .input-group .input-group-btn{
+	width: auto;
+}
+.panel.tree-panel {
+	float: left;
+	padding: 0;
+}
+.panel.panel-square {
+	border-radius: 0;
+}
+.cell-wrapperleaf{
+	font-weight: bold;
+}
+#change-tree .ui-state-highlight td{
+	background: #fff;
+}
+#change-tree .tree-plus.treeclick, #change-tree .tree-minus.treeclick, #change-tree .tree-leaf.treeclick{
+	background: none;
+	text-indent: 0;
+	overflow: visible;
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	color: #eea236;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+#change-tree .tree-plus.treeclick:before {
+	content: "\f114";
+}
+#change-tree .tree-minus.treeclick:before {
+	content: "\f115";
+}
+#change-tree .tree-leaf.treeclick:before {
+	content: "\f016";
+}
+#change-tree .tree-leaf.treeclick{
+	cursor: default;
+	color: #46b8da;
+}
+#change-tree .tree-plus.treeclick, #change-tree .tree-minus.treeclick{
+	cursor: pointer;
+}
+#change-tree td[title$=changes]{
+	text-transform: uppercase;
+	background: #EBEBEB;
+}
+#change-tree td[title$=changes] + td{
+	background: #EBEBEB;
+}
+.changes{
+	margin-left: 402px;
+}
+.changes .box-info{
+	padding-top: 0;
+}
+.changes h5{
+	float: left;
+	margin-right: 50px;
+}
+.changes .data-table-toolbar{
+	margin-top: 0;
+	border-bottom: 1px solid #ddd;
+}
+/********************** RESOURCES GRID *******************************/
+.res-grid{
+	padding: 0;
+}
+.res-grid li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px 20px 40px;
+	border: 1px solid #DDD;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	width: 200px;
+	position: relative;
+}
+.res-grid .lang-code, .res-grid .thumb, .res-grid .asset-info{
+	margin-bottom: 10px;
+}
+.res-grid .additional-btn{
+	bottom: 0;
+	left: 0;
+	top: auto;
+	width: 198px;
+	height: 40px;
+	background: #f5f5f5;
+	border-top: 1px solid #DDD;
+	padding: 9px 0 0;
+	z-index: 1;
+	font-size: 15px;
+}
+.res-grid .additional-btn a.additional-icon:first-child{
+	margin-left: 0;
+}
+.res-grid .additional-btn a.additional-icon{
+	padding: 2px;
+}

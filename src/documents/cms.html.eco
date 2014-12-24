@@ -1,0 +1,179 @@
+---
+layout: default
+title: CMS
+---
+<!-- Page header -->
+<div class="page-heading animated fadeInDownBig">
+	<h1>Changesets</h1>
+</div>
+<!-- End page header -->
+<div class="box-info">
+	<h2>Changeset #65421</h2>
+	<!-- CHANGESET ACTIONS -->
+	<div class="form-inline" style="position: absolute;right: 0;top: 11px;">
+		<form action="/us/Changeset/PreviewChangeset/ed86f2c6-066a-416c-9a85-e40fbf49242f" method="post">                
+			<div class="input-group">
+	            <span class="input-group-btn">
+	                <button type="submit" class="btn btn-info btn-sm" id="btnPreviewChangeset">Preview</button>
+	            </span>
+	            <select class="form-control input-sm" id="ClusterName" name="ClusterName"></select>
+	        </div>
+		</form>        
+		<form action="/us/Changeset/BuildActiveset/ed86f2c6-066a-416c-9a85-e40fbf49242f" method="post">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-info btn-sm" id="btnBuildActiveSet">Build ActiveSet</button>
+                </span>
+                <select class="form-control input-sm" id="ClusterName" name="ClusterName"></select>
+            </div>
+		</form>
+		<form action="/us/Changeset/CancelChangeset/ed86f2c6-066a-416c-9a85-e40fbf49242f" method="post">
+            <div class="button-center">
+                <button type="submit" class="btn btn-default btn-sm" id="btnCancelChangeset">Cancel</button>
+            </div>
+		</form>
+    </div><!--END CHANGESET ACTIONS -->
+	<!-- TREEGRID PANEL -->
+	<div class="panel panel-default panel-square tree-panel">
+		<table id="change-tree"></table>
+	</div>	<!-- END TREEGRID PANEL -->
+	<div class="changes">
+		<div class="box-info col-lg-12">
+			<div class="data-table-toolbar">
+				<div class="row">
+					<h5>PDF > Privacy policy</h5>
+					<div class="btn-group">
+					  <button type="button" class="btn btn-primary dropdown-toggle btn-sm" data-toggle="dropdown">
+						<i class="fa fa-plus"></i> Add resource change
+					  </button>
+					  <ul class="dropdown-menu pull-left" role="menu">
+						<li><a href="#fakelink">English</a></li>
+						<li><a href="#fakelink">Spanish</a></li>
+						<li><a href="#fakelink">Spanish in US</a></li>
+					  </ul>
+					</div>
+				</div><!-- End div .row -->
+			</div>
+			<div class="alert alert-info alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				Please add resource change
+			</div>
+			<div class="box-info resources">
+				<div class="row">
+					<ul class="res-grid">
+						<li>
+							<span class="lang-code col-sm-12 text-center">en-US</span>
+							<span class="thumb col-sm-12 text-center"><img width="100" src="/assets/img/thumb-pdf.png" alt="PDF-file"/></span>
+							<span class="asset-info col-sm-12 text-center">Asset not assigned. Please View Gallery.</span>
+							<span class="col-sm-12 actions full additional-btn text-center">
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Show info"><i class="fa fa-info-circle"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="View gallery"><i class="fa fa-picture-o"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Edit attributes"><i class="fa  fa-pencil-square"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i></a>
+							</span>
+						</li>
+						<li>
+							<span class="lang-code col-sm-12 text-center">es-ES</span>
+							<span class="thumb col-sm-12 text-center"><img width="100" src="/assets/img/thumb-css.png" alt="PDF-file"/></span>
+							<span class="asset-info col-sm-12 text-center">Privacy policy.css</span>
+							<span class="col-sm-12 actions full additional-btn text-center">
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Show info"><i class="fa fa-info-circle"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="View gallery"><i class="fa fa-picture-o"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Edit attributes"><i class="fa  fa-pencil-square"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i></a>
+							</span>
+						</li>
+						<li>
+							<span class="lang-code col-sm-12 text-center">es-US</span>
+							<span class="thumb col-sm-12 text-center"><img width="100" src="/assets/img/thumb-image.png" alt="PDF-file"/></span>
+							<span class="asset-info col-sm-12 text-center">Asset not assigned. Please View Gallery.</span>
+							<span class="col-sm-12 actions full additional-btn text-center">
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Show info"><i class="fa fa-info-circle"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="View gallery"><i class="fa fa-picture-o"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Edit attributes"><i class="fa  fa-pencil-square"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i></a>
+							</span>
+						</li>
+						<li>
+							<span class="lang-code col-sm-12 text-center">es-ES</span>
+							<span class="thumb col-sm-12 text-center"><img width="100" src="/assets/img/thumb-css.png" alt="PDF-file"/></span>
+							<span class="asset-info col-sm-12 text-center">Privacy policy.css</span>
+							<span class="col-sm-12 actions full additional-btn text-center">
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Show info"><i class="fa fa-info-circle"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="View gallery"><i class="fa fa-picture-o"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Edit attributes"><i class="fa  fa-pencil-square"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i></a>
+							</span>
+						</li>
+						<li>
+							<span class="lang-code col-sm-12 text-center">es-US</span>
+							<span class="thumb col-sm-12 text-center"><img width="100" src="/assets/img/thumb-image.png" alt="PDF-file"/></span>
+							<span class="asset-info col-sm-12 text-center">Asset not assigned. Please View Gallery.</span>
+							<span class="col-sm-12 actions full additional-btn text-center">
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Show info"><i class="fa fa-info-circle"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="View gallery"><i class="fa fa-picture-o"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Edit attributes"><i class="fa  fa-pencil-square"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i></a>
+							</span>
+						</li>
+						<li>
+							<span class="lang-code col-sm-12 text-center">en-US</span>
+							<span class="thumb col-sm-12 text-center"><img width="100" src="/assets/img/thumb-pdf.png" alt="PDF-file"/></span>
+							<span class="asset-info col-sm-12 text-center">Asset not assigned. Please View Gallery.</span>
+							<span class="col-sm-12 actions full additional-btn text-center">
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Show info"><i class="fa fa-info-circle"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="View gallery"><i class="fa fa-picture-o"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Edit attributes"><i class="fa  fa-pencil-square"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i></a>
+							</span>
+						</li>
+						<li>
+							<span class="lang-code col-sm-12 text-center">es-ES</span>
+							<span class="thumb col-sm-12 text-center"><img width="100" src="/assets/img/thumb-css.png" alt="PDF-file"/></span>
+							<span class="asset-info col-sm-12 text-center">Privacy policy.css</span>
+							<span class="col-sm-12 actions full additional-btn text-center">
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Show info"><i class="fa fa-info-circle"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="View gallery"><i class="fa fa-picture-o"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Edit attributes"><i class="fa  fa-pencil-square"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i></a>
+							</span>
+						</li>
+						<li>
+							<span class="lang-code col-sm-12 text-center">en-US</span>
+							<span class="thumb col-sm-12 text-center"><img width="100" src="/assets/img/thumb-pdf.png" alt="PDF-file"/></span>
+							<span class="asset-info col-sm-12 text-center">Asset not assigned. Please View Gallery.</span>
+							<span class="col-sm-12 actions full additional-btn text-center">
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Show info"><i class="fa fa-info-circle"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="View gallery"><i class="fa fa-picture-o"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Edit attributes"><i class="fa  fa-pencil-square"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i></a>
+							</span>
+						</li>
+						<li>
+							<span class="lang-code col-sm-12 text-center">es-US</span>
+							<span class="thumb col-sm-12 text-center"><img width="100" src="/assets/img/thumb-image.png" alt="PDF-file"/></span>
+							<span class="asset-info col-sm-12 text-center">Asset not assigned. Please View Gallery.</span>
+							<span class="col-sm-12 actions full additional-btn text-center">
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Show info"><i class="fa fa-info-circle"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="View gallery"><i class="fa fa-picture-o"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Edit attributes"><i class="fa  fa-pencil-square"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i></a>
+							</span>
+						</li>
+						<li>
+							<span class="lang-code col-sm-12 text-center">es-US</span>
+							<span class="thumb col-sm-12 text-center"><img width="100" src="/assets/img/thumb-image.png" alt="PDF-file"/></span>
+							<span class="asset-info col-sm-12 text-center">Asset not assigned. Please View Gallery.</span>
+							<span class="col-sm-12 actions full additional-btn text-center">
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Show info"><i class="fa fa-info-circle"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="View gallery"><i class="fa fa-picture-o"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Edit attributes"><i class="fa  fa-pencil-square"></i></a>
+								<a class="additional-icon" href="#fakelink" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i></a>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- end .box-info -->
+	</div>
+</div>
