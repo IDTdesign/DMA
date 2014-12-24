@@ -295,17 +295,20 @@ function getLiHeight(){
 	if(lis.length > 0){
 		for(var i = 0; i < lis.length; i++){
 			if (lis[i].offsetHeight > maxLiHeight) {
-				maxLiHeight = lis[i].offsetHeight;
+				if(lis[i].offsetHeight < 233){
+					maxLiHeight = lis[i].offsetHeight + 97;
+				} else {
+					maxLiHeight = lis[i].offsetHeight;
+				}
 			};
-							console.log(maxLiHeight);
-
+			console.log(maxLiHeight);
 		}
 		return maxLiHeight;
 	}
 }
 $(document).ready(function(){
 	
-	$(window).load(function() { $("#loading").fadeOut("slow", function(){getLiHeight()});})
+	$(window).load(function() { $("#loading").fadeOut("slow");})
 	
 	$(".res-grid li").outerHeight(getLiHeight());
 
