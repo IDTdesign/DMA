@@ -150,14 +150,14 @@ jQuery(function(){
 			}
         },
 		});
-	jQuery("#list").jqGrid('navGrid','#pager',{add: false, edit: false}, //options
+	jQuery("#list").jqGrid('navGrid','#pager',{add: false, edit: false, del:false, search:false, refresh: false}, //options
 		{reloadAfterSubmit:false}, // del options
 		{reloadAfterSubmit:false}, // del options
 		{reloadAfterSubmit:false} // del options
 	);
 	jQuery("#list").navButtonAdd('#pager',{
 	   title:"Add product", 
-	   caption: "",
+	   caption: "Add item",
 	   buttonicon:"ui-icon-plus", 
 	   onClickButton: function(){ 
 	   		var recCount = jQuery("#list").jqGrid('getGridParam', 'records');
@@ -186,7 +186,7 @@ jQuery(function(){
 	});
 	jQuery("#list").navButtonAdd('#pager',{
 	   title:"Remove product", 
-	   caption: "",
+	   caption: "Delete",
 	   buttonicon:"ui-icon-trash", 
 	   onClickButton: function(){ 
 	   		var selectedItems = jQuery("#list").jqGrid('getGridParam', 'selarrrow');
@@ -194,6 +194,12 @@ jQuery(function(){
 	   			jQuery("#list").delRowData(selectedItems[i]);
 	   		};
 	   }, 
+	   position:"last"
+	});	
+	jQuery("#list").navButtonAdd('#pager',{
+	   title:"Refresh", 
+	   caption: "Refresh",
+	   buttonicon:"ui-icon-refresh", 
 	   position:"last"
 	});
 	jQuery("#list").jqGrid('filterToolbar',{searchOperators : false});

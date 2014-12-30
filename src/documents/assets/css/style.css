@@ -3201,3 +3201,37 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
 .res-grid .additional-btn a.additional-icon{
 	padding: 2px;
 }
+.ui-jqgrid-pager #pager_left .ui-pg-button.ui-corner-all{
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #333;
+    text-decoration: none;
+    line-height: 100%;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin: 9px 5px 5px;
+    background-color: #ececec;
+    border: solid 1px #b8b8b9;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.1);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.1);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 2px;
+    height: 21px !important;
+    padding: 2px;
+}
+.ui-jqgrid-pager #pager_left .ui-pg-button.ui-corner-all:hover{
+	background-color: #f3f3f3;
+}
+.ui-jqgrid-pager #pager_left .ui-pg-button.ui-corner-all:focus{
+	box-shadow: none;
+}
+.ui-jqgrid-pager #pager_left .ui-pg-div{
+	padding: 2px 2px 2px 0;
+}
+.ui-jqgrid-pager #pager_left .ui-pg-div span.ui-icon{
+	margin-top: -3px;
+}
