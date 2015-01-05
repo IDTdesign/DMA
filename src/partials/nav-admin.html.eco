@@ -35,7 +35,11 @@
 							</li>
 							<li class="first-level"><a class="menu-item" href="<%= @getUrl('/consumers') %>"><i class="fa fa-users"></i> Consumers</a></li>
 							<li class="first-level"><a class="menu-item" href="<%= @getUrl('/products') %>"><i class="fa fa-suitcase"></i> Products</a></li>
-							<li class="first-level"><a class="menu-item" href="<%= @getUrl('/cms') %>"><i class="fa fa-book"></i> CMS</a></li>
+							<li class="first-level <%- @isActive('/cms/cms') %> <%- @document.cms %>"><a class="menu-item" href="<%= @getUrl('/cms/cms') %>"><i class="fa fa-book"></i><i class="fa fa-angle-double-down i-right"></i> CMS</a>
+								<ul class="second-level">
+									<li class="second-level <%- @isActive('/cms/cms-steps') %>"><a class="menu-item" href="<%= @getUrl('/cms/cms-steps') %>"><i class="fa fa-angle-right"></i> Steps</a></li>
+								</ul>
+							</li>
 							<li class="first-level"><a class="menu-item" href="<%= @getUrl('/history') %>"><i class="fa fa-archive"></i> Change History</a></li>
 							<li class="first-level"><a class="menu-item" href="<%= @getUrl('/reports') %>"><i class="fa fa-info-circle"></i> Reports</a></li>
 							<li class="first-level"><a class="menu-item" href="<%= @getUrl('/support') %>"><i class="fa fa-question-circle"></i> Support</a></li>
