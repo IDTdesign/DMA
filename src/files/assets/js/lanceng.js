@@ -354,7 +354,8 @@ csGrid.jqGrid({
 	   buttonicon:"fa fa-plus-circle", 
 	   position:"first",
    	   onClickButton: function(){ 
-	   		window.location.href = "../cms/cms-steps";
+	   		var nUrl = window.location.href.replace('changesets', '') + "cms-steps";
+	   		window.location.href = nUrl;
 	   }, 
 
 	});
