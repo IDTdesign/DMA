@@ -15,20 +15,38 @@ title: CMS
 		<section class="step" data-step-title="First step">
 			<div class="row">
 				<div class="col-sm-6">
-					<div class="form-group">
-						<label for="inputLorem">Lorem</label>
-						<input type="text" id="inputLorem" placeholder="Lorem" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="inputIpsum">Ipsum</label>
-						<input type="text" id="inputIpsum" placeholder="Ipsum" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="inputDolor">Dolor</label>
-						<input type="text" id="inputDolor" placeholder="Dolor" class="form-control">
-					</div>
-
-				</div><!-- End div. col-sm-6 -->
+					<table class="table gen-info">
+                        <tbody>
+                            <input data-val="true" data-val-number="The field Id must be a number." id="Id" name="Id" type="hidden" value="1">
+                            <input data-val="true" data-val-number="The field WalletHolderId must be a number." id="WalletHolderId" name="WalletHolderId" type="hidden" value="1">
+                            
+                            <tr>
+                                <th class="col-sm-3">Changeset ID:</th>
+                                <td>132</td>
+                            </tr>
+                            <tr>
+                                <th>Author:</th>
+                                <td>Mr. John Smith</td>
+                            </tr>
+                            <tr>
+                                <th>Description:</th>
+                                <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat</td>
+                            </tr>
+                            <tr>
+                                <th>Lorem:</th>
+                                <td>6455645321sdas</td>
+                            </tr>
+                            <tr>
+                                <th>Ipsum:</th>
+                                <td>Hohoho</td>
+                            </tr>
+                            <tr>
+                                <th>Dolor:</th>
+                                <td>Olololol</td>
+                            </tr>
+                        </tbody>
+                    </table>				
+                </div><!-- End div. col-sm-6 -->
 				<div class="col-sm-6">
 					<!-- Wizard notes -->
 					<div class="notes">

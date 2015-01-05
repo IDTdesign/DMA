@@ -3054,7 +3054,7 @@ input[type=checkbox].cbox:checked + label.choise{
     top: 0px;
     z-index: -1;
     border-radius: 3px;
-    box-shadow:  0px 3px 1px #8A8A8A;
+    box-shadow:  0px 2px 1px #8A8A8A;
     box-sizing: content-box;
 }
 .ui-jqgrid-bdiv .btn-group .btn, td[aria-describedby=list_actions] .btn{
@@ -3062,21 +3062,21 @@ input[type=checkbox].cbox:checked + label.choise{
 	-moz-box-shadow: 0 2px 0 #E0CBCB, 0px 3px 1px #8A8A8A;
 	box-shadow: 0 2px 0 #E0CBCB, 0px 3px 1px #8A8A8A;
 }
-.ui-jqgrid-bdiv .btn-group .btn, td[aria-describedby=list_actions] .btn-group .btn{
-	-webkit-box-shadow: 0 2px 0 #E0CBCB;
-	-moz-box-shadow: 0 2px 0 #E0CBCB;
-	box-shadow: 0 2px 0 #E0CBCB;
+.ui-jqgrid-bdiv .btn-group .btn, td[aria-describedby=list_actions] .btn-group .btn, .ui-jqgrid-bdiv .btn-group .btn, td[aria-describedby=csGrid_actions] .btn-group .btn{
+	-webkit-box-shadow: 0 1px 0 #E0CBCB;
+	-moz-box-shadow: 0 1px 0 #E0CBCB;
+	box-shadow: 0 1px 0 #E0CBCB;
 }
 .ui-jqgrid-bdiv .btn-group .btn, td[aria-describedby=list_actions] .btn-group .btn[disabled]{
-	-webkit-box-shadow: 0 2px 0 #FFF;
-	-moz-box-shadow: 0 2px 0 #FFF;
-	box-shadow: 0 2px 0 #FFF;
+	-webkit-box-shadow: 0 1px 0 #FFF;
+	-moz-box-shadow: 0 1px 0 #FFF;
+	box-shadow: 0 1px 0 #FFF;
 }
 .ui-jqgrid-bdiv .btn-group .btn:active, .ui-jqgrid-bdiv .btn-group .btn:focus{
 	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset, 0px 1px 1px 0px #fbf9ee;
 	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset, 0px 1px 1px 0px #fbf9ee;
 	box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset, 0px 1px 1px 0px #fbf9ee;
-	top: 3px;
+	top: 2px;
 }
 .ui-jqgrid-bdiv .btn-group .btn:first-child:active, .ui-jqgrid-bdiv .btn-group .btn:first-child:focus{
 	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, -5px 0 5px -3px rgba(0, 0, 0, .2) inset, -2px 1px 1px 0px #fbf9ee;
@@ -3102,6 +3102,11 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
 }
 .form-inline form .input-group .input-group-btn{
 	width: auto;
+}
+.gen-info th, .gen-info td {
+	border-color: transparent !important;
+	height: 41px;
+	overflow-x: hidden;
 }
 .panel.tree-panel {
 	float: left;
@@ -3201,7 +3206,9 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
 .res-grid .additional-btn a.additional-icon{
 	padding: 2px;
 }
-.ui-jqgrid-pager #pager_left .ui-pg-button.ui-corner-all{
+/*  JQGRID TOOLBAR STYLES OVERRIDE  */
+.ui-jqgrid-pager .navtable .ui-pg-button.ui-corner-all, 
+.ui-jqgrid-toppager .navtable .ui-pg-button.ui-corner-all{
     background-repeat: no-repeat;
     background-position: center center;
     color: #333;
@@ -3212,26 +3219,57 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
     position: relative;
     vertical-align: middle;
     margin: 9px 5px 5px;
-    background-color: #ececec;
-    border: solid 1px #b8b8b9;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.1);
-    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.1);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.1);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 2px;
+    background-color: #f3f3f3;
+    border: solid 1px #DBDBDB;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
     height: 21px !important;
     padding: 2px;
 }
-.ui-jqgrid-pager #pager_left .ui-pg-button.ui-corner-all:hover{
-	background-color: #f3f3f3;
+.ui-jqgrid-pager .navtable td[title^=Add],
+.ui-jqgrid-toppager .navtable td[title^=Add]{
+    color: #fff !important;
+    background-color: #428bca !important;
+    border-color: #357ebd !important;
 }
-.ui-jqgrid-pager #pager_left .ui-pg-button.ui-corner-all:focus{
+.ui-jqgrid-pager .navtable .ui-pg-button.ui-corner-all:first-child, 
+.ui-jqgrid-toppager .navtable .ui-pg-button.ui-corner-all:first-child{
+    margin-left: 0;
+}
+.ui-jqgrid-pager .navtable .ui-pg-button.ui-corner-all:hover,
+.ui-jqgrid-toppager .navtable .ui-pg-button.ui-corner-all:hover{
+	background-color: #ececec;
+}
+.ui-jqgrid-pager .navtable td[title^=Add]:hover,
+.ui-jqgrid-toppager .navtable td[title^=Add]:hover{
+    background-color: #3276b1 !important;
+    border-color: #285e8e !important;
+}
+.ui-jqgrid-pager .navtable .ui-pg-button.ui-corner-all:focus,
+.ui-jqgrid-toppager .navtable .ui-pg-button.ui-corner-all:focus{
 	box-shadow: none;
 }
-.ui-jqgrid-pager #pager_left .ui-pg-div{
+.ui-jqgrid-pager .navtable .ui-pg-div,
+.ui-jqgrid-toppager .navtable .ui-pg-div{
 	padding: 2px 2px 2px 0;
 }
-.ui-jqgrid-pager #pager_left .ui-pg-div span.ui-icon{
-	margin-top: -3px;
+.ui-jqgrid-pager .navtable .ui-pg-div span.fa,
+.ui-jqgrid-toppager .navtable .ui-pg-div span.fa{
+	margin: -1px 5px 0 3px;
+    font-size: 13px;
+    color: #666;
+}
+.ui-jqgrid-pager .navtable td[title^=Add] span.fa,
+.ui-jqgrid-toppager .navtable td[title^=Add] span.fa{
+    color: #fff !important;
+}
+.ui-jqgrid .ui-pg-button span.ui-icon.fa{
+    text-indent: 0;
+    display: inline-block;
+    float: none;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    background: none;
 }

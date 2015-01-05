@@ -1,0 +1,13 @@
+---
+layout: default
+title: CMS
+---
+<!-- Page header -->
+<div class="page-heading animated fadeInDownBig">
+	<h1>Changesets</h1>
+</div>
+<!-- End page header -->
+<div class="box-info full">
+	<table id="csGrid"></table>
+	<div id="pager"></div> 
+</div><!-- End div .box-info -->
