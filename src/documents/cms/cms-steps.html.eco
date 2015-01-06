@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CMS
+title: CMS - Create Changeset
 ---
 <!-- Page header -->
 <div class="page-heading animated fadeInDownBig">
@@ -16,36 +16,47 @@ title: CMS
 			<div class="row">
 				<div class="col-sm-6">
 					<table class="table gen-info">
-                        <tbody>
-                            <input data-val="true" data-val-number="The field Id must be a number." id="Id" name="Id" type="hidden" value="1">
-                            <input data-val="true" data-val-number="The field WalletHolderId must be a number." id="WalletHolderId" name="WalletHolderId" type="hidden" value="1">
-                            
-                            <tr>
-                                <th class="col-sm-3">Changeset ID:</th>
-                                <td>132</td>
-                            </tr>
-                            <tr>
-                                <th>Author:</th>
-                                <td>Mr. John Smith</td>
-                            </tr>
-                            <tr>
-                                <th>Description:</th>
-                                <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat</td>
-                            </tr>
-                            <tr>
-                                <th>Lorem:</th>
-                                <td>6455645321sdas</td>
-                            </tr>
-                            <tr>
-                                <th>Ipsum:</th>
-                                <td>Hohoho</td>
-                            </tr>
-                            <tr>
-                                <th>Dolor:</th>
-                                <td>Olololol</td>
-                            </tr>
-                        </tbody>
-                    </table>				
+	                    <tbody>
+	                        <tr>
+	                            <th>Name</th>
+	                            <td>
+	                                <input value="" data-val="true" data-val-required="Name is required." id="Description" name="Description" type="text" class="form-control input-sm">
+	                                <span class="field-validation-valid" data-valmsg-for="Description" data-valmsg-replace="true"></span>
+	                            </td>
+	                        </tr>
+	                        <tr>
+	                            <th>Channel</th>
+	                            <td>
+	                                <select data-val="true" data-val-required="Channel is required." id="ChangesetChannel" name="ChangesetChannel" class="form-control">
+		                                <option value="">All</option>
+										<option value="ANY">ANY</option>
+										<option value="GB">GB</option>
+										<option value="US">US</option>
+										<option value="SP">SP</option>
+									</select>
+	                                <span class="field-validation-valid" data-valmsg-for="ChangesetChannel" data-valmsg-replace="true"></span>
+	                            </td>
+	                        </tr>
+	                        <tr>
+	                            <th>Start Date</th>
+	                            <td>
+	                                <input value="" data-val="true" data-val-date="The field StartActiveDate must be a date." id="StartActiveDate" name="StartActiveDate" type="text" class="form-control input-sm">
+	                                
+	                            </td>
+	                        </tr>
+	                        <tr>
+	                            <th>End Date</th>
+	                            <td>
+	                                <input value="" data-val="true" data-val-date="The field EndActiveDate must be a date." id="EndActiveDate" name="EndActiveDate" type="text" class="form-control input-sm">
+	                                
+	                            </td>
+	                        </tr>
+	                        <tr>
+	                            <th>Endless Changeset</th>
+	                            <td><input data-val="true" data-val-required="'Is Endless' must not be empty." id="IsEndless" name="IsEndless" type="checkbox" value="true" class="cbox outgrid"><label class="choise" for="IsEndless"></label><input name="IsEndless" type="hidden" value="false"></td>
+	                        </tr>
+	                    </tbody>
+	                </table>
                 </div><!-- End div. col-sm-6 -->
 				<div class="col-sm-6">
 					<!-- Wizard notes -->
