@@ -3273,7 +3273,7 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
     overflow: visible;
     background: none;
 }
-/*	ZONE CHANGE  # # # # # # # # # # # # # # # # */
+/*	ZONE CHANGE  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
 .form-group:after {
 	content: "";
 	clear: both;
@@ -3307,6 +3307,7 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
 }
 .items-to-change li.not-chosen:hover{
 	background: #fff;
+	cursor: not-allowed;
 }
 .items-to-change .group-title{
 	background: #f5f5f5;
@@ -3314,11 +3315,15 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
 	font-weight: bold;
 	padding: 7px
 }
+.items-to-change li.active{
+	background: #f5f5f5;
+}
 .steps-how-to .notes{
 	border-color: #fff;
 }
 .steps-how-to .easyWizardSteps{
 	border-bottom: 0;
+    background: #fff;
 }
 .steps-how-to .easyWizardSteps li{
 	display: block;
@@ -3330,7 +3335,7 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
 }
 .steps-how-to .easyWizardSteps li .step-descr{
 	font-size: 18px;
-	background: #fafafa;
+	background: #fff;
 	color: #B0B1B3;
 	position: absolute;
 	top: 10px;
@@ -3338,7 +3343,7 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
 	border-radius: 0;
 }
 .steps-how-to .easyWizardSteps .current .step-descr{
-	color: #65BD77;
+	color: #2C7439;
 	background: #fff;
 }
 .steps-how-to .easyWizardSteps li .step-descr small{
@@ -3357,4 +3362,35 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
 }
 .editor .editor-action .btn{
 	margin-right: -15px;
+}
+/* IMAGE CHANGE */
+.image-change .image-item{
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px 0 0;
+	border: 1px solid #DDD;
+	margin-bottom: 20px;
+	position: relative;
+}
+.image-item .lang-code, 
+.image-item .thumb, 
+.image-item .asset-info{
+	margin-bottom: 10px;
+}
+.box-info .image-item .additional-btn{
+	background: #f5f5f5;
+	border-top: 1px solid #DDD;
+	padding: 9px 0;
+	line-height: 1;
+	position: static;
+}
+.image-change .image-params,
+.image-change .image-in-use{
+	margin-right: -15px;
+}
+.image-change .image-in-use{
+	margin-top: 20px;
+}
+.image-change .image-in-use thead th{
+	background: #f5f5f5;
 }

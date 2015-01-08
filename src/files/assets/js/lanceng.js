@@ -298,7 +298,7 @@ jQuery('#change-tree').jqGrid({
 });
 
 function getLiHeight(){
-	var lis = $(".res-grid li");
+	var lis = $(".res-grid li").not(".image-change .res-grid li");
 	var maxLiHeight = 0;
 	if(lis.length > 0){
 		for(var i = 0; i < lis.length; i++){
@@ -366,24 +366,35 @@ $(document).ready(function(){
 	
 	$(".res-grid li").outerHeight(getLiHeight());
 
-	// STEPS # # # # # #  # # # # # # # # # # # # # # #
+	// STEPS # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 	$("#step-1").change(function() {
 		$("#step-2").removeAttr("disabled");
 		$(".step-2").addClass("current");
-		$(".step-1").removeClass("current");
+        $(".step-1").fadeTo("fast", 0.4, function () {
+            $(".step-1").removeClass("current")
+        });
 		$("#step-2").change(function(){
 			$(".items-to-change li").show();
 			$(".not-chosen").hide();
-			$(".step-2").removeClass("current");
+	        $(".step-2").fadeTo("fast", 0.4, function () {
+	            $(".step-2").removeClass("current")
+	        });
 			$(".step-3").addClass("current");
 		})
 		$(".items-to-change li").not(".not-chosen, .group-title").click(function(){
-			$(".easyWizardSteps").hide();
-			$(".editor").show();
-			$(".editor .btn-group-justified .btn").click(function(){
-				$(".editor .btn-group-justified .btn").removeClass("active");
-				$(this).addClass("active");
+			$(".easyWizardSteps").hide("fast", function(){
+				$(".editor").show();
+				$(".editor .btn-group-justified .btn").click(function(){
+					$(".editor .btn-group-justified .btn").removeClass("active");
+					$(this).addClass("active");
+				});
 			});
+			$(".items-to-change li").removeClass("active");
+			$(this).addClass("active");
+			// FOR DEMONSTRATION ONLY
+			$(".asset-info").text($(this).text());
+			groupName = "Images on";
+			$(".items-to-change .group-title").text(groupName + " " + $("#step-2").val());
 		});
 	});
 
