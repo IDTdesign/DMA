@@ -3300,14 +3300,19 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
 .items-to-change li.not-chosen,
 .items-to-change li.group-title{
 	display: block;
+	cursor: auto;
 }
 .items-to-change li:hover{
 	background: #f5f5f5;
+}
+.items-to-change li.not-chosen:hover{
+	background: #fff;
 }
 .items-to-change .group-title{
 	background: #f5f5f5;
 	border-bottom: 1px solid #DDD;
 	font-weight: bold;
+	padding: 7px
 }
 .steps-how-to .notes{
 	border-color: #fff;
@@ -3325,20 +3330,31 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
 }
 .steps-how-to .easyWizardSteps li .step-descr{
 	font-size: 18px;
-	background: #fff;
+	background: #fafafa;
 	color: #B0B1B3;
 	position: absolute;
 	top: 10px;
 	line-height: 1;
+	border-radius: 0;
 }
 .steps-how-to .easyWizardSteps .current .step-descr{
 	color: #65BD77;
+	background: #fff;
 }
 .steps-how-to .easyWizardSteps li .step-descr small{
 	font-size: 65%;
 	display: block;
 }
-.note-editor{
+.editor{
 	display: none;
 	margin-top: 8px;
+}
+.editor > .btn-group-justified{
+	margin-bottom: 10px;
+}
+.editor .editor-action{
+	margin-top: 10px;
+}
+.editor .editor-action .btn{
+	margin-right: -15px;
 }

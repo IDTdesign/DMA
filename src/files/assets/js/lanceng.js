@@ -379,7 +379,11 @@ $(document).ready(function(){
 		})
 		$(".items-to-change li").not(".not-chosen, .group-title").click(function(){
 			$(".easyWizardSteps").hide();
-			$(".note-editor").show();
+			$(".editor").show();
+			$(".editor .btn-group-justified .btn").click(function(){
+				$(".editor .btn-group-justified .btn").removeClass("active");
+				$(this).addClass("active");
+			});
 		});
 	});
 
@@ -522,7 +526,7 @@ $(document).ready(function(){
 
 	//SUMMERNOTE
 	$('.summernote').summernote({
-		height: 500
+		height: 220
 	});
 
 
