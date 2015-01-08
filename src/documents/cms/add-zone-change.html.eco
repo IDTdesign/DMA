@@ -1,0 +1,75 @@
+---
+layout: default
+title: CMS - Add Zone Change
+---
+<!-- Page header -->
+<div class="page-heading animated fadeInDownBig">
+	<h1>Changesets</h1>
+</div>
+<!-- End page header -->
+<div class="box-info">
+<h2>Add zone change</h2>
+<div class="col-lg-6 change-steps">
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Site</label>
+		<div class="col-sm-10">
+			<select id="step-1" class="form-control form-sm">
+				<option value="" disabled selected>select a site</option>
+				<option value="cust">cust</option>
+				<option value="ret">ret</option>
+				<option value="dist">dist</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Page</label>
+		<div class="col-sm-10">
+			<select id="step-2" class="form-control form-sm" disabled>
+				<option value="" disabled selected>select a page</option>
+				<option value="index">index</option>
+				<option value="contacts">contacts</option>
+				<option value="about">about</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group">
+		<ul class="items-to-change">
+			<li class="group-title">Select a zone</li>
+			<li class="not-chosen">Please select site/page first</li>
+			<li>header (any)</li>
+			<li>footer (small)</li>
+			<li>sidebar_left (any)</li>
+			<li>top_nav (any)</li>			
+		</ul>
+	</div>
+</div><!-- end .change-steps -->
+<div class="steps-how-to col-lg-6">
+	<div class="notes">
+		<!--h4><strong>User Guide</strong></h4-->
+		<ul class="easyWizardSteps">
+			<li class="step-1 current">
+				<span>1</span>
+				<span class="step-descr">
+					Select a Site
+					<small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+				</span>
+			</li>
+			<li class="step-2">
+				<span>2</span>
+				<span class="step-descr">
+					Select a Page
+					<small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+				</span>
+			</li>
+			<li class="step-3">
+				<span>3</span>
+				<span class="step-descr">
+					Select a Zone
+					<small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+				</span>
+			</li>
+		</ul>
+		<textarea name="" id="editor" cols="30" rows="10" class="summernote"></textarea>
+	</div>
+</div>
+</div><!-- End div .box-info -->

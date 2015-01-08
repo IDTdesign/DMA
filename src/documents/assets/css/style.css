@@ -3273,3 +3273,72 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
     overflow: visible;
     background: none;
 }
+/*	ZONE CHANGE  # # # # # # # # # # # # # # # # */
+.form-group:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+.change-steps{
+	padding-top: 25px;
+}
+.change-steps .form-group{
+	margin-bottom: 30px;
+}
+.items-to-change{
+	padding: 0;
+	border: 1px solid #DDD;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.items-to-change li{
+	list-style-type: none;
+	padding: 5px;
+	cursor: pointer;
+	display: none;
+}
+.items-to-change li.not-chosen,
+.items-to-change li.group-title{
+	display: block;
+}
+.items-to-change li:hover{
+	background: #f5f5f5;
+}
+.items-to-change .group-title{
+	background: #f5f5f5;
+	border-bottom: 1px solid #DDD;
+	font-weight: bold;
+}
+.steps-how-to .notes{
+	border-color: #fff;
+}
+.steps-how-to .easyWizardSteps{
+	border-bottom: 0;
+}
+.steps-how-to .easyWizardSteps li{
+	display: block;
+	position: relative;
+	padding-bottom: 25px;
+}
+.easyWizardSteps li span{
+	background-color: #ECECEC;
+}
+.steps-how-to .easyWizardSteps li .step-descr{
+	font-size: 18px;
+	background: #fff;
+	color: #B0B1B3;
+	position: absolute;
+	top: 10px;
+	line-height: 1;
+}
+.steps-how-to .easyWizardSteps .current .step-descr{
+	color: #65BD77;
+}
+.steps-how-to .easyWizardSteps li .step-descr small{
+	font-size: 65%;
+	display: block;
+}
+.note-editor{
+	display: none;
+	margin-top: 8px;
+}

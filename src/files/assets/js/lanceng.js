@@ -366,6 +366,22 @@ $(document).ready(function(){
 	
 	$(".res-grid li").outerHeight(getLiHeight());
 
+	// STEPS # # # # # #  # # # # # # # # # # # # # # #
+	$("#step-1").change(function() {
+		$("#step-2").removeAttr("disabled");
+		$(".step-2").addClass("current");
+		$(".step-1").removeClass("current");
+		$("#step-2").change(function(){
+			$(".items-to-change li").show();
+			$(".not-chosen").hide();
+			$(".step-2").removeClass("current");
+			$(".step-3").addClass("current");
+		})
+		$(".items-to-change li").not(".not-chosen, .group-title").click(function(){
+			$(".easyWizardSteps").hide();
+			$(".note-editor").show();
+		});
+	});
 
 	//SLIM SCROLL
 	$('.slimscroller').slimscroll({
