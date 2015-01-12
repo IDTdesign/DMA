@@ -141,6 +141,7 @@ title: CMS - Add Image Change
 					</div>
 				</div>
 				<div class="editor-action col-lg-12 text-right">
+					<input type="checkbox" id="toggle-one">
 					<a href="#fake" class="btn btn-primary">
 						<i class="fa fa-pencil"></i> Edit
 					</a>

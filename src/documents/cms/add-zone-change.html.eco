@@ -88,11 +88,13 @@ title: CMS - Add Zone Change
 				</div>
 				<textarea name="" id="editor" cols="5" rows="1" class="summernote">Language content goes here</textarea>
 				<div class="editor-action col-lg-12 text-right">
+					<input type="checkbox" id="toggle-one">
 					<a href="#fake" class="btn btn-primary">
 						<i class="fa fa-pencil"></i> Edit
 					</a>
 				</div>
-			</div>
+			</div>		
 		</div>
 	</div>
 </div><!-- End div .box-info -->
+

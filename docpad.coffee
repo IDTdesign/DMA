@@ -28,6 +28,7 @@ docpadConfig = {
 				'/assets/third/datepicker/css/datepicker.css'
 				'/assets/third/jqgrid/css/ui.jqgrid.css'
 				'/assets/third/jqgrid/css/smoothness/jquery-ui-1.10.4.custom.css'
+				'/assets/third/bootstrap-toggle/bootstrap-toggle.min.css'
 				'/assets/css/style.css'
 			]
 
@@ -52,6 +53,7 @@ docpadConfig = {
 				'/assets/third/jqgrid/js/i18n/grid.locale-en.js'
 				'/assets/third/jqgrid/js/jquery.jqGrid.min.js'
 				'/assets/third/digitCapacity/jquery.digitCapacity.js'
+				'/assets/third/bootstrap-toggle/bootstrap-toggle.min.js'
 				'/assets/js/lanceng.js'
 			]
 		# -----------------------------

@@ -384,6 +384,22 @@ $(document).ready(function(){
 		$(".items-to-change li").not(".not-chosen, .group-title").click(function(){
 			$(".easyWizardSteps").hide("fast", function(){
 				$(".editor").show();
+				$('#toggle-one').bootstrapToggle({
+			        on: 'Enabled',
+      				off: 'Disabled'
+				});
+				$('#toggle-one').change(function(){
+					console.log($(this).prop("checked"));
+					if($(this).prop("checked")){
+						$(".note-editor").fadeTo("fast", 0.4, function(){
+							$(".editor-action > a.btn").fadeTo("fast", 0);
+						});
+					} else{
+						$(".note-editor").fadeTo("fast", 1, function(){
+							$(".editor-action > a.btn").fadeTo("fast", 1);
+						});
+					}
+				});
 				$(".editor .btn-group-justified .btn").click(function(){
 					$(".editor .btn-group-justified .btn").removeClass("active");
 					$(this).addClass("active");
