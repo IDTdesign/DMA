@@ -140,8 +140,11 @@ title: CMS - Add Image Change
 						</div>
 					</div>
 				</div>
-				<div class="editor-action col-lg-12 text-right">
+				<div class="toggle-tab">
 					<input type="checkbox" id="toggle-one">
+					Toggle description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				</div>
+				<div class="editor-action col-lg-12 text-right">
 					<a href="#fake" class="btn btn-primary">
 						<i class="fa fa-pencil"></i> Edit
 					</a>

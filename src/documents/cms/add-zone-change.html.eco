@@ -50,7 +50,6 @@ title: CMS - Add Zone Change
 	</div><!-- end .change-steps -->
 	<div class="steps-how-to col-lg-7">
 		<div class="notes">
-			<!--h4><strong>User Guide</strong></h4-->
 			<ul class="easyWizardSteps">
 				<li class="step-1 current">
 					<span>1</span>
@@ -75,25 +74,58 @@ title: CMS - Add Zone Change
 				</li>
 			</ul>
 			<div class="editor">
-				<div class="btn-group btn-group-justified" role="group">
-					<div class="btn-group" role="group">
-						<button type="button" class="btn btn-default active">en-US</button>
+				<h4>Zone <strong>header (any)</strong></h4>
+				<div role="tabpanel" class="change-tabs">
+
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs nav-justified" role="tablist">
+						<li role="presentation" class="active"><a href="#en-us" aria-controls="en-us" role="tab" data-toggle="tab">en-US</a></li>
+						<li role="presentation"><a href="#es-es" aria-controls="es-es" role="tab" data-toggle="tab">es-ES</a></li>
+						<li role="presentation"><a href="#es-us" aria-controls="es-us" role="tab" data-toggle="tab">es-US</a></li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="en-us">
+							<div class="switchers">
+								<input type="checkbox" id="toggle-one" class="toggle-zone" data-size="small">
+								<span class="description">Toggle description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+							</div>
+							<textarea name="" id="editor" cols="5" rows="1" class="summernote">Default language content goes here</textarea>
+							<div class="editor-action text-right">
+								<a href="#fake" class="btn btn-primary">
+									<i class="fa fa-pencil"></i> Edit
+								</a>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="es-es">
+							<div class="switchers">
+								<input type="checkbox" id="toggle-one" class="toggle-zone" data-size="small">
+								<span class="description">Toggle description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+							</div>
+							<textarea name="" id="editor" cols="5" rows="1" class="summernote">Language es-es content goes here</textarea>
+							<div class="editor-action text-right">
+								<a href="#fake" class="btn btn-primary">
+									<i class="fa fa-pencil"></i> Edit
+								</a>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="es-us">
+							<div class="switchers">
+								<input type="checkbox" id="toggle-one" class="toggle-zone" data-size="small">
+								<span class="description">Toggle description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+							</div>
+							<textarea name="" id="editor" cols="5" rows="1" class="summernote">Language es-us content goes here</textarea>
+							<div class="editor-action text-right">
+								<a href="#fake" class="btn btn-primary">
+									<i class="fa fa-pencil"></i> Edit
+								</a>
+							</div>
+						</div>
 					</div>
-					<div class="btn-group" role="group">
-						<button type="button" class="btn btn-default">es-ES</button>
-					</div>
-					<div class="btn-group" role="group">
-						<button type="button" class="btn btn-default">es-US</button>
-					</div>
+					<!-- tabs ends -->
 				</div>
-				<textarea name="" id="editor" cols="5" rows="1" class="summernote">Language content goes here</textarea>
-				<div class="editor-action col-lg-12 text-right">
-					<input type="checkbox" id="toggle-one">
-					<a href="#fake" class="btn btn-primary">
-						<i class="fa fa-pencil"></i> Edit
-					</a>
-				</div>
-			</div>		
+			</div>
 		</div>
 	</div>
 </div><!-- End div .box-info -->

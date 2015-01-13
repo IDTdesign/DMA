@@ -383,8 +383,9 @@ $(document).ready(function(){
 		})
 		$(".items-to-change li").not(".not-chosen, .group-title").click(function(){
 			$(".easyWizardSteps").hide("fast", function(){
+				$(".notes").addClass("edit-mode");
 				$(".editor").show();
-				$('#toggle-one').bootstrapToggle({
+				$('.toggle-zone').bootstrapToggle({
 			        on: 'Enabled',
       				off: 'Disabled'
 				});
@@ -400,19 +401,23 @@ $(document).ready(function(){
 						});
 					}
 				});
-				$(".editor .btn-group-justified .btn").click(function(){
-					$(".editor .btn-group-justified .btn").removeClass("active");
-					$(this).addClass("active");
-				});
 			});
 			$(".items-to-change li").removeClass("active");
 			$(this).addClass("active");
+			$(".editor strong").text($(this).text());
 			// FOR DEMONSTRATION ONLY
-			$(".asset-info").text($(this).text());
+			/*$(".asset-info").text($(this).text());
 			groupName = "Images on";
-			$(".items-to-change .group-title").text(groupName + " " + $("#step-2").val());
+			$(".items-to-change .group-title").text(groupName + " " + $("#step-2").val());*/
 		});
 	});
+	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+		$('.toggle-zone').bootstrapToggle('destroy');
+		$('.toggle-zone').bootstrapToggle({
+	        on: 'Enabled',
+			off: 'Disabled'
+		});
+	})
 
 	//SLIM SCROLL
 	$('.slimscroller').slimscroll({
