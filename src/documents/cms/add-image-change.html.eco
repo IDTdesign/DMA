@@ -50,7 +50,6 @@ title: CMS - Add Image Change
 	</div><!-- end .change-steps -->
 	<div class="steps-how-to col-lg-8">
 		<div class="notes">
-			<!--h4><strong>User Guide</strong></h4-->
 			<ul class="easyWizardSteps">
 				<li class="step-1 current">
 					<span>1</span>
@@ -87,6 +86,7 @@ title: CMS - Add Image Change
 
 					<!-- Tab panes -->
 					<div class="tab-content">
+						<!-- EN-US TAB -->
 						<div role="tabpanel" class="tab-pane active" id="en-us">
 							<div class="switchers">
 								<input type="checkbox" id="toggle-one" class="toggle-zone" data-size="small">
@@ -96,13 +96,13 @@ title: CMS - Add Image Change
 								<div class="col-lg-12">
 									<div class="row">
 										<div class="col-lg-5 col-md-5 col-sm-5 box-info full">
-											<div class="image-item">
+											<div class="image-item col-sm-12">
 												<span class="lang-code col-sm-12 text-center">en-US</span>
 												<span class="thumb col-sm-12 text-center"><img width="100" src="https://googledrive.com/host/0B_nRJqTIKCknOXBnU3h3aWF0eTQ/thumb-image.png" alt="PDF-file"/></span>
 												<span class="asset-info col-sm-12 text-center"><strong>Imaga-ga-ga</strong></span>
-												<!--span class="col-sm-12 actions full additional-btn text-center">
+												<span class="col-sm-12 actions full additional-btn text-center">
 													<small>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
-												</span-->
+												</span>
 												<div class="image-in-use">
 													<table class="table">
 														<thead>
@@ -154,7 +154,145 @@ title: CMS - Add Image Change
 									</div>
 								</div>
 							</div>
-						</div>
+						</div><!-- end EN-US -->
+						<!-- ES-ES TAB -->
+						<div role="tabpanel" class="tab-pane" id="es-es">
+							<div class="switchers">
+								<input type="checkbox" id="toggle-one" class="toggle-zone" data-size="small">
+								<span class="description">Toggle description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+							</div>
+							<div class="image-change">
+								<div class="col-lg-12">
+									<div class="row">
+										<div class="col-lg-5 col-md-5 col-sm-5 box-info full">
+											<div class="image-item col-sm-12">
+												<span class="lang-code col-sm-12 text-center">en-US</span>
+												<span class="thumb col-sm-12 text-center"><img width="100" src="https://googledrive.com/host/0B_nRJqTIKCknOXBnU3h3aWF0eTQ/thumb-pdf.png" alt="PDF-file"/></span>
+												<span class="asset-info col-sm-12 text-center"><strong>Imaga-ga-ga</strong></span>
+												<span class="col-sm-12 actions full additional-btn text-center">
+													<small>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
+												</span>
+												<div class="image-in-use">
+													<table class="table">
+														<thead>
+															<tr>
+																<th>In use on Zone(page)</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr><td>header (index)</td></tr>
+															<tr><td>footer (about)</td></tr>
+															<tr><td>sidebar (blog)</td></tr>
+															<tr><td>article (contacts)</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-7 col-md-7 col-sm-7">
+											<div class="image-params">
+												<table class="table table-bordered">
+													<tr>
+														<th>Alt</th>
+														<td>imaga-ga-ga-ga</td>
+													</tr>
+													<tr>
+														<th>Width</th>
+														<td>700 px</td>
+													</tr>
+													<tr>
+														<th>Height</th>
+														<td>300 px</td>
+													</tr>
+													<tr>
+														<th>Link</th>
+														<td>http://image-ga.ga</td>
+													</tr>
+													<tr>
+														<th>Original width</th>
+														<td>700 px</td>
+													</tr>
+													<tr>
+														<th>Original height</th>
+														<td>300 px</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- end es-es -->
+						<!-- ES-US TAB -->
+						<div role="tabpanel" class="tab-pane" id="es-us">
+							<div class="switchers">
+								<input type="checkbox" id="toggle-one" class="toggle-zone" data-size="small">
+								<span class="description">Toggle description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+							</div>
+							<div class="image-change">
+								<div class="col-lg-12">
+									<div class="row">
+										<div class="col-lg-5 col-md-5 col-sm-5 box-info full">
+											<div class="image-item col-sm-12">
+												<span class="lang-code col-sm-12 text-center">en-US</span>
+												<span class="thumb col-sm-12 text-center"><img width="100" src="https://googledrive.com/host/0B_nRJqTIKCknOXBnU3h3aWF0eTQ/thumb-css.png" alt="PDF-file"/></span>
+												<span class="asset-info col-sm-12 text-center"><strong>Imaga-ga-ga</strong></span>
+												<span class="col-sm-12 actions full additional-btn text-center">
+													<small>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
+												</span>
+												<div class="image-in-use">
+													<table class="table">
+														<thead>
+															<tr>
+																<th>In use on Zone(page)</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr><td>header (index)</td></tr>
+															<tr><td>footer (about)</td></tr>
+															<tr><td>nav (index)</td></tr>
+															<tr><td>sidebar (blog)</td></tr>
+															<tr><td>article (contacts)</td></tr>
+															<tr><td>article (about)</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-7 col-md-7 col-sm-7">
+											<div class="image-params">
+												<table class="table table-bordered">
+													<tr>
+														<th>Alt</th>
+														<td>imaga-ga-ga-ga</td>
+													</tr>
+													<tr>
+														<th>Width</th>
+														<td>700 px</td>
+													</tr>
+													<tr>
+														<th>Height</th>
+														<td>300 px</td>
+													</tr>
+													<tr>
+														<th>Link</th>
+														<td>http://image-ga.ga</td>
+													</tr>
+													<tr>
+														<th>Original width</th>
+														<td>700 px</td>
+													</tr>
+													<tr>
+														<th>Original height</th>
+														<td>300 px</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- end es-us -->
 					</div>
 				</div>
 				<div class="editor-action col-lg-12 text-right">
