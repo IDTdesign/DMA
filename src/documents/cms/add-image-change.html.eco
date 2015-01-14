@@ -7,7 +7,7 @@ title: CMS - Add Image Change
 	<h1>Changeset #US-777</h1>
 </div>
 <!-- End page header -->
-<div class="box-info">
+<div class="box-info full">
 	<h2>Add Image change</h2>
 	<div class="col-lg-4 change-steps">
 		<div class="form-group">
@@ -36,6 +36,10 @@ title: CMS - Add Image Change
 			<ul class="items-to-change">
 				<li class="group-title">Images</li>
 				<li class="not-chosen">Please select site/page first</li>
+				<li>header logo</li>
+				<li>banner left</li>
+				<li>simple image</li>
+				<li>footer background</li>
 				<li>header logo</li>
 				<li>banner left</li>
 				<li>simple image</li>
@@ -98,7 +102,7 @@ title: CMS - Add Image Change
 										<div class="col-lg-5 col-md-5 col-sm-5 box-info full">
 											<div class="image-item col-sm-12">
 												<span class="lang-code col-sm-12 text-center">en-US</span>
-												<span class="thumb col-sm-12 text-center"><img width="100" src="https://googledrive.com/host/0B_nRJqTIKCknOXBnU3h3aWF0eTQ/thumb-image.png" alt="PDF-file"/></span>
+												<span class="thumb col-sm-12 text-center"><img width="120" class="img-thumbnail" src="https://googledrive.com/host/0B_nRJqTIKCknOXBnU3h3aWF0eTQ/thumb-image.png" alt="PDF-file"/></span>
 												<span class="asset-info col-sm-12 text-center"><strong>Imaga-ga-ga</strong></span>
 												<span class="col-sm-12 actions full additional-btn text-center">
 													<small>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
@@ -167,7 +171,7 @@ title: CMS - Add Image Change
 										<div class="col-lg-5 col-md-5 col-sm-5 box-info full">
 											<div class="image-item col-sm-12">
 												<span class="lang-code col-sm-12 text-center">en-US</span>
-												<span class="thumb col-sm-12 text-center"><img width="100" src="https://googledrive.com/host/0B_nRJqTIKCknOXBnU3h3aWF0eTQ/thumb-pdf.png" alt="PDF-file"/></span>
+												<span class="thumb col-sm-12 text-center"><img width="120" class="img-thumbnail" src="https://googledrive.com/host/0B_nRJqTIKCknOXBnU3h3aWF0eTQ/thumb-pdf.png" alt="PDF-file"/></span>
 												<span class="asset-info col-sm-12 text-center"><strong>Imaga-ga-ga</strong></span>
 												<span class="col-sm-12 actions full additional-btn text-center">
 													<small>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
@@ -235,7 +239,7 @@ title: CMS - Add Image Change
 										<div class="col-lg-5 col-md-5 col-sm-5 box-info full">
 											<div class="image-item col-sm-12">
 												<span class="lang-code col-sm-12 text-center">en-US</span>
-												<span class="thumb col-sm-12 text-center"><img width="100" src="https://googledrive.com/host/0B_nRJqTIKCknOXBnU3h3aWF0eTQ/thumb-css.png" alt="PDF-file"/></span>
+												<span class="thumb col-sm-12 text-center"><img width="120" class="img-thumbnail" src="https://googledrive.com/host/0B_nRJqTIKCknOXBnU3h3aWF0eTQ/thumb-css.png" alt="PDF-file"/></span>
 												<span class="asset-info col-sm-12 text-center"><strong>Imaga-ga-ga</strong></span>
 												<span class="col-sm-12 actions full additional-btn text-center">
 													<small>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
@@ -295,7 +299,7 @@ title: CMS - Add Image Change
 						</div><!-- end es-us -->
 					</div>
 				</div>
-				<div class="editor-action col-lg-12 text-right">
+				<div class="editor-action text-right">
 					<a href="#fake" class="btn btn-primary">
 						<i class="fa fa-pencil"></i> Edit
 					</a>

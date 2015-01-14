@@ -3285,6 +3285,9 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
 .change-steps .form-group{
 	margin-bottom: 30px;
 }
+.change-steps label{
+	padding-top: 8px;
+}
 .items-to-change{
 	padding: 0;
 	border: 1px solid #DDD;
@@ -3317,6 +3320,9 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
 }
 .items-to-change li.active{
 	background: #f5f5f5;
+}
+.steps-how-to{
+	margin-bottom: 15px;
 }
 .steps-how-to .notes{
 	border-color: #fff;
@@ -3376,7 +3382,7 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
 }
 .editor .editor-action{
 	margin-top: 10px;
-	margin-bottom: 5px;
+	margin-bottom: 0;
 }
 .editor .switchers{
 	padding: 10px 0;

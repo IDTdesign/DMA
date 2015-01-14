@@ -7,7 +7,7 @@ title: CMS - Add Zone Change
 	<h1>Changesets</h1>
 </div>
 <!-- End page header -->
-<div class="box-info">
+<div class="box-info full">
 	<h2>Add zone change</h2>
 	<div class="col-lg-4 change-steps">
 		<div class="form-group">
@@ -92,11 +92,6 @@ title: CMS - Add Zone Change
 								<span class="description">Toggle description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
 							</div>
 							<textarea name="" id="editor" cols="5" rows="1" class="summernote">Default language content goes here</textarea>
-							<div class="editor-action text-right">
-								<a href="#fake" class="btn btn-primary">
-									<i class="fa fa-pencil"></i> Edit
-								</a>
-							</div>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="es-es">
 							<div class="switchers">
@@ -104,11 +99,6 @@ title: CMS - Add Zone Change
 								<span class="description">Toggle description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
 							</div>
 							<textarea name="" id="editor" cols="5" rows="1" class="summernote">Language es-es content goes here</textarea>
-							<div class="editor-action text-right">
-								<a href="#fake" class="btn btn-primary">
-									<i class="fa fa-pencil"></i> Edit
-								</a>
-							</div>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="es-us">
 							<div class="switchers">
@@ -116,14 +106,14 @@ title: CMS - Add Zone Change
 								<span class="description">Toggle description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
 							</div>
 							<textarea name="" id="editor" cols="5" rows="1" class="summernote">Language es-us content goes here</textarea>
-							<div class="editor-action text-right">
-								<a href="#fake" class="btn btn-primary">
-									<i class="fa fa-pencil"></i> Edit
-								</a>
-							</div>
 						</div>
 					</div>
 					<!-- tabs ends -->
+				</div>
+				<div class="editor-action text-right">
+					<a href="#fake" class="btn btn-primary">
+						<i class="fa fa-pencil"></i> Edit
+					</a>
 				</div>
 			</div>
 		</div>
