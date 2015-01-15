@@ -3062,7 +3062,10 @@ input[type=checkbox].cbox:checked + label.choise{
 	-moz-box-shadow: 0 2px 0 #E0CBCB, 0px 3px 1px #8A8A8A;
 	box-shadow: 0 2px 0 #E0CBCB, 0px 3px 1px #8A8A8A;
 }
-.ui-jqgrid-bdiv .btn-group .btn, td[aria-describedby=list_actions] .btn-group .btn, .ui-jqgrid-bdiv .btn-group .btn, td[aria-describedby=csGrid_actions] .btn-group .btn{
+.ui-jqgrid-bdiv .btn-group .btn, td[aria-describedby=list_actions] .btn-group .btn, 
+.ui-jqgrid-bdiv .btn-group .btn, td[aria-describedby=csGrid_actions] .btn-group .btn,
+.ui-jqgrid-bdiv .btn-group .btn, td[aria-describedby=zcGrid_actions] .btn-group .btn,
+.ui-jqgrid-bdiv .btn-group .btn, td[aria-describedby=rcGrid_actions] .btn-group .btn{
 	-webkit-box-shadow: 0 1px 0 #E0CBCB;
 	-moz-box-shadow: 0 1px 0 #E0CBCB;
 	box-shadow: 0 1px 0 #E0CBCB;
@@ -3102,6 +3105,10 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
 }
 .form-inline form .input-group .input-group-btn{
 	width: auto;
+}
+select.input-sm{
+	border-radius: 0;
+	border: 1px solid #ddd;
 }
 .gen-info th, .gen-info td {
 	border-color: transparent !important;
@@ -3462,4 +3469,39 @@ td[aria-describedby=list_actions] .btn:active, td[aria-describedby=list_actions]
 }
 .box-info .nav-tabs > li > a:hover{
 	background: #f3f3f3;
+}
+/* CHANGESET DETAILS # # # # # # # # # # # # # # # # # # # # # # */
+/*HEADER*/
+.page-heading.cs-header{
+	margin-bottom: 15px;
+}
+.cs-header h1, .cs-header span{
+	display: inline-block;
+}
+.cs-header .cs-status{
+	position: relative;
+}
+.cs-header .cs-status .label{
+	position: absolute;
+	top: -30px;
+	left: 5px;
+}
+.cs-header .cs-date{
+	display: block;
+	font-size: 14px;
+	color: #777;
+	margin-top: 5px;
+}
+.cs-header .cs-date em{
+	border-bottom: 1px dashed #c2c2c2;
+}
+/*NAV*/
+.cs-nav .navbar{
+	margin-left: 0;
+}
+.cs-nav .navbar .navbar-brand{
+	color: #5e5e5e;
+}
+.cs-nav .caret{
+	margin-left: 5px;
 }

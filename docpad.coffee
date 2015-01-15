@@ -55,6 +55,7 @@ docpadConfig = {
 				'/assets/third/digitCapacity/jquery.digitCapacity.js'
 				'/assets/third/bootstrap-toggle/bootstrap-toggle.min.js'
 				'/assets/js/lanceng.js'
+				'/assets/js/grid-init.js'
 			]
 		# -----------------------------
 		# Helper Functions

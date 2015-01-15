@@ -1,0 +1,111 @@
+---
+layout: default
+title: CMS - Changeset details
+---
+<!-- Page header -->
+<div class="page-heading animated fadeInDownBig cs-header">
+	<h1>Changeset #9877</h1>
+	<span class="cs-status">
+		<span class="label label-default">Setup</span>
+	</span>
+	<span class="cs-date">
+		<em>Active at: Jan 2, 2015 -- Feb 28, 2016</em>
+	</span>
+</div>
+<!-- End page header -->
+<div class="box-info full cs-nav">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<span class="navbar-brand">Changeset Actions</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Preview<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Local</a></li>
+							<li><a href="#">Redis_6381</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Aproove<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">SubMaster US</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Build ActiveSet<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">SubMaster US</a></li>
+						</ul>
+					</li>
+					<li class=""><a href="#">Customer Test ActiveSet Url</a></li>
+					<li><a href="#">Build Cache</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div>
+	</nav>
+</div>
+<!--div class="box-info">
+	<h2>Changeset actions</h2>
+	<div class="changeset-actions">
+		<div class="form-inline">
+			<form action="/us/Changeset/PreviewChangeset/64fd27ac-35cf-44b7-a1f8-92eeb06544e7" method="post">                
+				<div class="input-group">
+	                <span class="input-group-btn">
+	                    <button type="submit" class="btn btn-info btn-sm" id="btnPreviewChangeset">Preview</button>
+	                </span>
+	                <select class="input-sm" id="ClusterName" name="ClusterName"><option value="Local">Local</option>
+						<option value="Redis_6381">Redis_6381</option>
+					</select>
+	            </div>
+			</form>        
+			<form action="/us/Changeset/ApproveChangeset/64fd27ac-35cf-44b7-a1f8-92eeb06544e7" method="post">            
+				<div class="input-group">
+	                <span class="input-group-btn">
+	                    <button type="submit" class="btn btn-info btn-sm" id="btnApproveChangeset">Approve</button>
+	                </span>
+	                <select class="input-sm" id="ClusterName" name="ClusterName">
+	                	<option value="SubMaster US">SubMaster US</option>
+					</select>
+            	</div>
+			</form>        
+			<form action="/us/Changeset/BuildActiveset/64fd27ac-35cf-44b7-a1f8-92eeb06544e7" method="post">                   
+				<div class="input-group">
+                   <span class="input-group-btn">
+                        <button type="submit" class="btn btn-info btn-sm" id="btnBuildActiveSet">Build ActiveSet</button>
+                    </span>
+                    <select class="input-sm" id="ClusterName" name="ClusterName">
+                    	<option value="SubMaster US">SubMaster US</option>
+					</select>
+                </div>
+			</form>
+            <a href="/cms/test/activeset/cust/64fd27ac-35cf-44b7-a1f8-92eeb06544e7" class="btn btn-info btn-sm" style="margin-right: 10px;">Customer Test ActiveSet Url </a>
+			<form action="/us/Changeset/BuildMetaCache" method="post">                
+                <button type="submit" class="btn btn-info btn-sm" id="btnBuildMetaCache">Build Cache</button>
+			</form>  
+			<form action="/us/Changeset/CancelChangeset/64fd27ac-35cf-44b7-a1f8-92eeb06544e7" method="post">            
+				<div class="button-center">
+	                <button type="submit" class="btn btn-default btn-sm" id="btnCancelChangeset">Cancel</button>
+	            </div>
+			</form>
+		</div>
+	</div>
+</div-->
+<div class="box-info full">
+	<table id="zcGrid"></table>
+	<div id="zcPager"></div> 
+</div><!-- End div .box-info -->
+<div class="box-info full">
+	<table id="rcGrid"></table>
+	<div id="rcPager"></div> 
+</div><!-- End div .box-info -->
