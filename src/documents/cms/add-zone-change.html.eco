@@ -79,7 +79,12 @@ title: CMS - Add Zone Change
 
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs nav-justified" role="tablist">
-						<li role="presentation" class="active"><a href="#en-us" aria-controls="en-us" role="tab" data-toggle="tab">en-US</a></li>
+						<li role="presentation" class="active modified">
+							<a href="#en-us" aria-controls="en-us" role="tab" data-toggle="tab"><span>en-US</span></a>
+							<button class="btn btn-primary btn-xs discard" data-toggle="tooltip" title="Discard changes" data-placement="top">
+								<i class="fa fa-reply-all"></i>
+							</button>
+						</li>
 						<li role="presentation"><a href="#es-es" aria-controls="es-es" role="tab" data-toggle="tab">es-ES</a></li>
 						<li role="presentation"><a href="#es-us" aria-controls="es-us" role="tab" data-toggle="tab">es-US</a></li>
 					</ul>

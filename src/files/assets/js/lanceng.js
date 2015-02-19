@@ -437,7 +437,7 @@ $(document).ready(function(){
 		placement: "right",
 	});
 
-	$('.res-grid').tooltip({
+	$('.res-grid, .editor').tooltip({
 		selector: "[data-toggle=tooltip]",
 		container: "body",
 		placement: "top",
