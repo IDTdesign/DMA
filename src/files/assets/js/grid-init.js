@@ -43,6 +43,98 @@ csGrid.jqGrid({
 	   }, 
 
 	});
+
+//CSGRID NESTED
+var myGridData = [
+        // main grid data
+        {id: "m1", col1: "11", col2: "12"},
+        {id: "m2", col1: "21", col2: "22"},
+        {id: "m3", col1: "31", col2: "32"}
+    ],
+    mySubgrids = {
+        m1: [
+            // data for subgrid for the id=m1
+            {id: "s1a", c1: "aa", c2: "ab", c3: "ac"},
+            {id: "s1b", c1: "ba", c2: "bb", c3: "bc"},
+            {id: "s1c", c1: "ca", c2: "cb", c3: "cc"}
+        ],
+        m2: [
+            // data for subgrid for the id=m2
+            {id: "s2a", c1: "xx", c2: "xy", c3: "xz"},
+            {id: "s2a", c1: "xx", c2: "xy", c3: "xz"},
+            {id: "s2a", c1: "xx", c2: "xy", c3: "xz"}
+        ],
+        m3: [
+            // data for subgrid for the id=m2
+            {id: "s3a", c1: "x3", c2: "3y", c3: "3z"},
+            {id: "s3a", c1: "x3", c2: "3y", c3: "3z"},
+            {id: "s3a", c1: "x3", c2: "3y", c3: "3z"},
+            {id: "s3a", c1: "x3", c2: "3y", c3: "3z"},            
+        ]
+    },
+    $grid = $("#csGridNested");
+
+$grid.jqGrid({
+    datatype: 'local',
+    data: myGridData,
+    colNames: ['Column 1', 'Column 2'],
+    colModel: [
+        { name: 'col1'},
+        { name: 'col2'}
+    ],
+    autowidth: true,
+    gridview: true,
+    autoencode: true,
+    sortname: 'col1',
+    sortorder: 'desc',
+    height: '100%',
+    hidegrid: false,
+    pager: '#nestedPager',
+    toppager: true,
+    caption: 'Subgrid example',
+    subGrid: true,
+    subGridRowExpanded: function (subgridDivId, rowId) {
+        var subgridTableId = subgridDivId + "_t";
+        $("#" + subgridDivId).html("<table id='" + subgridTableId + "'></table>");
+        $("#" + subgridTableId).jqGrid({
+            datatype: 'local',
+            data: mySubgrids[rowId],
+            colNames: ['Col 1', 'Col 2', 'Col 3'],
+            colModel: [
+                { name: 'c1'},
+                { name: 'c2'},
+                { name: 'c3'}
+            ],
+            gridview: true,
+            rownumbers: true,
+            autoencode: true,
+            autowidth: true,
+            sortname: 'col1',
+            sortorder: 'desc',
+            height: '100%',
+            caption: 'Hi nested grid',
+            hidegrid: false,
+        });
+        stripSubGrid(subgridTableId, rowId);
+    }
+});
+$("#csGridNested").jqGrid('navGrid','#nestedPager',{add: false, edit: false, del:false, search:false, refresh: false}, //options
+        {reloadAfterSubmit:false}, // del options
+        {reloadAfterSubmit:false}, // del options
+        {reloadAfterSubmit:false},
+        {cloneToTop:true}
+);
+$("#csGridNested").navButtonAdd('#nestedPager',{
+       title:"Add new", 
+       caption: "Add new",
+       buttonicon:"fa fa-plus-circle", 
+       position:"first",
+       onClickButton: function(){ 
+            var nUrl = window.location.href.replace('changesets', '') + "cms-steps";
+            window.location.href = nUrl;
+        }
+});
+
 //##################################### ZONE CHANGE ##############################################################################################################################################
 var zcGrid = $("#zcGrid");
 var csData = [{name: "<a id='editCs' href='#fakelink'>First CS</a>", channel: "US", startDate: "01/01/2015", endDate: "01/07/2015", created: "12/31/2014 by J.Smith", actions: csGroup},
@@ -133,3 +225,9 @@ rcGrid.jqGrid({
        }, 
 
     });
+
+
+
+function stripSubGrid(subgridTableId, rowId){
+    $("#" + subgridTableId).addClass('table-hover table-striped');
+}

@@ -264,6 +264,7 @@ jQuery(function(){
 	});
 	$(".ui-search-toolbar th div:has(table)").css('padding-left', '0');
 	$(".ui-search-clear a").html('&times');
+	$(".ui-jqgrid-bdiv table").addClass('table-hover table-striped');
 });
 //#####################################	TREEGRID ##########################################################################################################################################
 var treeData = [{hierarchy: "Zone changes", type: "", level:"0", id:"1", parent:"null", isLeaf:false, expanded:true, loaded:true}, 
@@ -510,6 +511,7 @@ $(document).ready(function(){
 				return false;	
 			}		
 	});
+
 
 	//SUMMERNOTE
 	$('.summernote').summernote({

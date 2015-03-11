@@ -74,7 +74,7 @@ tr.ui-search-toolbar select {margin: 1px 0 0 0}
 .ui-jqgrid .ui-jqgrid-toppager .ui-pg-button { cursor:pointer; }
 .ui-jqgrid .ui-jqgrid-toppager .ui-pg-div  span.ui-icon {float:left;margin:0 2px;}
 /*subgrid*/
-.ui-jqgrid .ui-jqgrid-btable .ui-sgcollapsed span {display: block;}
+.ui-jqgrid .ui-jqgrid-btable .ui-sgcollapsed span {display: block; margin-left: -5px;}
 .ui-jqgrid .ui-subgrid {margin:0;padding:0; width:100%;}
 .ui-jqgrid .ui-subgrid table {table-layout: fixed;}
 .ui-jqgrid .ui-subgrid tr.ui-subtblcell td {height:18px;border-right-width: 1px; border-right-color: inherit; border-right-style: solid;border-bottom-width: 1px; border-bottom-color: inherit; border-bottom-style: solid;}

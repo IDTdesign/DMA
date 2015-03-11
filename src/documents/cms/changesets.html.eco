@@ -11,3 +11,7 @@ title: CMS
 	<table id="csGrid"></table>
 	<div id="pager"></div> 
 </div><!-- End div .box-info -->
+<div class="box-info full">
+	<table id="csGridNested"></table>
+	<div id="nestedPager"></div> 
+</div><!-- End div .box-info -->

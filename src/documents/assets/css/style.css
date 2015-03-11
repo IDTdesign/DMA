@@ -1079,8 +1079,10 @@ select.editable{
 }
 .box-info .text-box p{font-size: 14px;}
 
-
-
+.box-info .ui-jqgrid .ui-jqgrid-toppager {
+	margin: -20px 0 0 0!important;
+	height: auto!important;
+}
 
 
 
@@ -3279,6 +3281,24 @@ select.input-sm{
     height: auto;
     overflow: visible;
     background: none;
+}
+.ui-widget-content.subgrid-cell, 
+.ui-widget-content.subgrid-data{
+	background: none;
+	border-bottom: 1px solid #ddd;
+}
+.ui-jqgrid .ui-jqgrid-pager .ui-pager-control, .ui-jqgrid .ui-jqgrid-toppager .ui-pager-control {
+	background: #f5f5f5;
+	border-left: 0 none !important;
+	border-right: 0 none !important;
+	border-bottom: 0 none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	position: relative;
+	height: 40px;
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: 11px;
 }
 /*	ZONE CHANGE  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
 .form-group:after {
