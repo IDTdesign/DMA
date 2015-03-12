@@ -72,7 +72,12 @@ var myGridData = [
             {id: "s3a", c1: "x3", c2: "3y", c3: "3z"},            
         ]
     },
-    $grid = $("#csGridNested");
+    $grid = $("#csGridNested"),
+    pagerSelector = "#nestedPager",
+    myAddButton = function(options) {
+        $grid.jqGrid('navButtonAdd',pagerSelector,options);
+        $grid.jqGrid('navButtonAdd','#'+$grid[0].id+"_toppager",options);
+    };
 
 $grid.jqGrid({
     datatype: 'local',
@@ -95,7 +100,8 @@ $grid.jqGrid({
     subGrid: true,
     subGridRowExpanded: function (subgridDivId, rowId) {
         var subgridTableId = subgridDivId + "_t";
-        $("#" + subgridDivId).html("<table id='" + subgridTableId + "'></table>");
+        var pagerId = "p_"+subgridTableId;
+        $("#" + subgridDivId).html("<table id='" + subgridTableId + "'></table><div id='"+ pagerId +"' class='scroll'></div>");
         $("#" + subgridTableId).jqGrid({
             datatype: 'local',
             data: mySubgrids[rowId],
@@ -106,7 +112,6 @@ $grid.jqGrid({
                 { name: 'c3'}
             ],
             gridview: true,
-            rownumbers: true,
             autoencode: true,
             autowidth: true,
             sortname: 'col1',
@@ -114,17 +119,34 @@ $grid.jqGrid({
             height: '100%',
             caption: 'Hi nested grid',
             hidegrid: false,
+            pager: pagerId,
+        });
+        $("#"+subgridTableId).jqGrid('navGrid',"#"+pagerId,{edit:false,add:false,del:false,search:false,refresh: false})
+        $("#"+subgridTableId).navButtonAdd("#"+pagerId,{
+               title:"Add new", 
+               caption: "Add new",
+               buttonicon:"fa fa-plus-circle", 
+               position:"first",
+               onClickButton: function(){ 
+                    var nUrl = window.location.href.replace('changesets', '') + "cms-steps";
+                    window.location.href = nUrl;
+                }
         });
         stripSubGrid(subgridTableId, rowId);
     }
 });
-$("#csGridNested").jqGrid('navGrid','#nestedPager',{add: false, edit: false, del:false, search:false, refresh: false}, //options
-        {reloadAfterSubmit:false}, // del options
-        {reloadAfterSubmit:false}, // del options
-        {reloadAfterSubmit:false},
-        {cloneToTop:true}
-);
-$("#csGridNested").navButtonAdd('#nestedPager',{
+$("#csGridNested").jqGrid('navGrid','#nestedPager',{cloneToTop: true, add: false, edit: false, del:false, search:false, refresh: false});
+/*$("#csGridNested").navButtonAdd('#nestedPager',{
+       title:"Add new", 
+       caption: "Add new",
+       buttonicon:"fa fa-plus-circle", 
+       position:"first",
+       onClickButton: function(){ 
+            var nUrl = window.location.href.replace('changesets', '') + "cms-steps";
+            window.location.href = nUrl;
+        }
+});*/
+myAddButton ({
        title:"Add new", 
        caption: "Add new",
        buttonicon:"fa fa-plus-circle", 
@@ -134,7 +156,6 @@ $("#csGridNested").navButtonAdd('#nestedPager',{
             window.location.href = nUrl;
         }
 });
-
 //##################################### ZONE CHANGE ##############################################################################################################################################
 var zcGrid = $("#zcGrid");
 var csData = [{name: "<a id='editCs' href='#fakelink'>First CS</a>", channel: "US", startDate: "01/01/2015", endDate: "01/07/2015", created: "12/31/2014 by J.Smith", actions: csGroup},
