@@ -3300,6 +3300,34 @@ select.input-sm{
 	overflow: hidden;
 	font-size: 11px;
 }
+.ui-jqgrid .ui-jqgrid-titlebar{
+	border-bottom: 1px solid #357ebd;
+	color: #357ebd;
+}
+.ui-jqgrid .ui-jqgrid .ui-jqgrid-titlebar{
+	border-bottom: 1px solid #2F52AE;
+	color: #2F52AE;
+}
+.ui-jqgrid .ui-jqgrid{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ddd;
+	overflow-x: hidden;
+}
+.ui-jqgrid .ui-subgrid > td{
+	background: #F2F2F2 !important;
+}
+.ui-jqgrid .ui-jqgrid .ui-jqgrid-pager .navtable td[title^=Add],
+.ui-jqgrid .ui-jqgrid .ui-jqgrid-toppager .navtable td[title^=Add]{
+	border-color: #1C3B8C!important;
+	background: #2F52AE!important;
+}
+.ui-jqgrid .ui-jqgrid .ui-jqgrid-pager .navtable td[title^=Add]:hover,
+.ui-jqgrid .ui-jqgrid .ui-jqgrid-toppager .navtable td[title^=Add]:hover{
+	border-color: #1C3B8C!important;
+	background: #2F52AE!important;
+}
+
 /*	ZONE CHANGE  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # */
 .form-group:after {
 	content: "";

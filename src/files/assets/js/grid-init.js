@@ -146,16 +146,18 @@ $("#csGridNested").jqGrid('navGrid','#nestedPager',{cloneToTop: true, add: false
             window.location.href = nUrl;
         }
 });*/
-myAddButton ({
-       title:"Add new", 
-       caption: "Add new",
-       buttonicon:"fa fa-plus-circle", 
-       position:"first",
-       onClickButton: function(){ 
-            var nUrl = window.location.href.replace('changesets', '') + "cms-steps";
-            window.location.href = nUrl;
-        }
-});
+if($grid.attr('id') == "csGridNested"){
+    myAddButton ({
+           title:"Add new", 
+           caption: "Add new",
+           buttonicon:"fa fa-plus-circle", 
+           position:"first",
+           onClickButton: function(){ 
+                var nUrl = window.location.href.replace('changesets', '') + "cms-steps";
+                window.location.href = nUrl;
+            }
+    });
+}
 //##################################### ZONE CHANGE ##############################################################################################################################################
 var zcGrid = $("#zcGrid");
 var csData = [{name: "<a id='editCs' href='#fakelink'>First CS</a>", channel: "US", startDate: "01/01/2015", endDate: "01/07/2015", created: "12/31/2014 by J.Smith", actions: csGroup},
