@@ -3579,3 +3579,63 @@ select.input-sm{
 .cs-nav .caret{
 	margin-left: 5px;
 }
+/*## RESOURCE CHANGE ##*/
+.line-block{
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+.line-block--primary,
+.line-block--secondary{
+	display: table-cell;
+	width: 50%;
+	background: #fff;
+}
+.line-block-2-to-3 > .line-block--primary{
+	width: 40%;
+}
+.line-block-2-to-3 > .line-block--secondary{
+	width: 60%;
+}
+.line-block-centered .line-block--primary,
+.line-block-centered .line-block--secondary{
+	vertical-align: middle;
+}
+.line-block-devided > .line-block--primary{
+	border-right: 10px solid #E5E9EC;
+}
+.line-block-devided > .line-block--secondary{
+	border-left: 10px solid #E5E9EC;
+}
+.line-block .box-info .additional-box{
+	top: 15px;
+}
+.line-block .box-info .additional-box a{
+	padding: 10px;
+	color: #4C5264;
+}
+.line-block .box-info .additional-box a:hover,
+.line-block .box-info .additional-box a:visited,
+.line-block .box-info .additional-box a:focus{
+	text-decoration: none;
+}
+
+.resource-in-use{
+	padding: 10px 0 15px;
+	border-top: 1px dashed #ddd;
+	border-bottom: 1px dashed #ddd;
+	margin: 20px 0;
+}
+.resource-in-use em{
+	display: block;
+	padding-left: 10px;
+}
+.resource-in-use .in-use-on{
+	display: inline-block;
+	background: #fafafa;
+	margin: 10px 0 0 10px;
+	padding: 0 5px;
+	border-radius: 3px;
+	border: 1px solid #ddd;
+	font-size: 12px;
+}

@@ -1,0 +1,69 @@
+---
+layout: default
+title: CMS - Resource Change
+---
+<!-- Page header -->
+<div class="page-heading animated fadeInDownBig">
+	<h1>Changeset #15423</h1>
+</div>
+<!-- End page header -->
+<div class="line-block line-block-devided">
+	<div class="line-block--primary">
+		<div class="box-info">
+			<h2>Resource info</h2>
+			<div class="additional-box">
+				<a href="#fakelink" class="dropdown-toggle" data-toggle="dropdown"><img src="http://localhost:9778/assets/img/blank.gif" class="flag flag-us" alt="Unated States"> Languge <i class="fa fa-chevron-down i-xs"></i></a>
+			</div>
+			<div class="line-block line-block-centered line-block-2-to-3">
+				<div class="line-block--primary text-center">
+					<img src="/assets/img/Resource.jpg" alt="Po">
+				</div>
+				<div class="line-block--secondary">
+					<div class="resource-info">
+						<h4>Resource <strong>Resource name</strong></h4>
+						<p>Resource description</p>
+						<button class="btn btn-primary btn-sm">
+							<i class="fa fa-picture-o"></i>
+							 Load new
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="resource-in-use">
+				<div class="row">
+					<div class="col-sm-12">
+						<em>In use on Zone > Page > Site: </em> 
+						<span>
+							<span class="in-use-on">Zone_3 > Page_1 > Customer</span>
+							<span class="in-use-on">Zone_4 > Page_1 > Retailer</span>
+							<span class="in-use-on">Zone_6 > Page_5 > Distributor</span>
+							<span class="in-use-on">Zone_12 > Page_2 > Customer</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="line-block--secondary">
+		<div class="box-info">
+			<h2>Resource attributes</h2>
+			<div class="form-group">
+				<label for="width">Width</label>
+				<input type="text" class="form-control" id="width">
+			</div>
+			<div class="form-group">
+				<label for="height">Height</label>
+				<input type="text" class="form-control" id="height">
+			</div>
+			<div class="form-group">
+				<label for="border">Border</label>
+				<input type="text" class="form-control" id="border">
+			</div>
+			<div class="form-group">
+				<label for="alt">Alt</label>
+				<input type="text" class="form-control" id="alt">
+			</div>
+		</div>
+	</div>
+</div>

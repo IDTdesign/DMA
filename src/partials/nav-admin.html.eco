@@ -42,6 +42,7 @@
 									<li class="second-level <%- @isActive('/cms/changeset-details') %>"><a class="menu-item" href="<%= @getUrl('/cms/changeset-details') %>"><i class="fa fa-angle-right"></i> Changeset details</a></li>
 									<li class="second-level <%- @isActive('/cms/add-zone-change') %>"><a class="menu-item" href="<%= @getUrl('/cms/add-zone-change') %>"><i class="fa fa-angle-right"></i> Add zone change</a></li>
 									<li class="second-level <%- @isActive('/cms/add-image-change') %>"><a class="menu-item" href="<%= @getUrl('/cms/add-image-change') %>"><i class="fa fa-angle-right"></i> Add image change</a></li>
+									<li class="second-level <%- @isActive('/cms/resource-change') %>"><a class="menu-item" href="<%= @getUrl('/cms/resource-change') %>"><i class="fa fa-angle-right"></i> Resource change</a></li>
 								</ul>
 							</li>
 							<li class="first-level"><a class="menu-item" href="<%= @getUrl('/history') %>"><i class="fa fa-archive"></i> Change History</a></li>
