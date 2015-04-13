@@ -16,7 +16,7 @@ title: CMS - Resource Change
 			</div>
 			<div class="line-block line-block-centered line-block-2-to-3">
 				<div class="line-block--primary text-center">
-					<img src="/assets/img/Resource.jpg" alt="Po">
+					<img src="https://googledrive.com/host/0B_nRJqTIKCknOXBnU3h3aWF0eTQ/Resource.jpg" alt="Po">
 				</div>
 				<div class="line-block--secondary">
 					<div class="resource-info">
@@ -65,5 +65,15 @@ title: CMS - Resource Change
 				<input type="text" class="form-control" id="alt">
 			</div>
 		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 text-left">
+		<button class="btn btn-default">
+			« Back to Changeset Details
+		</button>
+	</div>
+	<div class="col-sm-6 text-right">
+		<button class="btn btn-primary"><i class="fa fa-save"></i> Save all changes</button>
 	</div>
 </div>

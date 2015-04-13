@@ -1,0 +1,146 @@
+---
+layout: default
+title: CMS - Add Image Change
+---
+<!-- Page header -->
+<div class="page-heading animated fadeInDownBig">
+	<h1>Changeset #US-777</h1>
+</div>
+<!-- End page header -->
+<div class="box-info full">
+	<h2>Add Image change</h2>
+	<div class="col-lg-4 change-steps">
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Site</label>
+			<div class="col-sm-10">
+				<select id="step-1" class="form-control form-sm">
+					<option value="" disabled selected>select a site</option>
+					<option value="cust">cust</option>
+					<option value="ret">ret</option>
+					<option value="dist">dist</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Page</label>
+			<div class="col-sm-10">
+				<select id="step-2" class="form-control form-sm" disabled>
+					<option value="" disabled selected>select a page</option>
+					<option value="index">index</option>
+					<option value="contacts">contacts</option>
+					<option value="about">about</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<ul class="items-to-change">
+				<li class="group-title">Images</li>
+				<li class="not-chosen">Please select site/page first</li>
+				<li>header logo</li>
+				<li>banner left</li>
+				<li>simple image</li>
+				<li>footer background</li>
+				<li>header logo</li>
+				<li>banner left</li>
+				<li>simple image</li>
+				<li>footer background</li>			
+			</ul>
+		</div>
+		<div class="form-group">
+			<div class="col-lg-12">
+				<a href="#fake" class="btn btn-default btn-sm">&laquo; Back to zone changes</a>
+			</div>
+		</div>
+	</div><!-- end .change-steps -->
+	<div class="steps-how-to col-lg-8">
+		<div class="notes">
+			<ul class="easyWizardSteps">
+				<li class="step-1 current">
+					<span>1</span>
+					<span class="step-descr">
+						Select a Site
+						<small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+					</span>
+				</li>
+				<li class="step-2">
+					<span>2</span>
+					<span class="step-descr">
+						Select a Page
+						<small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+					</span>
+				</li>
+				<li class="step-3">
+					<span>3</span>
+					<span class="step-descr">
+						Select a Zone
+						<small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+					</span>
+				</li>
+			</ul>
+			<div class="editor">
+				<div class="line-block line-block-devided">
+					<div class="line-block--primary">
+						<div class="box-info">
+							<h2>Resource info</h2>
+							<div class="line-block line-block-centered line-block-2-to-3">
+								<div class="line-block--primary text-center">
+									<img class="resource-preview" src="https://googledrive.com/host/0B_nRJqTIKCknOXBnU3h3aWF0eTQ/Resource.jpg" alt="Po">
+								</div>
+								<div class="line-block--secondary">
+									<div class="resource-info">
+										<h4>Resource <strong>Resource name</strong></h4>
+										<p>Resource description</p>
+										<button class="btn btn-primary btn-sm">
+											<i class="fa fa-picture-o"></i>
+											 Load new
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="resource-in-use">
+								<div class="row">
+									<div class="col-sm-12">
+										<em>In use on Zone > Page > Site: </em> 
+										<span>
+											<span class="in-use-on">Zone_3 > Page_1 > Customer</span>
+											<span class="in-use-on">Zone_4 > Page_1 > Retailer</span>
+											<span class="in-use-on">Zone_6 > Page_5 > Distributor</span>
+											<span class="in-use-on">Zone_12 > Page_2 > Customer</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="line-block--secondary">
+						<div class="box-info">
+							<h2>Resource attributes</h2>
+							<div class="form-group">
+								<label for="width">Width</label>
+								<input type="text" class="form-control" id="width">
+							</div>
+							<div class="form-group">
+								<label for="height">Height</label>
+								<input type="text" class="form-control" id="height">
+							</div>
+							<div class="form-group">
+								<label for="border">Border</label>
+								<input type="text" class="form-control" id="border">
+							</div>
+							<div class="form-group">
+								<label for="alt">Alt</label>
+								<input type="text" class="form-control" id="alt">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="editor-action text-right">
+					<a href="#fake" class="btn btn-primary">
+						<i class="fa fa-pencil"></i> Edit
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- End div .box-info -->

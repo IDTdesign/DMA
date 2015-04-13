@@ -3610,16 +3610,10 @@ select.input-sm{
 .line-block .box-info .additional-box{
 	top: 15px;
 }
-.line-block .box-info .additional-box a{
-	padding: 10px;
-	color: #4C5264;
+.line-block .resource-preview{
+	width: 80%;
+	max-width: 120px;
 }
-.line-block .box-info .additional-box a:hover,
-.line-block .box-info .additional-box a:visited,
-.line-block .box-info .additional-box a:focus{
-	text-decoration: none;
-}
-
 .resource-in-use{
 	padding: 10px 0 15px;
 	border-top: 1px dashed #ddd;
@@ -3638,4 +3632,21 @@ select.input-sm{
 	border-radius: 3px;
 	border: 1px solid #ddd;
 	font-size: 12px;
+}
+/* ADD MODE */
+.editor > .line-block{
+	margin-top: -8px;
+}
+.editor .line-block h4{
+	border-bottom: 0;
+	padding: 0;
+}
+.editor .line-block-devided > .line-block--primary,
+.editor .line-block-devided > .line-block--secondary{
+	border-color: #fafafa;
+}
+
+.editor .box-info h2{
+	padding: 0 15px 15px 15px;
+	margin: 5px -15px 20px -15px;
 }
