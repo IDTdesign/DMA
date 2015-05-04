@@ -161,7 +161,11 @@ if($grid.attr('id') == "csGridNested"){
 //##################################### ZONE CHANGE ##############################################################################################################################################
 var zcGrid = $("#zcGrid");
 var csData = [{name: "<a id='editCs' href='#fakelink'>First CS</a>", channel: "US", startDate: "01/01/2015", endDate: "01/07/2015", created: "12/31/2014 by J.Smith", actions: csGroup},
-{name: "<a id='editCs' href='#fakelink'>Second CS</a>", channel: "ES", startDate: "01/01/2015", endDate: "01/07/2015", created: "12/31/2014 by J.Cole", actions: csGroup}];
+{name: "<a id='editCs' href='#fakelink'>Second CS</a>", channel: "ES", startDate: "01/01/2015", endDate: "01/07/2015", created: "12/31/2014 by J.Cole", actions: csGroup},
+{name: "<a id='editCs' href='#fakelink'>Third CS</a>", channel: "ES", startDate: "01/01/2015", endDate: "01/07/2015", created: "12/31/2014 by J.Cole", actions: csGroup},
+{name: "<a id='editCs' href='#fakelink'>Fifth CS</a>", channel: "ES", startDate: "01/01/2015", endDate: "01/07/2015", created: "12/31/2014 by J.Cole", actions: csGroup},
+{name: "<a id='editCs' href='#fakelink'>Sixth CS</a>", channel: "ES", startDate: "01/01/2015", endDate: "01/07/2015", created: "12/31/2014 by J.Cole", actions: csGroup},
+{name: "<a id='editCs' href='#fakelink'>Seventh CS</a>", channel: "ES", startDate: "01/01/2015", endDate: "01/07/2015", created: "12/31/2014 by J.Cole", actions: csGroup}];
 zcGrid.jqGrid({
     datatype: 'local',
     colNames:['Name','Channel','Start Date', 'End Date','Created','Actions'],
@@ -254,3 +258,5 @@ rcGrid.jqGrid({
 function stripSubGrid(subgridTableId, rowId){
     $("#" + subgridTableId).addClass('table-hover table-striped');
 }
+zcGrid.jqGrid('filterToolbar');
+rcGrid.jqGrid('filterToolbar');
