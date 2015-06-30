@@ -5,10 +5,12 @@ var editBtn = '<button id="edit-btn" type="button" class="btn btn-default btn-xs
 var enRestore = '<button id="restore" type="button" class="btn btn-default btn-xs" role="button"><i class="fa fa-mail-reply"></i></button>';
 var delBtn = '<button id="restore" type="button" class="btn btn-default btn-xs" role="button"><i class="fa fa-trash-o"></i></button>'
 var disRestore = '<button disabled id="restore" type="button" class="btn btn-default btn-xs" role="button"><i class="fa fa-mail-reply"></i></button>';
+var sendMessage = '<button id="sendMessage" type="button" class="btn btn-default btn-xs" role="button"><i class="fa fa-envelope"></i></button>'
 var enGroup = '<div class="btn-group btn-group-xs">'+editBtn+enRestore+'</div>';
 var disGroup = '<div class="btn-group btn-group-xs">'+editBtn+disRestore+'</div>';
 var longGroup = '<div class="btn-group btn-group-xs">'+editBtn+enRestore+editBtn+'</div>';
 var csGroup = '<div class="btn-group btn-group-xs">'+editBtn+delBtn+'</div>';
+var msGroup = '<div class="btn-group btn-group-xs">'+sendMessage + delBtn + '</div>';
 jQuery(function(){
 	var lastsel;
 	var myData = [
@@ -58,7 +60,7 @@ jQuery(function(){
         height: '100%',
         rowNum: 10,
         rowList: [10, 20, 30],
-	    viewrecords: true,		    
+	    viewrecords: true,
 	    autowidth: true,
 	    gridview: true,
 	    cellEdit: false,
@@ -78,9 +80,9 @@ jQuery(function(){
 			});
 			$('#pop').on('hide.bs.popover', function () {
 				$(this).blur();
-			})			
+			})
 			/*$("tr#2 td").hover(function() {
-				
+
 				if($(this).is("[data-oldval]")){
 					$(this).wrapInner('<span></span>');
 					$(this).children('span').popover({
@@ -127,25 +129,25 @@ jQuery(function(){
 				jQuery('#list').jqGrid('restoreRow',lastsel);
 				lastsel=id;
 
-	            jQuery("#list").jqGrid('editRow',id, 
-				{ 
-				    keys : true, 
+	            jQuery("#list").jqGrid('editRow',id,
+				{
+				    keys : true,
 				    aftersavefunc: function() {
-				        jQuery("#list").trigger('reloadGrid'); 
+				        jQuery("#list").trigger('reloadGrid');
 				    },
 				    afterrestorefunc: function() {
-				        jQuery("#list").trigger('reloadGrid'); 
+				        jQuery("#list").trigger('reloadGrid');
 				    }
 				});
 			} else if(id == lastsel){
-	            jQuery("#list").jqGrid('editRow',id, 
-					{ 
-					    keys : true, 
+	            jQuery("#list").jqGrid('editRow',id,
+					{
+					    keys : true,
 					    aftersavefunc: function() {
-					        jQuery("#list").trigger('reloadGrid'); 
+					        jQuery("#list").trigger('reloadGrid');
 					    },
 					    afterrestorefunc: function() {
-					        jQuery("#list").trigger('reloadGrid'); 
+					        jQuery("#list").trigger('reloadGrid');
 					    }
 					});
 
@@ -158,12 +160,12 @@ jQuery(function(){
 		{reloadAfterSubmit:false} // del options
 	);
 	jQuery("#list").navButtonAdd('#pager',{
-	   title:"Add product", 
+	   title:"Add product",
 	   caption: "Add item",
-	   buttonicon:"fa fa-plus-circle", 
-	   onClickButton: function(){ 
+	   buttonicon:"fa fa-plus-circle",
+	   onClickButton: function(){
 	   		var recCount = jQuery("#list").jqGrid('getGridParam', 'records');
-	    	jQuery("#list").addRowData(recCount+1, 'first');	
+	    	jQuery("#list").addRowData(recCount+1, 'first');
 			if(recCount/* && id!==lastsel*/){
 				jQuery('#list').jqGrid('restoreRow',lastsel);
 				jQuery("#list tbody tr#"+(recCount+1)+" td:has('span')").each(function() {
@@ -171,41 +173,41 @@ jQuery(function(){
 					$(this).text(old_val);
 				});
 
-	            jQuery("#list").jqGrid('editRow',(recCount+1), 
-				{ 
-				    keys : true, 
+	            jQuery("#list").jqGrid('editRow',(recCount+1),
+				{
+				    keys : true,
 				    aftersavefunc: function() {
-				        jQuery("#list").trigger('reloadGrid'); 
+				        jQuery("#list").trigger('reloadGrid');
 				    },
 				    afterrestorefunc: function() {
-				        jQuery("#list").trigger('reloadGrid'); 
+				        jQuery("#list").trigger('reloadGrid');
 				    }
 				});
 				lastsel=recCount+1;
 			}
-	   }, 
+	   },
 	   position:"first"
 	});
 	jQuery("#list").navButtonAdd('#pager',{
-	   title:"Remove product", 
+	   title:"Remove product",
 	   caption: "Delete",
-	   buttonicon:"fa fa-trash-o", 
-	   onClickButton: function(){ 
+	   buttonicon:"fa fa-trash-o",
+	   onClickButton: function(){
 	   		var selectedItems = jQuery("#list").jqGrid('getGridParam', 'selarrrow');
 	   		for (var i = selectedItems.length - 1; i >= 0; i--) {
 	   			jQuery("#list").delRowData(selectedItems[i]);
 	   		};
-	   }, 
+	   },
 	   position:"last"
-	});	
+	});
 	jQuery("#list").navButtonAdd('#pager',{
-	   title:"Refresh", 
+	   title:"Refresh",
 	   caption: "Refresh",
-	   buttonicon:"fa fa-refresh", 
+	   buttonicon:"fa fa-refresh",
 	   position:"last"
 	});
 	jQuery("#list").jqGrid('filterToolbar',{searchOperators : false});
-	$('body').bind("DOMSubtreeModified",function(){//don't forget to remove if we'll deside don't use floating/popup edit                     
+	$('body').bind("DOMSubtreeModified",function(){//don't forget to remove if we'll deside don't use floating/popup edit
 		$(".ui-jqdialog select, .ui-jqdialog input[type=text]").addClass('form-control');
 	});
 	jQuery("#list").addClass('table-hover table-striped');
@@ -267,7 +269,7 @@ jQuery(function(){
 	$(".ui-jqgrid-bdiv table").addClass('table-hover table-striped');
 });
 //#####################################	TREEGRID ##########################################################################################################################################
-var treeData = [{hierarchy: "Zone changes", type: "", level:"0", id:"1", parent:"null", isLeaf:false, expanded:true, loaded:true}, 
+var treeData = [{hierarchy: "Zone changes", type: "", level:"0", id:"1", parent:"null", isLeaf:false, expanded:true, loaded:true},
 				{hierarchy: "Customer", type:"site", level:"1", id:"5", parent:"1", isLeaf:false, expanded:false, loaded:true},
 				{hierarchy: "Distributor", type:"site", level:"1", id:"6", parent:"1", isLeaf:false, expanded:false, loaded:true},
 				{hierarchy: "Retailer", type:"site", level:"1", id:"7", parent:"1", isLeaf:false, expanded:false, loaded:true},
@@ -280,7 +282,7 @@ jQuery('#change-tree').jqGrid({
     colNames: ['Hierarchy', 'Type'],
     colModel:[
         {name:'hierarchy', index:'hierarchy', sortable:'false', width:'300', fixed:'true'},
-        {name:'type', index:'type', sortable:'false', width:'100', fixed:'true'},        
+        {name:'type', index:'type', sortable:'false', width:'100', fixed:'true'},
                ],
     height: "auto",
     datastr: treeData,
@@ -317,12 +319,12 @@ function getLiHeight(){
 }
 
 $(document).ready(function(){
-	
+
 	$(window).load(function() { $("#loading").fadeOut("slow");})
-	
+
 	$(".res-grid li").outerHeight(getLiHeight());
 
-	// STEPS # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+	// STEPS # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 	$("#step-1").change(function() {
 		$("#step-2").removeAttr("disabled");
 		$(".step-2").addClass("current");
@@ -495,7 +497,7 @@ $(document).ready(function(){
 	});*/
 	$('.sidebar-menu ul li.first-level a .fa-angle-double-down')/*.not('.sidebar-menu ul li.second-level a')*/.click(function() {
 		$('.sidebar-menu li').removeClass('selected');
-		$(this).closest('li').addClass('selected');	
+		$(this).closest('li').addClass('selected');
 		var checkElement = $(this).parents('a').next();
 			if((checkElement.is('ul.second-level')) && (checkElement.is(':visible'))) {
 				$(this).closest('li').removeClass('selected');
@@ -508,8 +510,8 @@ $(document).ready(function(){
 			if($(this).closest('li').find('ul').children().length == 0) {
 				return true;
 				} else {
-				return false;	
-			}		
+				return false;
+			}
 	});
 
 
@@ -547,7 +549,7 @@ $(document).ready(function(){
 				enabled:true
 			}
 		});
-	}); 
+	});
 
 
 	if ($('#morris-bar-home').length > 0){
@@ -601,8 +603,8 @@ $(document).ready(function(){
 			lineColors: ['#5CB85C', '#FFD600', '#D10D0D']
 		});
 	}
-	
-	
+
+
 	function respChart(selector, data, options){
 
 		// Define default option for line chart
@@ -619,10 +621,10 @@ $(document).ready(function(){
 			scaleFontFamily : "'proxima-nova'",
 			scaleFontSize : 10,
 			scaleFontStyle : "normal",
-			scaleFontColor : "#909090",	
+			scaleFontColor : "#909090",
 			scaleShowGridLines : true,
 			scaleGridLineColor : "rgba(0,0,0,.05)",
-			scaleGridLineWidth : 1,	
+			scaleGridLineWidth : 1,
 			bezierCurve : true,
 			pointDot : true,
 			pointDotRadius : 3,
@@ -636,11 +638,11 @@ $(document).ready(function(){
 			onAnimationComplete : null
 		}
 
-		// check if the option is override to exact options 
+		// check if the option is override to exact options
 		// (bar, pie and other)
 		if (options == false || options == null){
 			options = option;
-		} 
+		}
 
 		// get selector by context
 		var ctx = selector.get(0).getContext("2d");
@@ -662,7 +664,7 @@ $(document).ready(function(){
 		generateChart();
 
 	}
-	
+
 	respChart($("#canvas"),data);
 
 
@@ -701,14 +703,14 @@ $(document).ready(function(){
 
 	var Inputmask = function (element, options) {
 		if (isAndroid) return // No support because caret positioning doesn't work on Android
-		
+
 		this.$element = $(element)
 		this.options = $.extend({}, Inputmask.DEFAULS, options)
 		this.mask = String(this.options.mask)
-		
+
 		this.init()
 		this.listen()
-				
+
 		this.checkVal() //Perform initial check for existing values
 	}
 
@@ -727,7 +729,7 @@ $(document).ready(function(){
 		var defs = this.options.definitions
 		var len = this.mask.length
 
-		this.tests = [] 
+		this.tests = []
 		this.partialPosition = this.mask.length
 		this.firstNonMaskPos = null
 
@@ -756,7 +758,7 @@ $(document).ready(function(){
 			}).join('')
 		}, this))
 	}
-		
+
 	Inputmask.prototype.listen = function() {
 		if (this.$element.attr("readonly")) return
 
@@ -800,19 +802,19 @@ $(document).ready(function(){
 				end = begin + range.text.length
 			}
 			return {
-				begin: begin, 
+				begin: begin,
 				end: end
 			}
 		}
 	}
-	
+
 	Inputmask.prototype.seekNext = function(pos) {
 		var len = this.mask.length
 		while (++pos <= len && !this.tests[pos]);
 
 		return pos
 	}
-	
+
 	Inputmask.prototype.seekPrev = function(pos) {
 		while (--pos >= 0 && !this.tests[pos]);
 
@@ -862,7 +864,7 @@ $(document).ready(function(){
 
 	Inputmask.prototype.focusEvent = function() {
 		this.focusText = this.$element.val()
-		var len = this.mask.length 
+		var len = this.mask.length
 		var pos = this.checkVal()
 		this.writeBuffer()
 
@@ -992,17 +994,17 @@ $(document).ready(function(){
 		return (this.partialPosition ? i : this.firstNonMaskPos)
 	}
 
-	
+
 	// INPUTMASK PLUGIN DEFINITION
 	// ===========================
 
 	var old = $.fn.inputmask
-	
+
 	$.fn.inputmask = function (options) {
 		return this.each(function () {
 			var $this = $(this)
 			var data = $this.data('inputmask')
-			
+
 			if (!data) $this.data('inputmask', (data = new Inputmask(this, options)))
 		})
 	}

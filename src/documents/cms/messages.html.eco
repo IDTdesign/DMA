@@ -1,0 +1,88 @@
+---
+layout: default
+title: CMS - Messages
+---
+<!-- Page header -->
+<div class="page-heading animated fadeInDownBig cs-header">
+	<h1>Messages</h1>
+</div>
+<!-- End page header -->
+<div class="box-info full">
+	<table id="msGrid"></table>
+	<div id="msPager"></div>
+</div><!-- End div .box-info -->
+<div class="modal fade" id="sendModal" style="opacity: 1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Send Message</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-horizontal box-info">
+					<div class="form-group">
+						<div class="col-sm-3">
+							<div><label for="input1">Distributors</label></div>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-primary btn-xs active">
+							    <input type="radio" name="options" id="option1" autocomplete="off" checked> None
+							  </label>
+							  <label class="btn btn-primary btn-xs">
+							    <input type="radio" name="options" id="option2" autocomplete="off"> All
+							  </label>
+							  <label class="btn btn-primary btn-xs">
+							    <input type="radio" name="options" id="option3" class="seleted-val" autocomplete="off"> Selected
+							  </label>
+							</div>
+						</div>
+						<div class="col-sm-9">
+							<input type="text" name="input1" id="input1" disabled class="form-control input-lg"></input>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-3">
+							<div><label for="input1">Retailers</label></div>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-primary btn-xs active">
+							    <input type="radio" name="options" id="option1" autocomplete="off" checked> None
+							  </label>
+							  <label class="btn btn-primary btn-xs">
+							    <input type="radio" name="options" id="option2" autocomplete="off"> All
+							  </label>
+							  <label class="btn btn-primary btn-xs">
+							    <input type="radio" name="options" id="option3" class="seleted-val" autocomplete="off"> Selected
+							  </label>
+							</div>
+						</div>
+						<div class="col-sm-9">
+							<input type="text" name="input1" id="input1" disabled class="form-control input-lg"></input>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-3">
+							<div><label for="input1">Salespeople</label></div>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-primary btn-xs active">
+							    <input type="radio" name="options" id="option1" autocomplete="off" checked> None
+							  </label>
+							  <label class="btn btn-primary btn-xs">
+							    <input type="radio" name="options" id="option2" autocomplete="off"> All
+							  </label>
+							  <label class="btn btn-primary btn-xs">
+							    <input type="radio" name="options" id="option3" class="seleted-val" autocomplete="off"> Selected
+							  </label>
+							</div>
+						</div>
+						<div class="col-sm-9">
+							<input type="text" name="input1" id="input1" disabled class="form-control input-lg"></input>
+						</div>
+					</div>
+				</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

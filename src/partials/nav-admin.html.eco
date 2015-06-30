@@ -20,7 +20,7 @@
 											<input type="text" class="form-control search" placeholder="Search retailer">
 											<i class="fa fa-search"></i>
 										</form>
-									</li>								
+									</li>
 									<li class="second-level <%- @isActive('/retailers/general_info') %>"><a class="menu-item" href="<%= @getUrl('/retailers/general_info') %>"><i class="fa fa-angle-right"></i> General Info</a></li>
 									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers/bill_pay') %>"><i class="fa fa-angle-right"></i> Bill Pay</a></li>
 									<li class="second-level"><a class="menu-item" href="<%= @getUrl('/retailers/products') %>"><i class="fa fa-angle-right"></i> Products</a></li>
@@ -43,6 +43,7 @@
 									<li class="second-level <%- @isActive('/cms/add-zone-change') %>"><a class="menu-item" href="<%= @getUrl('/cms/add-zone-change') %>"><i class="fa fa-angle-right"></i> Add zone change</a></li>
 									<li class="second-level <%- @isActive('/cms/add-image-change') %>"><a class="menu-item" href="<%= @getUrl('/cms/add-image-change') %>"><i class="fa fa-angle-right"></i> Add image change</a></li>
 									<li class="second-level <%- @isActive('/cms/resource-change') %>"><a class="menu-item" href="<%= @getUrl('/cms/resource-change') %>"><i class="fa fa-angle-right"></i> Resource change</a></li>
+									<li class="second-level <%- @isActive('/cms/messages') %>"><a class="menu-item" href="<%= @getUrl('/cms/messages') %>"><i class="fa fa-angle-right"></i> Messages</a></li>
 								</ul>
 							</li>
 							<li class="first-level"><a class="menu-item" href="<%= @getUrl('/history') %>"><i class="fa fa-archive"></i> Change History</a></li>

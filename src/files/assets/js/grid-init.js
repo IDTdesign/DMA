@@ -18,7 +18,7 @@ csGrid.jqGrid({
     height: '100%',
     rowNum: 10,
     rowList: [10, 20, 30],
-    viewrecords: true,		    
+    viewrecords: true,
     autowidth: true,
     gridview: true,
     cellEdit: false,
@@ -33,14 +33,14 @@ csGrid.jqGrid({
 		{reloadAfterSubmit:false} // del options
 	);
 	csGrid.navButtonAdd('#pager',{
-	   title:"Add new", 
+	   title:"Add new",
 	   caption: "Add new",
-	   buttonicon:"fa fa-plus-circle", 
+	   buttonicon:"fa fa-plus-circle",
 	   position:"first",
-   	   onClickButton: function(){ 
+   	   onClickButton: function(){
 	   		var nUrl = window.location.href.replace('changesets', '') + "cms-steps";
 	   		window.location.href = nUrl;
-	   }, 
+	   },
 
 	});
 
@@ -69,7 +69,7 @@ var myGridData = [
             {id: "s3a", c1: "x3", c2: "3y", c3: "3z"},
             {id: "s3a", c1: "x3", c2: "3y", c3: "3z"},
             {id: "s3a", c1: "x3", c2: "3y", c3: "3z"},
-            {id: "s3a", c1: "x3", c2: "3y", c3: "3z"},            
+            {id: "s3a", c1: "x3", c2: "3y", c3: "3z"},
         ]
     },
     $grid = $("#csGridNested"),
@@ -123,11 +123,11 @@ $grid.jqGrid({
         });
         $("#"+subgridTableId).jqGrid('navGrid',"#"+pagerId,{edit:false,add:false,del:false,search:false,refresh: false})
         $("#"+subgridTableId).navButtonAdd("#"+pagerId,{
-               title:"Add new", 
+               title:"Add new",
                caption: "Add new",
-               buttonicon:"fa fa-plus-circle", 
+               buttonicon:"fa fa-plus-circle",
                position:"first",
-               onClickButton: function(){ 
+               onClickButton: function(){
                     var nUrl = window.location.href.replace('changesets', '') + "cms-steps";
                     window.location.href = nUrl;
                 }
@@ -137,22 +137,22 @@ $grid.jqGrid({
 });
 $("#csGridNested").jqGrid('navGrid','#nestedPager',{cloneToTop: true, add: false, edit: false, del:false, search:false, refresh: false});
 /*$("#csGridNested").navButtonAdd('#nestedPager',{
-       title:"Add new", 
+       title:"Add new",
        caption: "Add new",
-       buttonicon:"fa fa-plus-circle", 
+       buttonicon:"fa fa-plus-circle",
        position:"first",
-       onClickButton: function(){ 
+       onClickButton: function(){
             var nUrl = window.location.href.replace('changesets', '') + "cms-steps";
             window.location.href = nUrl;
         }
 });*/
 if($grid.attr('id') == "csGridNested"){
     myAddButton ({
-           title:"Add new", 
+           title:"Add new",
            caption: "Add new",
-           buttonicon:"fa fa-plus-circle", 
+           buttonicon:"fa fa-plus-circle",
            position:"first",
-           onClickButton: function(){ 
+           onClickButton: function(){
                 var nUrl = window.location.href.replace('changesets', '') + "cms-steps";
                 window.location.href = nUrl;
             }
@@ -182,7 +182,7 @@ zcGrid.jqGrid({
     height: '100%',
     rowNum: 10,
     rowList: [10, 20, 30],
-    viewrecords: true,          
+    viewrecords: true,
     autowidth: true,
     gridview: true,
     cellEdit: false,
@@ -197,14 +197,14 @@ zcGrid.jqGrid({
         {reloadAfterSubmit:false} // del options
     );
     zcGrid.navButtonAdd('#zcPager',{
-       title:"Add new", 
+       title:"Add new",
        caption: "Add new",
-       buttonicon:"fa fa-plus-circle", 
+       buttonicon:"fa fa-plus-circle",
        position:"first",
-       onClickButton: function(){ 
+       onClickButton: function(){
             var nUrl = window.location.href.replace('changesets', '') + "cms-steps";
             window.location.href = nUrl;
-       }, 
+       },
 
     });
 //##################################### RESOURCE CHANGE ##############################################################################################################################################
@@ -227,7 +227,7 @@ rcGrid.jqGrid({
     height: '100%',
     rowNum: 10,
     rowList: [10, 20, 30],
-    viewrecords: true,          
+    viewrecords: true,
     autowidth: true,
     gridview: true,
     cellEdit: false,
@@ -242,14 +242,14 @@ rcGrid.jqGrid({
         {reloadAfterSubmit:false} // del options
     );
     rcGrid.navButtonAdd('#rcPager',{
-       title:"Add new", 
+       title:"Add new",
        caption: "Add new",
-       buttonicon:"fa fa-plus-circle", 
+       buttonicon:"fa fa-plus-circle",
        position:"first",
-       onClickButton: function(){ 
+       onClickButton: function(){
             var nUrl = window.location.href.replace('changesets', '') + "cms-steps";
             window.location.href = nUrl;
-       }, 
+       },
 
     });
 
@@ -260,3 +260,61 @@ function stripSubGrid(subgridTableId, rowId){
 }
 zcGrid.jqGrid('filterToolbar');
 rcGrid.jqGrid('filterToolbar');
+//##################################### MESSAGES ##############################################################################################################################################
+var msGrid = $("#msGrid");
+var msData = [{name: "<a id='editCs' href='#fakelink'>First CS</a>", channel: "US", startDate: "01/01/2015", endDate: "01/07/2015", created: "12/31/2014 by J.Smith", actions: msGroup},
+{name: "<a id='editCs' href='#fakelink'>Second CS</a>", channel: "ES", startDate: "01/01/2015", endDate: "01/07/2015", created: "12/31/2014 by J.Cole", actions: msGroup},
+{name: "<a id='editCs' href='#fakelink'>Third CS</a>", channel: "ES", startDate: "01/01/2015", endDate: "01/07/2015", created: "12/31/2014 by J.Cole", actions: msGroup},
+{name: "<a id='editCs' href='#fakelink'>Fifth CS</a>", channel: "ES", startDate: "01/01/2015", endDate: "01/07/2015", created: "12/31/2014 by J.Cole", actions: msGroup},
+{name: "<a id='editCs' href='#fakelink'>Sixth CS</a>", channel: "ES", startDate: "01/01/2015", endDate: "01/07/2015", created: "12/31/2014 by J.Cole", actions: msGroup},
+{name: "<a id='editCs' href='#fakelink'>Seventh CS</a>", channel: "ES", startDate: "01/01/2015", endDate: "01/07/2015", created: "12/31/2014 by J.Cole", actions: msGroup}];
+msGrid.jqGrid({
+    datatype: 'local',
+    colNames:['Name','Channel','Start Date', 'End Date','Created','Actions'],
+    colModel:[
+        {name:'name', index:'name', editable: true},
+        {name:'channel', index:'channel', editable: true},
+        {name:'startDate', index:'startDate', editable: true},
+        {name:'endDate', index:'endDate', editable: true},
+        {name:'created', index:'created', editable: true},
+        {name:'actions', index:'actions', editable: false, sortable: false, search: false},
+               ],
+    pager: "#msPager",
+    hidegrid: false,
+    height: '100%',
+    rowNum: 10,
+    rowList: [10, 20, 30],
+    viewrecords: true,
+    autowidth: true,
+    gridview: true,
+    cellEdit: false,
+    cellsubmit: 'clientArray',
+    editurl: 'clientArray',
+    data : msData,
+    caption: 'Messages list',
+});
+    msGrid.jqGrid('navGrid','#msPager',{add: false, edit: false, del:false, search:false, refresh: false}, //options
+        {reloadAfterSubmit:false}, // del options
+        {reloadAfterSubmit:false}, // del options
+        {reloadAfterSubmit:false} // del options
+    );
+    msGrid.navButtonAdd('#msPager',{
+       title:"Add new",
+       caption: "Add new",
+       buttonicon:"fa fa-plus-circle",
+       position:"first",
+       onClickButton: function(){
+            alert("Good job!");
+       },
+
+    });
+$("body").on('click', "#sendMessage", function(){
+	$("#sendModal").modal('show');
+});
+$("body").on('click', "label.btn", function(){
+	if($(this).children().hasClass("seleted-val")){
+		$(this).parents(".form-group").find("input[type=text]").removeAttr("disabled").focus();
+	} else {
+		$(this).parents(".form-group").find("input[type=text]").attr("disabled", "disabled");
+	}
+})
