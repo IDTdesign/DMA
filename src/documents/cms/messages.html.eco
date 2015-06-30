@@ -20,7 +20,7 @@ title: CMS - Messages
       </div>
       <div class="modal-body">
         <div class="form-horizontal box-info">
-					<div class="form-group">
+					<div class="form-group" style="margin-bottom: 30px;">
 						<div class="col-sm-3">
 							<div><label for="input1">Distributors</label></div>
 							<div class="btn-group" data-toggle="buttons">
@@ -36,37 +36,54 @@ title: CMS - Messages
 							</div>
 						</div>
 						<div class="col-sm-9">
-							<input type="text" name="input1" id="input1" disabled class="form-control input-lg"></input>
+							<select class="form-control input-lg" disabled multiple="" tabindex="-1" aria-hidden="true" id="selectColor" style="width: 100%">
+								<option>orange</option>
+								<option>white</option>
+								<option>purple</option>
+								<option value="red">red</option>
+								<option value="blue">blue</option>
+								<option value="green">green</option>
+							</select>
 						</div>
 					</div>
-					<div class="form-group">
+					<div class="form-group" style="margin-bottom: 30px;">
 						<div class="col-sm-3">
 							<div><label for="input1">Retailers</label></div>
 							<div class="btn-group" data-toggle="buttons">
-							  <label class="btn btn-primary btn-xs active">
-							    <input type="radio" name="options" id="option1" autocomplete="off" checked> None
+							  <label class="btn btn-primary btn-xs">
+							    <input type="radio" name="options" id="option1" autocomplete="off"> None
 							  </label>
 							  <label class="btn btn-primary btn-xs">
 							    <input type="radio" name="options" id="option2" autocomplete="off"> All
 							  </label>
-							  <label class="btn btn-primary btn-xs">
-							    <input type="radio" name="options" id="option3" class="seleted-val" autocomplete="off"> Selected
+							  <label class="btn btn-primary btn-xs active">
+							    <input type="radio" name="options" id="option3" class="seleted-val" autocomplete="off" checked> Selected
 							  </label>
 							</div>
 						</div>
 						<div class="col-sm-9">
-							<input type="text" name="input1" id="input1" disabled class="form-control input-lg"></input>
+							<select class="form-control input-lg" multiple="" tabindex="-1" aria-hidden="true" id="selectCity" style="width: 100%">
+								<option>Shanghai</option>
+								<option>Karachi</option>
+								<option selected="selected">Beijing</option>
+								<option selected="selected" value="red">Tianjin</option>
+								<option selected="selected" value="blue">New York City</option>
+								<option value="green">Bengaluru</option>
+								<option value="green">London</option>
+								<option value="green">Bangkok</option>
+								<option value="green">Rio de Janeiro</option>
+							</select>
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-sm-3">
 							<div><label for="input1">Salespeople</label></div>
 							<div class="btn-group" data-toggle="buttons">
-							  <label class="btn btn-primary btn-xs active">
-							    <input type="radio" name="options" id="option1" autocomplete="off" checked> None
-							  </label>
 							  <label class="btn btn-primary btn-xs">
-							    <input type="radio" name="options" id="option2" autocomplete="off"> All
+							    <input type="radio" name="options" id="option1" autocomplete="off"> None
+							  </label>
+							  <label class="btn btn-primary btn-xs active">
+							    <input type="radio" name="options" id="option2" autocomplete="off" checked> All
 							  </label>
 							  <label class="btn btn-primary btn-xs">
 							    <input type="radio" name="options" id="option3" class="seleted-val" autocomplete="off"> Selected
@@ -74,7 +91,17 @@ title: CMS - Messages
 							</div>
 						</div>
 						<div class="col-sm-9">
-							<input type="text" name="input1" id="input1" disabled class="form-control input-lg"></input>
+							<select class="form-control input-lg" multiple="" tabindex="-1" disabled aria-hidden="true" id="selectSea" style="width: 100%">
+								<option>Archipelago Sea</option>
+								<option>Bothnian Sea</option>
+								<option>Aegean Sea</option>
+								<option value="red">Balearic Sea</option>
+								<option value="blue">Black Sea</option>
+								<option value="green">Caribbean Sea</option>
+								<option value="green">Irish Sea</option>
+								<option value="green">Hudson Bay</option>
+								<option value="green">Wandel Sea</option>
+							</select>
 						</div>
 					</div>
 				</div>

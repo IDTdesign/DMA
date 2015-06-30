@@ -310,11 +310,16 @@ msGrid.jqGrid({
     });
 $("body").on('click', "#sendMessage", function(){
 	$("#sendModal").modal('show');
+	$("#selectColor, #selectCity, #selectSea").select2({
+		theme: "boss"
+	});
 });
 $("body").on('click', "label.btn", function(){
 	if($(this).children().hasClass("seleted-val")){
-		$(this).parents(".form-group").find("input[type=text]").removeAttr("disabled").focus();
+		$(this).parents(".form-group").find("input[type=text], select").removeAttr("disabled").focus();
+		$(this).parents(".form-group").find("select").select2("open");
 	} else {
-		$(this).parents(".form-group").find("input[type=text]").attr("disabled", "disabled");
+		$(this).parents(".form-group").find("input[type=text], select").attr("disabled", "disabled");
+		$(this).parents(".form-group").find("select").val(null).trigger('change');
 	}
 })
