@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "docpad": "~6.78.1",
-    "docpad-plugin-cleanurls": "~2.7.0",
+    "docpad-plugin-cleanurls": "~2.8.1",
     "docpad-plugin-eco": "~2.1.0",
     "docpad-plugin-geturl": "~2.1.1",
     "docpad-plugin-ghpages": "~2.4.4",
