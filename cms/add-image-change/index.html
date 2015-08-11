@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>CMS - Add Image Change - BMA</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="description" content="">
+	<meta name="keywords" content="admin, bootstrap,admin template, bootstrap admin, simple, awesome">
+	<meta name="author" content="">
+	
+	<!-- DocPad Styles + Our Own -->
+	<link  rel="stylesheet" href="http://idtdesign.github.io/DMA/assets/css/bootstrap.min.css" /><link  rel="stylesheet" href="http://idtdesign.github.io/DMA/assets/css/style-responsive.css" /><link  rel="stylesheet" href="http://idtdesign.github.io/DMA/assets/css/animate.css" /><link  rel="stylesheet" href="http://idtdesign.github.io/DMA/assets/third/font-awesome/css/font-awesome.min.css" /><link  rel="stylesheet" href="http://idtdesign.github.io/DMA/assets/third/weather-icon/css/weather-icons.min.css" /><link  rel="stylesheet" href="http://idtdesign.github.io/DMA/assets/third/morris/morris.css" /><link  rel="stylesheet" href="http://idtdesign.github.io/DMA/assets/third/nifty-modal/css/component.css" /><link  rel="stylesheet" href="http://idtdesign.github.io/DMA/assets/third/sortable/sortable-theme-bootstrap.css" /><link  rel="stylesheet" href="http://idtdesign.github.io/DMA/assets/third/select/bootstrap-select.min.css" /><link  rel="stylesheet" href="http://idtdesign.github.io/DMA/assets/third/select2/css/select2.min.css" /><link  rel="stylesheet" href="http://idtdesign.github.io/DMA/assets/third/summernote/summernote.css" /><link  rel="stylesheet" href="http://idtdesign.github.io/DMA/assets/third/magnific-popup/magnific-popup.css" /><link  rel="stylesheet" href="http://idtdesign.github.io/DMA/assets/third/datepicker/css/datepicker.css" /><link  rel="stylesheet" href="http://idtdesign.github.io/DMA/assets/third/jqgrid/css/ui.jqgrid.css" /><link  rel="stylesheet" href="http://idtdesign.github.io/DMA/assets/third/jqgrid/css/smoothness/jquery-ui-1.10.4.custom.css" /><link  rel="stylesheet" href="http://idtdesign.github.io/DMA/assets/third/bootstrap-toggle/bootstrap-toggle.min.css" /><link  rel="stylesheet" href="http://idtdesign.github.io/DMA/assets/css/style.css" />
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+	
+	<!-- FAVICON -->
+	<link rel="shortcut icon" href="http://idtdesign.github.io/DMA/assets/img/favicon.ico">
+	<script src="http://idtdesign.github.io/DMA/assets/third/modernizr/modernizr.custom.93625.js"></script>
+	</head>
+	
+	
+	
+	<!-- BODY -->
+	<body class="tooltips sidebar-is-opened">
+	
+	<!-- LOADING ANIMATION -->
+	<div id="loading">
+		<div class="loading-inner">
+			<div class="spinner">
+				<div class="cube1"></div>
+				<div class="cube2"></div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- BEGIN PAGE -->
+	<div class="container">
+		
+		<!-- Button mobile view to collapse sidebar menu -->
+		<button class="button-menu-mobile show-sidebar">
+			<i class="fa fa-bars"></i>
+		</button>
+
+		<!-- Your logo goes here -->
+		<div class="logo-brand header rows">
+			<div class="logo">
+				<h1 class="logo-inner"><a href="http://idtdesign.github.io/DMA/"><img src="http://idtdesign.github.io/DMA/assets/img/logo.png" alt="Logo"><span class="logo-txt">BMA</span></a></h1>
+			</div>
+		</div><!-- End div .header .sidebar .rows -->
+	
+		<!-- BEGIN SIDEBAR -->
+		<div class="page-sidebar side-menu">
+			
+            <div class="body rows">
+				
+				<!-- Scrolling sidebar -->
+                <div class="sidebar-inner slimscroller">
+					
+
+					<!-- Sidebar menu -->
+										<div class="sidebar-menu">
+						<ul>
+							<li class="first-level "><a class="menu-item " href="http://idtdesign.github.io/DMA/"><i class="fa fa-home"></i> Dashboard</a></li>
+							<li class="first-level  "><a class="menu-item " href="http://idtdesign.github.io/DMA/distributors"><i class="fa fa-truck"></i><i class="fa fa-angle-double-down i-right"></i> Distributors</a>
+								<ul class="second-level">
+									<li class="second-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/distributors/general_info"><i class="fa fa-angle-right"></i> General Info</a></li>
+									<li class="second-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/distributors/bank_info"><i class="fa fa-angle-right"></i> Bank Info</a></li>
+									<li class="second-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/distributors/manage_comission"><i class="fa fa-angle-right"></i> Manage Comission</a></li>
+									<li class="second-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/distributors/manage_fees"><i class="fa fa-angle-right"></i> Manage Fees</a></li>
+									<li class="second-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/distributors/manage_products"><i class="fa fa-angle-right"></i> Manage Products</a></li>
+									<li class="second-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/distributors/notes"><i class="fa fa-angle-right"></i> Notes</a></li>
+									<li class="second-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/distributors/access_control"><i class="fa fa-angle-right"></i> Access Control</a></li>
+									<li class="second-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/distributors/adjustment"><i class="fa fa-angle-right"></i> Adjustment</a></li>
+								</ul>
+							</li>
+							<li class="first-level  "><a class="menu-item" href="http://idtdesign.github.io/DMA/retailers"><i class="fa fa-shopping-cart"></i><i class="fa fa-angle-double-down i-right"></i> Retailers</a>
+								<ul class="second-level">
+									<li class="second-level">
+										<form class="retailer-search">
+											<input type="text" class="form-control search" placeholder="Search retailer">
+											<i class="fa fa-search"></i>
+										</form>
+									</li>
+									<li class="second-level "><a class="menu-item" href="http://idtdesign.github.io/DMA/retailers/general_info"><i class="fa fa-angle-right"></i> General Info</a></li>
+									<li class="second-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/retailers/bill_pay"><i class="fa fa-angle-right"></i> Bill Pay</a></li>
+									<li class="second-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/retailers/products"><i class="fa fa-angle-right"></i> Products</a></li>
+									<li class="second-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/retailers/allowed_ips"><i class="fa fa-angle-right"></i> Allowed IPs</a></li>
+									<li class="second-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/retailers/money_transfer"><i class="fa fa-angle-right"></i> Money Transfer</a></li>
+									<li class="second-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/retailers/transfer_retails"><i class="fa fa-angle-right"></i> Transfer Retailer</a></li>
+									<li class="second-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/retailers/adjustment"><i class="fa fa-angle-right"></i> Adjustment</a></li>
+									<li class="second-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/retailers/locations"><i class="fa fa-angle-right"></i> Locations</a></li>
+									<li class="second-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/retailers/toll_fee"><i class="fa fa-angle-right"></i> Toll Free</a></li>
+									<li class="second-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/retailers/product_fees"><i class="fa fa-angle-right"></i> Product Fees</a></li>
+								</ul>
+							</li>
+							<li class="first-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/consumers"><i class="fa fa-users"></i> Consumers</a></li>
+							<li class="first-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/products"><i class="fa fa-suitcase"></i> Products</a></li>
+							<li class="first-level  "><a class="menu-item" href="http://idtdesign.github.io/DMA/cms/cms"><i class="fa fa-book"></i><i class="fa fa-angle-double-down i-right"></i> CMS</a>
+								<ul class="second-level">
+									<!--li class="second-level "><a class="menu-item" href="http://idtdesign.github.io/DMA/cms/cms-steps"><i class="fa fa-angle-right"></i> Steps</a></li-->
+									<li class="second-level "><a class="menu-item" href="http://idtdesign.github.io/DMA/cms/changesets"><i class="fa fa-angle-right"></i> Changesets</a></li>
+									<li class="second-level "><a class="menu-item" href="http://idtdesign.github.io/DMA/cms/changeset-details"><i class="fa fa-angle-right"></i> Changeset details</a></li>
+									<li class="second-level "><a class="menu-item" href="http://idtdesign.github.io/DMA/cms/add-zone-change"><i class="fa fa-angle-right"></i> Add zone change</a></li>
+									<li class="second-level active"><a class="menu-item" href="http://idtdesign.github.io/DMA/cms/add-image-change"><i class="fa fa-angle-right"></i> Add image change</a></li>
+									<li class="second-level "><a class="menu-item" href="http://idtdesign.github.io/DMA/cms/resource-change"><i class="fa fa-angle-right"></i> Resource change</a></li>
+									<li class="second-level "><a class="menu-item" href="http://idtdesign.github.io/DMA/cms/messages"><i class="fa fa-angle-right"></i> Messages</a></li>
+								</ul>
+							</li>
+							<li class="first-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/history"><i class="fa fa-archive"></i> Change History</a></li>
+							<li class="first-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/reports"><i class="fa fa-info-circle"></i> Reports</a></li>
+							<li class="first-level"><a class="menu-item" href="http://idtdesign.github.io/DMA/support"><i class="fa fa-question-circle"></i> Support</a></li>
+						</ul>
+						<div class="clear"></div>
+					</div><!-- End div .sidebar-menu -->
+
+
+				</div><!-- End div .sidebar-inner .slimscroller -->
+            </div><!-- End div .body .rows .scroll-y -->
+
+			<!-- Sidebar footer -->
+            <div class="footer rows animated fadeInUpBig">
+				<p class="copyrights">© 2014 IDT</p>
+            </div><!-- End div .footer .rows -->
+
+        </div>
+		<!-- END SIDEBAR -->
+		
+		
+		
+		<!-- BEGIN CONTENT -->
+        <div class="content-container content-page">
+		
+			<!-- BEGIN CONTENT HEADER -->
+            <div class="header content rows-content-header">
+				
+				<!-- BEGIN NAVBAR CONTENT-->				
+				<div class="navbar navbar-default" role="navigation">
+					<div class="container">
+						<!-- Navbar header -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<i class="fa fa-angle-double-down"></i>
+							</button>
+						</div><!-- End div .navbar-header -->
+						
+						<!-- Navbar collapse -->	
+						<div class="navbar-collapse collapse">
+						
+							<!-- Right navbar -->
+							<ul class="nav navbar-nav navbar-right top-navbar">
+								
+								<!-- Dropdown language -->
+								<li class="dropdown">
+									<a href="#fakelink" class="dropdown-toggle" data-toggle="dropdown">English <i class="fa fa-chevron-down i-xs"></i></a>
+									<ul class="dropdown-menu animated half flipInX">
+										<li><a href="#fakelink">English</a></li>
+										<li><a href="#fakelink">Español</a></li>
+									</ul>
+								</li>
+
+								<!-- Dropdown region -->
+								<li class="dropdown">
+									<a href="#fakelink" class="dropdown-toggle" data-toggle="dropdown"><img src="http://idtdesign.github.io/DMA/assets/img/blank.gif" class="flag flag-us" alt="Unated States"/> USA <i class="fa fa-chevron-down i-xs"></i></a>
+									<ul class="dropdown-menu animated half flipInX">
+										<li><a href="#fakelink"><img src="http://idtdesign.github.io/DMA/assets/img/blank.gif" class="flag flag-ca" alt="Canada"/> Canada</a></li>
+										<li><a href="#fakelink"><img src="http://idtdesign.github.io/DMA/assets/img/blank.gif" class="flag flag-gb" alt="Great Britain"/> Great Britain</a></li>
+										<li><a href="#fakelink"><img src="http://idtdesign.github.io/DMA/assets/img/blank.gif" class="flag flag-es" alt="Spain"/> Spain</a></li>
+										<li><a href="#fakelink"><img src="http://idtdesign.github.io/DMA/assets/img/blank.gif" class="flag flag-hk" alt="Hong Kong"/> Hong Kong</a></li>
+										<li><a href="#fakelink"><img src="http://idtdesign.github.io/DMA/assets/img/blank.gif" class="flag flag-sg" alt="Singapore"/> Singapore</a></li>
+										<li><a href="#fakelink"><img src="http://idtdesign.github.io/DMA/assets/img/blank.gif" class="flag flag-au" alt="Australia"/> Australia</a></li>
+									</ul>
+								</li>
+							
+								<!-- Dropdown User session -->
+								<li class="dropdown">
+									<a href="#fakelink" class="dropdown-toggle" data-toggle="dropdown">Welcome, <strong>Username</strong> <i class="fa fa-chevron-down i-xs"></i></a>
+									<ul class="dropdown-menu animated half flipInX">
+										<li><a href="#fakelink">My Profile</a></li>
+										<li><a href="#fakelink">Change Password</a></li>
+										<li><a href="#fakelink">Account Setting</a></li>
+										<li class="divider"></li>
+										<li class="dropdown-header">Another action</li>
+										<li><a href="#fakelink">Help</a></li>
+										<li><a href="lock-screen.html">Lock me</a></li>
+										<li><a class="md-trigger" data-modal="logout-modal">Logout</a></li>
+									</ul>
+								</li>
+								<!-- End Dropdown User session -->
+							</ul>
+						</div><!-- End div .navbar-collapse -->
+					</div><!-- End div .container -->
+				</div>
+				<!-- END NAVBAR CONTENT-->
+            </div>
+			<!-- END CONTENT HEADER -->
+			
+			
+			
+			
+			<!-- ============================================================== -->
+			<!-- START YOUR CONTENT HERE -->
+			<!-- ============================================================== -->
+            <div class="body content rows scroll-y">
+				
+				<!-- Page header -->
+<div class="page-heading animated fadeInDownBig">
+	<h1>Changeset #US-777</h1>
+</div>
+<!-- End page header -->
+<div class="box-info full">
+	<h2>Add Image change</h2>
+	<div class="col-lg-4 change-steps">
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Site</label>
+			<div class="col-sm-10">
+				<select id="step-1" class="form-control form-sm">
+					<option value="" disabled selected>select a site</option>
+					<option value="cust">cust</option>
+					<option value="ret">ret</option>
+					<option value="dist">dist</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Page</label>
+			<div class="col-sm-10">
+				<select id="step-2" class="form-control form-sm" disabled>
+					<option value="" disabled selected>select a page</option>
+					<option value="index">index</option>
+					<option value="contacts">contacts</option>
+					<option value="about">about</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<ul class="items-to-change">
+				<li class="group-title">Images</li>
+				<li class="not-chosen">Please select site/page first</li>
+				<li>header logo</li>
+				<li>banner left</li>
+				<li>simple image</li>
+				<li>footer background</li>
+				<li>header logo</li>
+				<li>banner left</li>
+				<li>simple image</li>
+				<li>footer background</li>			
+			</ul>
+		</div>
+		<div class="form-group">
+			<div class="col-lg-12">
+				<a href="#fake" class="btn btn-default btn-sm">&laquo; Back to zone changes</a>
+			</div>
+		</div>
+	</div><!-- end .change-steps -->
+	<div class="steps-how-to col-lg-8">
+		<div class="notes">
+			<ul class="easyWizardSteps">
+				<li class="step-1 current">
+					<span>1</span>
+					<span class="step-descr">
+						Select a Site
+						<small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+					</span>
+				</li>
+				<li class="step-2">
+					<span>2</span>
+					<span class="step-descr">
+						Select a Page
+						<small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+					</span>
+				</li>
+				<li class="step-3">
+					<span>3</span>
+					<span class="step-descr">
+						Select a Zone
+						<small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+					</span>
+				</li>
+			</ul>
+			<div class="editor">
+				<h4>Image <strong>header (any)</strong></h4>
+				<div role="tabpanel" class="change-tabs">
+
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs nav-justified" role="tablist">
+						<li role="presentation" class="active"><a href="#en-us" aria-controls="en-us" role="tab" data-toggle="tab">en-US</a></li>
+						<li role="presentation"><a href="#es-es" aria-controls="es-es" role="tab" data-toggle="tab">es-ES</a></li>
+						<li role="presentation"><a href="#es-us" aria-controls="es-us" role="tab" data-toggle="tab">es-US</a></li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<!-- EN-US TAB -->
+						<div role="tabpanel" class="tab-pane active" id="en-us">
+							<div class="switchers">
+								<input type="checkbox" id="toggle-one" class="toggle-zone" data-size="small">
+								<span class="description">Toggle description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+							</div>
+							<div class="image-change">
+								<div class="col-lg-12">
+									<div class="row">
+										<div class="col-lg-5 col-md-5 col-sm-5 box-info full">
+											<div class="image-item col-sm-12">
+												<span class="lang-code col-sm-12 text-center">en-US</span>
+												<span class="thumb col-sm-12 text-center"><img width="120" class="img-thumbnail" src="https://googledrive.com/host/0B_nRJqTIKCknOXBnU3h3aWF0eTQ/thumb-image.png" alt="PDF-file"/></span>
+												<span class="asset-info col-sm-12 text-center"><strong>Imaga-ga-ga</strong></span>
+												<span class="col-sm-12 actions full additional-btn text-center">
+													<small>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
+												</span>
+												<div class="image-in-use">
+													<table class="table">
+														<thead>
+															<tr>
+																<th>In use on Zone(page)</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr><td>header (index)</td></tr>
+															<tr><td>footer (about)</td></tr>
+															<tr><td>nav (index)</td></tr>
+															<tr><td>sidebar (blog)</td></tr>
+															<tr><td>article (contacts)</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-7 col-md-7 col-sm-7">
+											<div class="image-params">
+												<table class="table table-bordered">
+													<tr>
+														<th>Alt</th>
+														<td>imaga-ga-ga-ga</td>
+													</tr>
+													<tr>
+														<th>Width</th>
+														<td>700 px</td>
+													</tr>
+													<tr>
+														<th>Height</th>
+														<td>300 px</td>
+													</tr>
+													<tr>
+														<th>Link</th>
+														<td>http://image-ga.ga</td>
+													</tr>
+													<tr>
+														<th>Original width</th>
+														<td>700 px</td>
+													</tr>
+													<tr>
+														<th>Original height</th>
+														<td>300 px</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- end EN-US -->
+						<!-- ES-ES TAB -->
+						<div role="tabpanel" class="tab-pane" id="es-es">
+							<div class="switchers">
+								<input type="checkbox" id="toggle-one" class="toggle-zone" data-size="small">
+								<span class="description">Toggle description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+							</div>
+							<div class="image-change">
+								<div class="col-lg-12">
+									<div class="row">
+										<div class="col-lg-5 col-md-5 col-sm-5 box-info full">
+											<div class="image-item col-sm-12">
+												<span class="lang-code col-sm-12 text-center">en-US</span>
+												<span class="thumb col-sm-12 text-center"><img width="120" class="img-thumbnail" src="https://googledrive.com/host/0B_nRJqTIKCknOXBnU3h3aWF0eTQ/thumb-pdf.png" alt="PDF-file"/></span>
+												<span class="asset-info col-sm-12 text-center"><strong>Imaga-ga-ga</strong></span>
+												<span class="col-sm-12 actions full additional-btn text-center">
+													<small>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
+												</span>
+												<div class="image-in-use">
+													<table class="table">
+														<thead>
+															<tr>
+																<th>In use on Zone(page)</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr><td>header (index)</td></tr>
+															<tr><td>footer (about)</td></tr>
+															<tr><td>sidebar (blog)</td></tr>
+															<tr><td>article (contacts)</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-7 col-md-7 col-sm-7">
+											<div class="image-params">
+												<table class="table table-bordered">
+													<tr>
+														<th>Alt</th>
+														<td>imaga-ga-ga-ga</td>
+													</tr>
+													<tr>
+														<th>Width</th>
+														<td>700 px</td>
+													</tr>
+													<tr>
+														<th>Height</th>
+														<td>300 px</td>
+													</tr>
+													<tr>
+														<th>Link</th>
+														<td>http://image-ga.ga</td>
+													</tr>
+													<tr>
+														<th>Original width</th>
+														<td>700 px</td>
+													</tr>
+													<tr>
+														<th>Original height</th>
+														<td>300 px</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- end es-es -->
+						<!-- ES-US TAB -->
+						<div role="tabpanel" class="tab-pane" id="es-us">
+							<div class="switchers">
+								<input type="checkbox" id="toggle-one" class="toggle-zone" data-size="small">
+								<span class="description">Toggle description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+							</div>
+							<div class="image-change">
+								<div class="col-lg-12">
+									<div class="row">
+										<div class="col-lg-5 col-md-5 col-sm-5 box-info full">
+											<div class="image-item col-sm-12">
+												<span class="lang-code col-sm-12 text-center">en-US</span>
+												<span class="thumb col-sm-12 text-center"><img width="120" class="img-thumbnail" src="https://googledrive.com/host/0B_nRJqTIKCknOXBnU3h3aWF0eTQ/thumb-css.png" alt="PDF-file"/></span>
+												<span class="asset-info col-sm-12 text-center"><strong>Imaga-ga-ga</strong></span>
+												<span class="col-sm-12 actions full additional-btn text-center">
+													<small>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
+												</span>
+												<div class="image-in-use">
+													<table class="table">
+														<thead>
+															<tr>
+																<th>In use on Zone(page)</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr><td>header (index)</td></tr>
+															<tr><td>footer (about)</td></tr>
+															<tr><td>nav (index)</td></tr>
+															<tr><td>sidebar (blog)</td></tr>
+															<tr><td>article (contacts)</td></tr>
+															<tr><td>article (about)</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-7 col-md-7 col-sm-7">
+											<div class="image-params">
+												<table class="table table-bordered">
+													<tr>
+														<th>Alt</th>
+														<td>imaga-ga-ga-ga</td>
+													</tr>
+													<tr>
+														<th>Width</th>
+														<td>700 px</td>
+													</tr>
+													<tr>
+														<th>Height</th>
+														<td>300 px</td>
+													</tr>
+													<tr>
+														<th>Link</th>
+														<td>http://image-ga.ga</td>
+													</tr>
+													<tr>
+														<th>Original width</th>
+														<td>700 px</td>
+													</tr>
+													<tr>
+														<th>Original height</th>
+														<td>300 px</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- end es-us -->
+					</div>
+				</div>
+				<div class="editor-action text-right">
+					<a href="#fake" class="btn btn-primary">
+						<i class="fa fa-pencil"></i> Edit
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- End div .box-info -->
+				
+				
+				<!-- Footer -->
+				<footer class="page-footer">
+				&nbsp;
+				<!--&copy; 2014 <a href="index.html">Lanceng Admin</a>. Design with love by <a href="http://isohdesign.com" target="_blank">Isoh Design Studio</a> from <a href="#fakelink">Yogyakarta, ID</a>-->
+				</footer>
+				<!-- End Footer -->
+			
+            </div>
+			<!-- ============================================================== -->
+			<!-- END YOUR CONTENT HERE -->
+			<!-- ============================================================== -->
+			
+			
+        </div>
+		<!-- END CONTENT -->
+		
+		
+		
+				<!--
+		============================================================================
+		MODAL DIALOG EXAMPLE
+		You can change transition style, just view element page
+		============================================================================
+		-->
+		<!-- Modal Logout Primary -->
+		<div class="md-modal md-fall" id="logout-modal">
+			<div class="md-content">
+				<h3><strong>Logout</strong> Confirmation</h3>
+				<div>
+					<p class="text-center">Are you sure want to logout from this awesome system?</p>
+					<p class="text-center">
+					<button class="btn btn-danger md-close">Nope!</button>
+					<a href="login.html" class="btn btn-success md-close">Yeah, I'm sure</a>
+					</p>
+				</div>
+			</div>
+		</div><!-- End .md-modal -->
+		
+		<!-- Modal Logout Alternatif -->
+		<div class="md-modal md-just-me" id="logout-modal-alt">
+			<div class="md-content">
+				<h3><strong>Logout</strong> Confirmation</h3>
+				<div>
+					<p class="text-center">Are you sure want to logout from this awesome system?</p>
+					<p class="text-center">
+					<button class="btn btn-danger md-close">Nope!</button>
+					<a href="login.html" class="btn btn-success md-close">Yeah, I'm sure</a>
+					</p>
+				</div>
+			</div>
+		</div><!-- End .md-modal -->
+		
+		<!-- Modal Task Progress -->	
+		<div class="md-modal md-slide-stick-top" id="task-progress">
+			<div class="md-content">
+				<h3><strong>Task Progress</strong> Information</h3>
+				<div>
+					<p>CLEANING BUGS</p>
+					<div class="progress progress-xs for-modal">
+					  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+						<span class="sr-only">80&#37; Complete</span>
+					  </div>
+					</div>
+					<p>POSTING SOME STUFF</p>
+					<div class="progress progress-xs for-modal">
+					  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
+						<span class="sr-only">65&#37; Complete</span>
+					  </div>
+					</div>
+					<p>BACKUP DATA FROM SERVER</p>
+					<div class="progress progress-xs for-modal">
+					  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
+						<span class="sr-only">95&#37; Complete</span>
+					  </div>
+					</div>
+					<p>RE-DESIGNING WEB APPLICATION</p>
+					<div class="progress progress-xs for-modal">
+					  <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+						<span class="sr-only">100&#37; Complete</span>
+					  </div>
+					</div>
+					<p class="text-center">
+					<button class="btn btn-danger btn-sm md-close">Close</button>
+					</p>
+				</div>
+			</div>
+		</div><!-- End .md-modal -->
+		<!--
+		============================================================================
+		END MODAL DIALOG EXAMPLE
+		============================================================================
+		-->
+		
+		<!--
+		MODAL OVERLAY
+		Always place this div at the end of the page content
+		-->
+		<div class="md-overlay"></div>
+		
+
+		
+		
+		
+	</div><!-- End div .container -->
+	<!-- END PAGE -->
+
+	<!--
+	================================================
+	JAVASCRIPT
+	================================================
+	-->
+	<!-- DocPad Scripts + Our Own -->
+	<script defer="defer"  src="http://idtdesign.github.io/DMA/assets/js/jquery.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/js/bootstrap.min.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/slimscroll/jquery.slimscroll.min.js"></script><script defer="defer"  src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/morris/morris.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/nifty-modal/js/classie.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/nifty-modal/js/modalEffects.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/sortable/sortable.min.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/select/bootstrap-select.min.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/select2/js/select2.min.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/summernote/summernote.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/magnific-popup/jquery.magnific-popup.min.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/input/bootstrap.file-input.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/datepicker/js/bootstrap-datepicker.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/wizard/jquery.snippet.min.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/wizard/jquery.easyWizard.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/wizard/scripts.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/jqgrid/js/i18n/grid.locale-en.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/jqgrid/js/jquery.jqGrid.min.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/digitCapacity/jquery.digitCapacity.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/third/bootstrap-toggle/bootstrap-toggle.min.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/js/lanceng.js"></script><script defer="defer"  src="http://idtdesign.github.io/DMA/assets/js/grid-init.js"></script>
+
+	</body>
+</html>
